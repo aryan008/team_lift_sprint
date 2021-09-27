@@ -33,18 +33,18 @@
   </head>
   <body>
     <header class = "container-fluid fixed-top">
-      <div class="row">
-        <div class="col-12 col-lg-4 my-auto">
+      <div class="row pt-3 mt-lg-1">
+        <div class="col-12 col-lg-4 my-auto py-2 py-lg-1">
           <a href="{% url 'home' %}" class="nav-link">
             <h2 class="text-dark"><strong class = "text-uppercase">Team </strong><i>Lift Sprint</i></h2>
           </a>
         </div>
-        <div class="col-12 col-lg-4 my-auto">
+        <div class="col-12 col-lg-4 my-auto py-2 py-lg-1">
           <div class = "input-group">
             <form method = "GET" action="">
-              <div class="input-group-append border border-dark border-4">
+              <div class="input-group-append border border-dark border-5">
                 <input type="text" class="form-control border" aria-describedby="searchOurStore" name="q" placeholder = "What are you looking for?">
-                <button type="submit" class="btn btn-dark rounded-3">
+                <button type="submit" class="btn btn-dark rounded-0">
                   <span class = "input-group">
                     <i class = "fas fa-search"></i>
                   </span>Search
@@ -53,8 +53,30 @@
             </form>
           </div>
         </div>
-        <div class="col-12 col-lg-4 my-auto">
-          <p>Test 3</p>
+        <div class="col-12 col-lg-4 my-auto py-2 py-lg-1">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item dropdown">
+              <a class = "nav-link" href="#" id="user-options" data-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="accountManagementButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  My Account
+                </button>
+              </a>
+              <!--Below dropdown for authentication/Site Management/Allauth features taken from Boutique Ado mini-project and tailored for my project-->
+              <div class="dropdown-menu bg-dark border-1 border-dark" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <a href="#" class="dropdown-item"><p class = "text-white">Site Management</p></a>
+                    {% endif %}
+                    <a href="" class="dropdown-item"><p class = "text-white">Profile</p></a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item"><p class = "text-white">Log Out</p></a>
+                {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item"><p class = "text-white">Register</p></a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item"><p class = "text-white">Login</p></a>
+                {% endif %}
+              </div>
+            </li>
+            <li class="list-inline-item">Shopping Cart</li>
+          </ul>
         </div>
       </div>
   </header>
