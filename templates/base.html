@@ -35,10 +35,23 @@
     <header class = "container-fluid fixed-top">
       <div class="row">
         <div class="col-12 col-lg-4 my-auto">
-          <p>Test</p>
+          <a href="{% url 'home' %}" class="nav-link">
+            <h2 class="text-dark"><strong class = "text-uppercase">Team </strong><i>Lift Sprint</i></h2>
+          </a>
         </div>
         <div class="col-12 col-lg-4 my-auto">
-          <p>Test 2</p>
+          <div class = "input-group">
+            <form method = "GET" action="">
+              <div class="input-group-append border border-dark border-4">
+                <input type="text" class="form-control border" aria-describedby="searchOurStore" name="q" placeholder = "What are you looking for?">
+                <button type="submit" class="btn btn-dark rounded-3">
+                  <span class = "input-group">
+                    <i class = "fas fa-search"></i>
+                  </span>Search
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
         <div class="col-12 col-lg-4 my-auto">
           <p>Test 3</p>
