@@ -72,9 +72,14 @@
             </ul>
             <li class="list-inline-item">
               <a class = "nav-link" href="#">
-                <div>
-                  <p class = "my-0 text-black">
-                    €0.00
+                <div class="text-center">
+                  <i class = "fas fa-shopping-bag"></i>
+                  <p class = "my-0 text-dark">
+                    {% if cart_total %}
+                      €{{ cart_total|floatformat:2 }}
+                    {% else %}
+                      €0.00
+                    {% endif %}
                   </p>
                 </div>
               </a>
@@ -83,7 +88,7 @@
         </div>
       </div>
   </header>
-  {% if cart_total %} fw-bold {% else %} fst-italic{% endif %}
+  
 
     {% if messages %}
         <div class="message-container">
