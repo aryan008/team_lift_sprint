@@ -3,8 +3,12 @@ html {
 }
 
 body {
+    
+    font-family: 'Lato';
+}
+
+/*.main-image {
     background: url("/media/background_home.jpg") no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    font-family: "Lato";
-}
+}*/

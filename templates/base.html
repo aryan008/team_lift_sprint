@@ -42,7 +42,7 @@
   </head>
   <body>
     <header class = "container-fluid fixed-top">
-      <div class="row pt-3 mt-lg-1">
+      <div class="row pt-3 mt-lg-1 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-2 py-lg-1">
           <a href="{% url 'home' %}" class="nav-link">
             <h2 class="text-dark"><strong class = "text-uppercase">Team </strong><i>Lift Sprint</i></h2>
@@ -50,7 +50,7 @@
         </div>
         <div class="col-12 col-lg-4 my-auto py-2 py-lg-1">
           <div class = "input-group">
-            <form method = "GET" action="">
+            <form method = "GET" action="#">
               <div class="input-group flex-nowrap border border-dark border-1">
                 <input type="text" class="form-control border" aria-describedby="searchOurStore" name="q" placeholder = "Find a product">
                 <button type="submit" class="btn btn-dark rounded-0">
