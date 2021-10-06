@@ -3,12 +3,17 @@ html {
 }
 
 body {
-    
     font-family: 'Lato';
 }
 
-/*.main-image {
-    background: url("/media/background_home.jpg") no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-}*/
+/* Home page ---------------------------*/
+/* Home page header */
+header.masthead {
+    background-color: #000;
+    height: 350px;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
+
+
