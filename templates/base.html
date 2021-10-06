@@ -41,7 +41,7 @@
     <title>Team Lift Sprint {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
           <h2 class="text-dark"><strong class="text-uppercase">Team </strong><i>Lift Sprint</i></h2>
@@ -52,20 +52,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <form method="GET" action="#" class="d-flex">
-              <input class="form-control me-2" type="text" name="q" placeholder="Find a product"
+            <form method="GET" action="#" class="d-flex border border-dark">
+              <input class="form-control" type="text" name="q" placeholder="Find a product"
                 aria-label="searchOurStore">
-              <button class="btn btn-dark" type="submit"><span class="input-group">
+              <button class="btn btn-dark rounded-0" type="submit"><span class="input-group">
                   <i class="fas fa-search"> Search</i>
                 </span></button>
             </form>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle btn btn-dark bg-dark text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 My Account
               <i class="fas fa-user"></i>
               </a>
-              <ul class="dropdown-menu dropdown-menu-dark bg-dark" aria-labelledby="dropdownMenuButton2">
+              <ul class="dropdown-menu dropdown-menu-dark bg-dark text-white" aria-labelledby="dropdownMenuButton2">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <li><a class="dropdown-item" href="#">Site Management</a></li>
