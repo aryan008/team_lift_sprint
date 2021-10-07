@@ -23,8 +23,9 @@ header.masthead {
 }
 
 .area-descriptor {
-    background-color: #000;
     height: 500px;
+    padding-top: 6rem;
+    padding-left:4rem
   }
 
 .center {
