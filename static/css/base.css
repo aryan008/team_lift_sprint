@@ -18,8 +18,6 @@ header.masthead {
 
 .image-area {
     height: 500px;
-    padding-bottom: 10rem;
-    background-color: #fafafa;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -27,5 +25,9 @@ header.masthead {
 .area-descriptor {
     background-color: #000;
     height: 500px;
-    padding-bottom: 10rem;
   }
+
+.center {
+  object-fit: cover;
+  width: 100%;
+}
