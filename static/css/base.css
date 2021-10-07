@@ -16,8 +16,8 @@ header.masthead {
     padding-bottom: 10rem;
   }
 
+/* Image and text area */
 .image-area {
-    height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -27,7 +27,7 @@ header.masthead {
     padding-top: 6rem;
   }
 
-.area-left {
-    padding-left: 10rem
+.area-left, .area-right {
+    padding-left: 13rem
 }
 
