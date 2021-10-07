@@ -15,3 +15,17 @@ header.masthead {
     padding-top: 5rem;
     padding-bottom: 10rem;
   }
+
+.image-area {
+    height: 500px;
+    padding-bottom: 10rem;
+    background-color: #fafafa;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.area-descriptor {
+    background-color: #000;
+    height: 500px;
+    padding-bottom: 10rem;
+  }
