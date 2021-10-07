@@ -18,17 +18,16 @@ header.masthead {
 
 .image-area {
     height: 500px;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .area-descriptor {
     height: 500px;
     padding-top: 6rem;
-    padding-left:4rem
   }
 
-.center {
-  object-fit: cover;
-  width: 100%;
+.area-left {
+    padding-left: 10rem
 }
+
