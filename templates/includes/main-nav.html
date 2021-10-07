@@ -1,12 +1,12 @@
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+<div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
+    <ul class="nav me-auto mx-auto m-2 mb-lg-0 ms-lg-4">
         <!-- All products -->
         <li class="nav-item">
             <a class="nav-link" href=""></a>
         </li>
         <!-- Individual -->
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownIndividual" role="button"
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownIndividual" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Individual
             </a>
@@ -18,8 +18,8 @@
         </li>
         <!-- Team -->
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTeam" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownTeam" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Team
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownTeam">
@@ -32,5 +32,48 @@
         <li class="nav-item">
             <a class="nav-link text-danger fw-bold" href="">CLEARANCE</a>
         </li>
+        <!-- Search form -->
+        <form method="GET" action="#" class="d-flex border border-dark">
+            <input class="form-control" type="search" name="q" placeholder="Find a product" aria-label="searchOurStore">
+            <button class="btn btn-dark rounded-0" type="submit"><span class="input-group">
+                    <i class="fas fa-search"> Search</i>
+                </span></button>
+        </form>
     </ul>
+    <!-- Account Management -->
+    <ul class="nav justify-content-end">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btn btn-dark bg-dark text-white" href="#" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                My Account
+                <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark bg-dark text-white" aria-labelledby="dropdownMenuButton2">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <li><a class="dropdown-item" href="#">Site Management</a></li>
+                {% endif %}
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
+                {% else %}
+                <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                <li><a class="dropdown-item" href="{% url 'account_login' %}">Log In</a></li>
+                {% endif %}
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <div class="text-center">
+                    <p class="my-0 text-dark">
+                        {% if cart_total %}
+                        €{{ cart_total|floatformat:2 }}
+                        {% else %}
+                        €0.00
+                        {% endif %}
+                    </p>
+                </div>
+            </a>
+        </li>
+      </ul>
 </div>
+
