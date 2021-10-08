@@ -18,10 +18,8 @@
         </div>
     </div>
     <br>
-    
 </header>
 {% endblock %}
-
 {% block content %}
 
 <section>
@@ -30,45 +28,71 @@
         <div class="row">
             <!-- Individual -->
             <div class="col-lg-6 image-area g-0">
-                <img src="/media/individual.jpg" alt="" style='height: 100%; width: 100%; object-fit: cover'>
+                <img src="{{ MEDIA_URL }}/media/individual.jpg" alt="" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
-            <div class="col-lg-6 area-descriptor area-right">
+            <div class="col-lg-6 area-descriptor area-right g-0">
                 <h2 class="text-uppercase fw-bold mb-4">Individual Training</h2>
 
                 <p class="lead fst-italic">Need to up your game for your home gym and workouts?</p>
                 <a href="" class="btn btn-dark me-1 mt-3" type="button">Shop Individual</a>
             </div>
             <!-- Team -->
-            <div class="col-lg-6 area-descriptor area-left">
+            <div class="col-lg-6 area-descriptor area-left g-0">
                 <h2 class="text-uppercase fw-bold mb-4">Team Training</h2>
 
                 <p class="lead fst-italic">Prepare your teams professionally and with purpose!</p>
                 <a href="" class="btn btn-dark me-1 mt-3" type="button">Shop Teams</a>
             </div>
             <div class="col-lg-6 image-area g-0">
-                <img src="/media/team.jpg" alt="" style='height: 100%; width: 100%; object-fit: cover'>
+                <img src="{{ MEDIA_URL }}/media/team.jpg" alt="" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
             <!-- Weightroom -->
             <div class="col-lg-6 image-area g-0">
-                <img src="/media/weightroom.jpg" alt="" style='height: 100%; width: 100%; object-fit: cover'>
+                <img src="{{ MEDIA_URL }}/media/weightroom.jpg" alt="" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
-            <div class="col-lg-6 area-descriptor area-right">
+            <div class="col-lg-6 area-descriptor area-right g-0">
                 <h2 class="text-uppercase fw-bold mb-4">Weightroom</h2>
 
                 <p class="lead fst-italic">Add to your home/gym weightlifting collection!</p>
                 <a href="" class="btn btn-dark me-1 mt-3" type="button">Shop Weightroom Essentials</a>
             </div>
             <!-- Pitch/Track -->
-            <div class="col-lg-6 area-descriptor area-left">
+            <div class="col-lg-6 area-descriptor area-left g-0">
                 <h2 class="text-uppercase fw-bold mb-4">Pitch/Track</h2>
 
                 <p class="lead fst-italic">Prepare you or your teams for their specific sport!</p>
                 <a href="" class="btn btn-dark me-1 mt-3" type="button">Shop Outdoor Essentials</a>
             </div>
             <div class="col-lg-6 image-area g-0">
-                <img src="/media/pitch.jpg" alt="" style='height: 100%; width: 100%; object-fit: cover'>
+                <img src="{{ MEDIA_URL }}/media/pitch.jpg" alt="" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
         </div>
     </div>
 </section>
+<section>
+    <!-- Shipping, returns and info-->
+    <div class="container-fluid g-0">
+        <div class="row">
+            <div class="sri-info-container text-white p-4">
+                <div>
+                    <h3 class = "text-uppercase text-center">Equipment</h3>
+                    <i class="fas fa-dumbbell fa-lg sri-icons"></i>
+                    <p class = "text-muted fw-bold text-center">100% guaranteed quality.</p>
+                </div>
+                <div>
+                    <h3 class = "text-uppercase text-center">Shipping</h3>
+                    <i class="fas fa-shipping-fast fa-lg sri-icons"></i>
+                    <p class = "text-muted fw-bold text-center">Same-day Ireland shipping.</p>
+                </div>
+
+                <div>
+                    <h3 class = "text-uppercase text-center">Information</h3>
+                    <i class="fas fa-question-circle fa-lg sri-icons"></i>
+                    <p class = "text-muted fw-bold text-center">24/7 customer support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

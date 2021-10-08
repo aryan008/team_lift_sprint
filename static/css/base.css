@@ -29,6 +29,21 @@ header.masthead {
   }
 
 .area-left, .area-right {
-    padding-left: 13rem
+    padding-left: 10rem;
+    padding-right: 5rem;
 }
 
+/* Banner of information & icons */
+.sri-info-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    background-color: #000;
+}
+
+.sri-icons {
+    padding-left: 5rem;
+}
