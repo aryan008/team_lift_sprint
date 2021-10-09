@@ -17,7 +17,3 @@ def faq(request):
 
 def shipping_info(request):
     return render(request, "home/shipping_info.html")
-
-
-def about_us(request):
-    return render(request, "home/about_us.html")
