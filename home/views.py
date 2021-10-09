@@ -6,3 +6,12 @@ def index(request):
 
 def contact(request):
     return render(request, "home/contact.html")
+
+def faq(request):
+    return render(request, "home/faq.html")
+
+def shipping_info(request):
+    return render(request, "home/shipping_info.html")
+
+def about_us(request):
+    return render(request, "home/about_us.html")
