@@ -3,5 +3,26 @@ from .models import Category, Product
 
 # Register your models here.
 
-admin.site.register(Category)
-admin.site.register(Product)
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+        'sku',
+        'name',
+        'category',
+        'price',
+        'area',
+        'image',
+    )
+
+    ordering = ('sku',)
+
+
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Product, ProductAdmin)
