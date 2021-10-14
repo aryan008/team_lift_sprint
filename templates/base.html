@@ -23,7 +23,7 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
     <!-- Custom CSS -->
-    <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -71,7 +71,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-6 text-center mt-2 my-auto">
+          <div class="col-md-6 col-sm-12 text-center mt-2 my-auto">
             <ul class="list-unstyled">
               <li class = "fw-bold text-uppercase"><u>Support/Contact</u></li>
               <li><a class="nav-link text-dark" href="{% url 'contact' %}" alt="Contact us">Contact us</a></li>
@@ -79,7 +79,7 @@
               <li><a class="nav-link text-dark" href="{% url 'shipping_info' %}" alt="Shipping info">Shipping Info</a></li>
             </ul>
           </div>
-          <div class="col-6 text-center mt-2">
+          <div class="col-md-6 col-sm-12 text-center mt-2">
             <ul class="list-unstyled">
               <li class = "fw-bold text-uppercase"><u>Find us on:</u></li>
             </ul>
@@ -96,6 +96,7 @@
             </ul>
           </div>
         </div>
+        <br>
         <div class="row">
           <div class="col text-center my-auto">
             <p class="mt-2 m-0 fst-italic fw-bold">Copyright &copy; TLS 2021 - celebrating 1 year in business</p>
