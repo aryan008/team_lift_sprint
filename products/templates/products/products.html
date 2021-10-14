@@ -54,12 +54,12 @@
                         </a>
                         {% endif %}
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">{{ product.name }}</h5>
-                            <p class="lead ps-1 text-left fw-bold fst-italic">${{ product.price }}</p>
+                            <h5 class="card-title text-center fw-bold">{{ product.name }}</h5>
+                            <p class="lead ps-1 text-center fw-bold fst-italic pt-1">${{ product.price }}</p>
                             {% if product.area %}
-                            <small class="fw-light text-uppercase">{{ product.area }}</small>
+                            <p class="fw-light text-center text-capitalize">{{ product.area }}</p>
                             {% else %}
-                            <small class="text-muted">No Area</small>
+                            <p class="text-muted fw-light text-center text-capitalize">No Area</p>
                             {% endif %}
                         </div>
                     </div>
