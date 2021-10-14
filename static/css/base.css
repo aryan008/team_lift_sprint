@@ -6,6 +6,16 @@ body {
     font-family: 'Lato';
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 /* Home page ---------------------------*/
 /* Home page header */
 header.masthead {
@@ -47,3 +57,16 @@ header.masthead {
 .sri-icons {
     padding-left: 5rem;
 }
+
+/* Products page ---------------------------*/
+/* Products page overlay for products as per Boutique Ado instructions */
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
