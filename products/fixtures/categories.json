@@ -27,20 +27,12 @@
       "pk": 4,
       "model": "products.category",
       "fields": {
-        "name": "weightlifting",
-        "friendly_name": "Weightlifting"
-      }
-    },
-    {
-      "pk": 5,
-      "model": "products.category",
-      "fields": {
         "name": "team equipment",
         "friendly_name": "Team Equipment"
       }
     },
     {
-      "pk": 6,
+      "pk": 5,
       "model": "products.category",
       "fields": {
         "name": "gym equipment",

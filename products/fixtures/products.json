@@ -11,5 +11,18 @@
         "area": "universal",
         "image": "barbells_image.jpg"
       }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "dsfjkhfkjdsgkjds",
+        "name": "Track Spikes",
+        "description": "Track spikes for sprinters to wear for training on astro and/or track.",
+        "price": 79.99,
+        "category": 2,
+        "area": "universal",
+        "image": "spikes_image.JPG"
+      }
     }
   ]
