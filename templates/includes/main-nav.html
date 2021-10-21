@@ -11,10 +11,10 @@
                 Individual
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownIndividual">
-                <li><a class="dropdown-item" href="#">All Individual</a></li>
-                <li><a class="dropdown-item" href="#">Weightlifting</a></li>
-                <li><a class="dropdown-item" href="#">Track</a></li>
-                <li><a class="dropdown-item" href="#">Cardio</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=weightlifting,track,cardio">All Individual</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=weightlifting">Weightlifting</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=track">Track</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=cardio">Cardio</a></li>
             </ul>
         </li>
         <!-- Team -->
@@ -24,9 +24,9 @@
                 Team
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownTeam">
-                <li><a class="dropdown-item" href="#">All Team</a></li>
-                <li><a class="dropdown-item" href="#">Team Equipment</a></li>
-                <li><a class="dropdown-item" href="#">Gym Equipment</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=team equipment,gym equipment">All Team</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=team equipment">Team Equipment</a></li>
+                <li><a class="dropdown-item" href="{% url 'products' %}?category=gym equipment">Gym Equipment</a></li>
             </ul>
         </li>
         <!-- Clearance -->
