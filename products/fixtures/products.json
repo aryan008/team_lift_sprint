@@ -24,5 +24,44 @@
         "area": "universal",
         "image": "spikes_image.JPG"
       }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "sghsjhgkjdshds",
+        "name": "Assault Bike",
+        "description": "Assault bike to build up your cardiovascular system.",
+        "price": 569.99,
+        "category": 3,
+        "area": "universal",
+        "image": "assault_image.JPG"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "fdfafafafvg",
+        "name": "Bibs",
+        "description": "Set of 20 multicoloured bib set for team training exercises.",
+        "price": 29.99,
+        "category": 4,
+        "area": "team",
+        "image": "bibs_image.JPG"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "dfgkjfgdakgfkjda",
+        "name": "Restraining Harness",
+        "description": "Gym harness for team sprinting indoor drills.",
+        "price": 19.99,
+        "category": 5,
+        "area": "individual",
+        "image": "harness_image.JPG"
+      }
     }
   ]
