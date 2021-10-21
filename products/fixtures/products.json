@@ -56,12 +56,77 @@
       "model": "products.product",
       "fields": {
         "sku": "dfgkjfgdakgfkjda",
-        "name": "Restraining Harness",
+        "name": "Harness",
         "description": "Gym harness for team sprinting indoor drills.",
         "price": 19.99,
         "category": 5,
         "area": "individual",
         "image": "harness_image.JPG"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "dajfkadgfkjdagfry",
+        "name": "Collars",
+        "description": "A set of 6 weightlifting collars for barbell tightening.",
+        "price": 35.99,
+        "category": 1,
+        "area": "universal",
+        "image": "collars_image.JPG"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "dsjfjdsfkjsd",
+        "name": "Hurdles",
+        "description": "Set of 10 hurdles for track and field use.",
+        "price": 189.99,
+        "category": 2,
+        "area": "universal",
+        "image": "hurdles_image.JPG"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "adaaadkehfkjdf",
+        "name": "Ski Erg",
+        "description": "Concept 2 ski-erg to build up your cardiovascular system.",
+        "price": 249.99,
+        "category": 3,
+        "area": "universal",
+        "image": "ski_image.JPG"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "dfkjfdakjgfkjrrrr",
+        "name": "Cones",
+        "description": "Set of 10 marker cones for team training exercises.",
+        "price": 45.99,
+        "category": 4,
+        "area": "team",
+        "image": "cones_image.JPG"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "fvkjfhkjhfkjgsfk",
+        "name": "Squat Rack",
+        "description": "Squat rack for indoor gym setting.",
+        "price": 699.99,
+        "category": 5,
+        "area": "universal",
+        "image": "rack_image.JPG"
       }
     }
   ]
