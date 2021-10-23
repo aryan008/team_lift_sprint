@@ -43,6 +43,7 @@
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                     <div class="my-5">
+                        <!-- Product image-->
                         {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -57,16 +58,23 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="mb-5 mt-md-5">
+                        <!-- Product name-->
                         <p>{{ product.name }}</p>
+                        <!-- Product price and discounted price if appropriate-->
                         {% if product.on_sale is True %}
                         <p class="text-left">
                             <span
                                 class="lead ps-1 fw-light text-danger pt-1 text-decoration-line-through">€{{ product.price }}</span>
                             <span class="lead ps-1 fw-bold fst-italic pt-1">€{{ product.sales_price }}</span>
                         </p>
+                        <!-- Sales icon for user if on sale-->
+                        <p class="badge rounded-pill bg-danger">
+                            On Sale
+                        </p>
                         {% else %}
                         <p class="lead ps-1 text-left fw-bold fst-italic pt-1">€{{ product.price }}</p>
                         {% endif %}
+                        <!-- Product category-->
                         {% if product.category %}
                         <p class="small mt-1 mb-0">
                             <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -74,18 +82,23 @@
                             </a>
                         </p>
                         {% endif %}
+                        <!-- Product area-->
                         {% if product.area %}
                             <p class="fw-light text-capitalize mt-1 mb-1"><i>Area: </i>{{ product.area }}</p>
                             {% else %}
                             <p class="text-muted fw-light text-capitalize mt-1 mb-0">No Area</p>
                             {% endif %}
+                        <!-- Superuser functionality-->
                         {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="">Edit</a> |
                             <a class="text-danger" href="">Delete</a>
                         </small>
                         {% endif %}
+                        <!-- Product description-->
                         <p class="mt-3 fw-light text-capitalize">{{ product.description }}</p>
+                        <!-- Form for user to interact with to add to their bag.
+                        The below form structure has been taken from the boutique ado mini project and edited appropriately.-->
                         <form class="form" action="" method="POST">
                             {% csrf_token %}
                             <div class="form-row">
