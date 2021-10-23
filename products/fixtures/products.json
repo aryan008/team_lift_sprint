@@ -370,7 +370,7 @@
         "discount_on_product": 5,
         "category": 3,
         "on_sale": "True",
-        "area": "Universal",
+        "area": "universal",
         "image": "elliptical_image.JPG"
       }
     },
@@ -385,7 +385,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "5kg_image.JPG"
       }
     },
@@ -400,7 +400,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "10kg_image.JPG"
       }
     },
@@ -415,7 +415,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "15kg_image.JPG"
       }
     },
@@ -430,7 +430,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "20kg_image.JPG"
       }
     },
@@ -445,7 +445,7 @@
         "discount_on_product": 5,
         "category": 1,
         "on_sale": "True",
-        "area": "Universal",
+        "area": "universal",
         "image": "25kg_image.JPG"
       }
     },
@@ -460,7 +460,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "belt_image.JPG"
       }
     },
@@ -475,7 +475,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "gloves_image.JPG"
       }
     },
@@ -490,7 +490,7 @@
         "discount_on_product": 10,
         "category": 5,
         "on_sale": "True",
-        "area": "Universal",
+        "area": "universal",
         "image": "hex_image.JPG"
       }
     },
@@ -505,7 +505,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Individual",
+        "area": "individual",
         "image": "chalk_image.JPG"
       }
     },
@@ -520,7 +520,7 @@
         "discount_on_product": 0,
         "category": 5,
         "on_sale": "False",
-        "area": "Team",
+        "area": "team",
         "image": "medball_rack_image.JPG"
       }
     },
@@ -535,7 +535,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "med2kg_image.JPG"
       }
     },
@@ -550,7 +550,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "med3kg_image.JPG"
       }
     },
@@ -565,7 +565,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "med4kg_image.JPG"
       }
     },
@@ -580,7 +580,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "med5kg_image.JPG"
       }
     },
@@ -595,7 +595,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "med6kg_image.JPG"
       }
     },
@@ -610,7 +610,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "med7kg_image.JPG"
       }
     },
@@ -625,7 +625,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "Universal",
+        "area": "universal",
         "image": "med8kg_image.JPG"
       }
     },
@@ -640,8 +640,233 @@
         "discount_on_product": 5,
         "category": 1,
         "on_sale": "True",
-        "area": "Universal",
+        "area": "universal",
         "image": "med10kg_image.JPG"
+      }
+    },
+    {
+      "pk": 43,
+      "model": "products.product",
+      "fields": {
+        "sku": "lloorureibwbbq",
+        "name": "Speed Ladder",
+        "description": "Multi-coloured speed ladder to improve footwork.",
+        "price": 32.99,
+        "discount_on_product": 0,
+        "category": 2,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "ladder_image.JPG"
+      }
+    },
+    {
+      "pk": 44,
+      "model": "products.product",
+      "fields": {
+        "sku": "ktjurtnwweeeiirrl",
+        "name": "Plyometric Set",
+        "description": "A set of 24/18/12/6 soft cushioning plyometric boxes.",
+        "price": 99.99,
+        "discount_on_product": 0,
+        "category": 3,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "box_all_image.JPG"
+      }
+    },
+    {
+      "pk": 45,
+      "model": "products.product",
+      "fields": {
+        "sku": "qewrtvvvzvajhnn",
+        "name": "Resistance Chute",
+        "description": "Parachute worn to improve sprint capability by training with drag.",
+        "price": 29.99,
+        "discount_on_product": 15,
+        "category": 2,
+        "on_sale": "True",
+        "area": "universal",
+        "image": "parachute_image.JPG"
+      }
+    },
+    {
+      "pk": 46,
+      "model": "products.product",
+      "fields": {
+        "sku": "vnvnvbbjfjkjdkeww",
+        "name": "51' Plyo Box",
+        "description": "Wooden plyometric box (51'x61') for training.",
+        "price": 79.85,
+        "discount_on_product": 0,
+        "category": 3,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "plyo_wooden_image.JPG"
+      }
+    },
+    {
+      "pk": 47,
+      "model": "products.product",
+      "fields": {
+        "sku": "lkjdlkjreruuebbbbbb",
+        "name": "Stopwatch",
+        "description": "Stopwatch down to the millisecond including timed lap ability.",
+        "price": 9.99,
+        "discount_on_product": 0,
+        "category": 2,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "watch_image.JPG"
+      }
+    },
+    {
+      "pk": 48,
+      "model": "products.product",
+      "fields": {
+        "sku": "aasswqivjbtnrk",
+        "name": "Skipping Rope",
+        "description": "3m high speed adjustable skipping rope.",
+        "price": 12.99,
+        "discount_on_product": 10,
+        "category": 3,
+        "on_sale": "True",
+        "area": "individual",
+        "image": "rope_image.JPG"
+      }
+    },
+    {
+      "pk": 49,
+      "model": "products.product",
+      "fields": {
+        "sku": "rrreennccgigfrebr",
+        "name": "6' Hurdles",
+        "description": "Set of five 6' hurdles for plyometric training.",
+        "price": 14.99,
+        "discount_on_product": 0,
+        "category": 2,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "hurdles6_image.JPG"
+      }
+    },
+    {
+      "pk": 50,
+      "model": "products.product",
+      "fields": {
+        "sku": "looiryterwe",
+        "name": "Battle Rope",
+        "description": "Heavy Duty battle rope made from Kevlar giving high traction grip.",
+        "price": 59.99,
+        "discount_on_product": 0,
+        "category": 3,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "battle_rope_image.JPG"
+      }
+    },
+    {
+      "pk": 51,
+      "model": "products.product",
+      "fields": {
+        "sku": "",
+        "name": "9' Hurdles",
+        "description": "Set of five 9' hurdles for plyometric training.",
+        "price": 24.99,
+        "discount_on_product": 5,
+        "category": 2,
+        "on_sale": "True",
+        "area": "universal",
+        "image": "hurdles9_image.JPG"
+      }
+    },
+    {
+      "pk": 52,
+      "model": "products.product",
+      "fields": {
+        "sku": "lkjhgfrrreeqqa",
+        "name": "Wooden Rings",
+        "description": "Set of heavy duty wooden rings from gymnastics/grip training.",
+        "price": 29.99,
+        "discount_on_product": 5,
+        "category": 3,
+        "on_sale": "True",
+        "area": "individual",
+        "image": "rings_image.JPG"
+      }
+    },
+    {
+      "pk": 53,
+      "model": "products.product",
+      "fields": {
+        "sku": "",
+        "name": "12' Hurdles",
+        "description": "Set of five 12' hurdles for plyometric training.",
+        "price": 37.99,
+        "discount_on_product": 0,
+        "category": 2,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "hurdles12_image.JPG"
+      }
+    },
+    {
+      "pk": 54,
+      "model": "products.product",
+      "fields": {
+        "sku": "ncbcbsruewkqkiwi",
+        "name": "Massage Stick",
+        "description": "Massage stick to release sore muscles and lactic acid buildup.",
+        "price": 8.99,
+        "discount_on_product": 0,
+        "category": 4,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "massage_stick_image.JPG"
+      }
+    },
+    {
+      "pk": 55,
+      "model": "products.product",
+      "fields": {
+        "sku": "iruwtqrqcccssddee",
+        "name": "First Aid Kit",
+        "description": "Complete first aid kit including bad and required essentials.",
+        "price": 69.99,
+        "discount_on_product": 0,
+        "category": 4,
+        "on_sale": "False",
+        "area": "individual",
+        "image": "aid_image.JPG"
+      }
+    },
+    {
+      "pk": 56,
+      "model": "products.product",
+      "fields": {
+        "sku": "qwsazxcvfgtyu",
+        "name": "Foam Roller",
+        "description": "Heavy duty foam roller to remove lactic acid and aches/pains.",
+        "price": 12.99,
+        "discount_on_product": 5,
+        "category": 4,
+        "on_sale": "True",
+        "area": "individual",
+        "image": "roller_image.JPG"
+      }
+    },
+    {
+      "pk": 57,
+      "model": "products.product",
+      "fields": {
+        "sku": "etgdbcudueybfehj",
+        "name": "Ball Pump",
+        "description": "Reliable ball pump for all sports.",
+        "price": 15.99,
+        "discount_on_product": 0,
+        "category": 4,
+        "on_sale": "False",
+        "area": "individual",
+        "image": "pump_image.JPG"
       }
     }
   ]
