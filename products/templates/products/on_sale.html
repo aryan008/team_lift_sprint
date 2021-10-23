@@ -71,6 +71,7 @@
                                     class="lead ps-1 fw-light pt-1 text-danger text-decoration-line-through">€{{ product.price }}</span>
                                 <span class="lead ps-1 fw-bold fst-italic pt-1">€{{ product.sales_price }}</span>
                             </p>
+                            <p class = "text-center fw-light text-danger"><i class="fas fa-arrow-down"></i>({{ product.discount_on_product|floatformat:0 }}%)</p>
                             {% else %}
                             <p class="lead ps-1 text-center fw-bold fst-italic pt-1">€{{ product.price }}</p>
                             {% endif %}

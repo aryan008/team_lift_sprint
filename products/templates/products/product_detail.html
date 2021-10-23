@@ -66,6 +66,7 @@
                             <span
                                 class="lead ps-1 fw-light text-danger pt-1 text-decoration-line-through">€{{ product.price }}</span>
                             <span class="lead ps-1 fw-bold fst-italic pt-1">€{{ product.sales_price }}</span>
+                            <span class = "text-left fw-light text-danger"><i class="fas fa-arrow-down"></i>({{ product.discount_on_product|floatformat:0 }}%)</span>
                         </p>
                         <!-- Sales icon for user if on sale-->
                         <p class="badge rounded-pill bg-danger">
