@@ -19,6 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'area',
         'on_sale',
+        'discount_on_product',
         'image',
     )
 
