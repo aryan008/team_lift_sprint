@@ -370,7 +370,7 @@
         "discount_on_product": 5,
         "category": 3,
         "on_sale": "True",
-        "area": "individual",
+        "area": "Universal",
         "image": "elliptical_image.JPG"
       }
     },
@@ -385,7 +385,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "individual",
+        "area": "Universal",
         "image": "5kg_image.JPG"
       }
     },
@@ -400,7 +400,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "individual",
+        "area": "Universal",
         "image": "10kg_image.JPG"
       }
     },
@@ -415,7 +415,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "individual",
+        "area": "Universal",
         "image": "15kg_image.JPG"
       }
     },
@@ -430,7 +430,7 @@
         "discount_on_product": 0,
         "category": 1,
         "on_sale": "False",
-        "area": "individual",
+        "area": "Universal",
         "image": "20kg_image.JPG"
       }
     },
@@ -445,8 +445,203 @@
         "discount_on_product": 5,
         "category": 1,
         "on_sale": "True",
-        "area": "individual",
+        "area": "Universal",
         "image": "25kg_image.JPG"
+      }
+    },
+    {
+      "pk": 31,
+      "model": "products.product",
+      "fields": {
+        "sku": "hdjkjruuruuwdwaq",
+        "name": "Weightlifting Belt",
+        "description": "HIT Fitness strong & durable weightlifting belt.",
+        "price": 15.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "belt_image.JPG"
+      }
+    },
+    {
+      "pk": 32,
+      "model": "products.product",
+      "fields": {
+        "sku": "iourioyrufbbs",
+        "name": "Weightlifting Gloves",
+        "description": "A pair of weightlifting gloves for experienced users.",
+        "price": 9.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "gloves_image.JPG"
+      }
+    },
+    {
+      "pk": 33,
+      "model": "products.product",
+      "fields": {
+        "sku": "kjijuhrbcbdbeewwq",
+        "name": "Hex Bar",
+        "description": "25kg Hex Bar made from eleiko steel.",
+        "price": 109.99,
+        "discount_on_product": 10,
+        "category": 5,
+        "on_sale": "True",
+        "area": "Universal",
+        "image": "hex_image.JPG"
+      }
+    },
+    {
+      "pk": 34,
+      "model": "products.product",
+      "fields": {
+        "sku": "kjhdkjshqqaassww",
+        "name": "Liquid Chalk",
+        "description": "250ml of liquid chalk to keep your grip intact on heavy lifting.",
+        "price": 5.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Individual",
+        "image": "chalk_image.JPG"
+      }
+    },
+    {
+      "pk": 35,
+      "model": "products.product",
+      "fields": {
+        "sku": "iuqyiuebxxbbxbxbbaa",
+        "name": "MedBall Rack",
+        "description": "Medicine Ball rack with space for 12 balls.",
+        "price": 110.99,
+        "discount_on_product": 0,
+        "category": 5,
+        "on_sale": "False",
+        "area": "Team",
+        "image": "medball_rack_image.JPG"
+      }
+    },
+    {
+      "pk": 36,
+      "model": "products.product",
+      "fields": {
+        "sku": "kdhciuaaaheeiuqnxna",
+        "name": "2kg Medicine Ball",
+        "description": "HIT Fitness 2kg medicine ball.",
+        "price": 7.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "med2kg_image.JPG"
+      }
+    },
+    {
+      "pk": 37,
+      "model": "products.product",
+      "fields": {
+        "sku": "aaqqwoiproroooppp",
+        "name": "3kg Medicine Ball",
+        "description": "HIT Fitness 3kg medicine ball.",
+        "price": 14.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "med3kg_image.JPG"
+      }
+    },
+    {
+      "pk": 38,
+      "model": "products.product",
+      "fields": {
+        "sku": "lpopoepopopqwee",
+        "name": "4kg Medicine Ball",
+        "description": "HIT Fitness 4kg medicine ball.",
+        "price": 17.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "med4kg_image.JPG"
+      }
+    },
+    {
+      "pk": 39,
+      "model": "products.product",
+      "fields": {
+        "sku": "lsljjjjjruuuwbehwjbq",
+        "name": "5kg Medicine Ball",
+        "description": "HIT Fitness 5kg medicine ball.",
+        "price": 20.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "med5kg_image.JPG"
+      }
+    },
+    {
+      "pk": 40,
+      "model": "products.product",
+      "fields": {
+        "sku": "kjhhwhuuueewcvhsg",
+        "name": "6kg Medicine Ball",
+        "description": "HIT Fitness 6kg medicine ball.",
+        "price": 27.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "med6kg_image.JPG"
+      }
+    },
+    {
+      "pk": 41,
+      "model": "products.product",
+      "fields": {
+        "sku": "kshyrewgdbbzvgv",
+        "name": "7kg Medicine Ball",
+        "description": "HIT Fitness 7kg medicine ball.",
+        "price": 35.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "med7kg_image.JPG"
+      }
+    },
+    {
+      "pk": 42,
+      "model": "products.product",
+      "fields": {
+        "sku": "aqwerttoiiiicc",
+        "name": "8kg Medicine Ball",
+        "description": "HIT Fitness 8kg medicine ball.",
+        "price": 39.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "Universal",
+        "image": "med8kg_image.JPG"
+      }
+    },
+    {
+      "pk": 43,
+      "model": "products.product",
+      "fields": {
+        "sku": "aqwerttossee2wsiicc",
+        "name": "10kg Medicine Ball",
+        "description": "HIT Fitness 10kg medicine ball.",
+        "price": 49.99,
+        "discount_on_product": 5,
+        "category": 1,
+        "on_sale": "True",
+        "area": "Universal",
+        "image": "med10kg_image.JPG"
       }
     }
   ]
