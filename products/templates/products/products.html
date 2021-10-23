@@ -55,7 +55,14 @@
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title text-center fw-bold">{{ product.name }}</h5>
+                            {% if product.on_sale is True %}
+                            <p class = "text-center">
+                            <span class="lead ps-1 fw-light pt-1 text-danger text-decoration-line-through">€{{ product.price }}</span>
+                            <span class="lead ps-1 fw-bold fst-italic pt-1">€{{ product.sales_price }}</span>
+                            </p>
+                            {% else %}
                             <p class="lead ps-1 text-center fw-bold fst-italic pt-1">€{{ product.price }}</p>
+                            {% endif %}
                             {% if product.area %}
                             <p class="fw-light text-center text-capitalize">{{ product.category }}</p>
                             {% else %}

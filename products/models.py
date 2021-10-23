@@ -1,4 +1,5 @@
 from django.db import models
+from decimal import Decimal
 
 # Create your models here.
 
@@ -38,3 +39,12 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def sales_price(self):
+        '''Calculate the new price after applying the product discount
+        Source of help: https://helperbyte.com/questions/77886/
+        django-how-to-make-a-discount-for-the-item
+        '''
+        on_sale_price = Decimal(self.price * (
+            100 - self.discount_on_product) / 100).quantize(Decimal('0.00'))
+        return on_sale_price
