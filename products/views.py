@@ -51,3 +51,14 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def on_sale(request):
+    """ A view to show products that are on sale. """
+    products = Product.objects.filter(on_sale=True)
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/on_sale.html', context)
