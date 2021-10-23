@@ -223,5 +223,80 @@
         "area": "universal",
         "image": "mat_image.JPG"
       }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "djhfkjdjkskkeye",
+        "name": "Dumbbells",
+        "description": "Set of 25kg and 10kg black dumbbells for personal use.",
+        "price": 49.99,
+        "discount_on_product": 0,
+        "category": 1,
+        "on_sale": "False",
+        "area": "individual",
+        "image": "dumbbells_image.JPG"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "ccbbcbbyeyegdss",
+        "name": "Resistance Bands",
+        "description": "Set of 4 (varying intensity) resistence bands.",
+        "price": 15.99,
+        "discount_on_product": 0,
+        "category": 2,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "bands_image.JPG"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "hkkkeehkeyggdvdh",
+        "name": "Treadmill",
+        "description": "Durable and comfortable treadmill with speeds up to 27km/h.",
+        "price": 529.99,
+        "discount_on_product": 15,
+        "category": 3,
+        "on_sale": "True",
+        "area": "individual",
+        "image": "treadmill_image.JPG"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "sku": "lskdkshskkdhfrbrbr",
+        "name": "Water Bottles",
+        "description": "Set of 8 500ml water bottles to refuel your players.",
+        "price": 10.99,
+        "discount_on_product": 0,
+        "category": 4,
+        "on_sale": "False",
+        "area": "team",
+        "image": "bottles_image.JPG"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "sku": "shjhdhjwjrjgrbrbr",
+        "name": "Power Rack",
+        "description": "Easy to assemble and simple to install power rack (testing up to 800kg).",
+        "price": 749.99,
+        "discount_on_product": 0,
+        "category": 5,
+        "on_sale": "False",
+        "area": "universal",
+        "image": "power_rack_image.JPG"
+      }
     }
   ]

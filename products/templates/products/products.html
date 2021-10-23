@@ -43,10 +43,10 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border border-dark border-1">
+                    <div class="card h-100 border border-light border-5">
                         <!-- Sales icon for user if on sale-->
                         {% if product.on_sale is True %}
-                        <div class="badge rounded-pill bg-danger position-absolute" style="top: 0.5rem; left: 0.5rem">
+                        <div class="badge rounded-pill bg-danger position-absolute" style="top: 2rem; left: 0.5rem">
                             On Sale
                         </div>
                         {% endif %}
@@ -54,7 +54,7 @@
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"
-                                style='height: 200px; object-fit: cover'>
+                                style='height: 200px; object-fit: scale-down'>
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
