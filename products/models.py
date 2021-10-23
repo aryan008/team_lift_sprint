@@ -31,6 +31,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     area = models.CharField(max_length=200, null=True, choices=AREA)
+    on_sale = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

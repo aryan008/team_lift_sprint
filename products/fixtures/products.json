@@ -8,6 +8,7 @@
         "description": "A set of 25kg, 20kg and 10kg weightlifting bumper plates designed for barbells of all users.",
         "price": 109.99,
         "category": 1,
+        "on_sale": "True",
         "area": "universal",
         "image": "barbells_image.jpg"
       }
@@ -21,6 +22,7 @@
         "description": "Track spikes for sprinters to wear for training on astro and/or track.",
         "price": 79.99,
         "category": 2,
+        "on_sale": "False",
         "area": "universal",
         "image": "spikes_image.JPG"
       }
@@ -34,6 +36,7 @@
         "description": "Assault bike to build up your cardiovascular system.",
         "price": 569.99,
         "category": 3,
+        "on_sale": "False",
         "area": "universal",
         "image": "assault_image.JPG"
       }
@@ -47,6 +50,7 @@
         "description": "Set of 20 multicoloured bib set for team training exercises.",
         "price": 29.99,
         "category": 4,
+        "on_sale": "False",
         "area": "team",
         "image": "bibs_image.JPG"
       }
@@ -60,6 +64,7 @@
         "description": "Gym harness for team sprinting indoor drills.",
         "price": 19.99,
         "category": 5,
+        "on_sale": "False",
         "area": "individual",
         "image": "harness_image.JPG"
       }
@@ -73,6 +78,7 @@
         "description": "A set of 6 weightlifting collars for barbell tightening.",
         "price": 35.99,
         "category": 1,
+        "on_sale": "False",
         "area": "universal",
         "image": "collars_image.JPG"
       }
@@ -86,6 +92,7 @@
         "description": "Set of 10 hurdles for track and field use.",
         "price": 189.99,
         "category": 2,
+        "on_sale": "False",
         "area": "universal",
         "image": "hurdles_image.JPG"
       }
@@ -99,6 +106,7 @@
         "description": "Concept 2 ski-erg to build up your cardiovascular system.",
         "price": 249.99,
         "category": 3,
+        "on_sale": "False",
         "area": "universal",
         "image": "ski_image.JPG"
       }
@@ -112,6 +120,7 @@
         "description": "Set of 10 marker cones for team training exercises.",
         "price": 45.99,
         "category": 4,
+        "on_sale": "True",
         "area": "team",
         "image": "cones_image.JPG"
       }
@@ -125,6 +134,7 @@
         "description": "Squat rack for indoor gym setting.",
         "price": 699.99,
         "category": 5,
+        "on_sale": "False",
         "area": "universal",
         "image": "rack_image.JPG"
       }

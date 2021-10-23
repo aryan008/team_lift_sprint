@@ -18,6 +18,7 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         'area',
+        'on_sale',
         'image',
     )
 
