@@ -50,8 +50,7 @@
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png"
-                                alt="{{ product.name }}">
+                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                         {% endif %}
                     </div>
@@ -66,7 +65,8 @@
                             <span
                                 class="lead ps-1 fw-light text-danger pt-1 text-decoration-line-through">€{{ product.price }}</span>
                             <span class="lead ps-1 fw-bold fst-italic pt-1">€{{ product.sales_price }}</span>
-                            <span class = "text-left fw-light text-danger"><i class="fas fa-arrow-down"></i>({{ product.discount_on_product|floatformat:0 }}%)</span>
+                            <span class="text-left fw-light text-danger"><i
+                                    class="fas fa-arrow-down"></i>({{ product.discount_on_product|floatformat:0 }}%)</span>
                         </p>
                         <!-- Sales icon for user if on sale-->
                         <p class="badge rounded-pill bg-danger">
@@ -85,10 +85,10 @@
                         {% endif %}
                         <!-- Product area-->
                         {% if product.area %}
-                            <p class="fw-light text-capitalize mt-1 mb-1"><i>Area: </i>{{ product.area }}</p>
-                            {% else %}
-                            <p class="text-muted fw-light text-capitalize mt-1 mb-0">No Area</p>
-                            {% endif %}
+                        <p class="fw-light text-capitalize mt-1 mb-1"><i>Area: </i>{{ product.area }}</p>
+                        {% else %}
+                        <p class="text-muted fw-light text-capitalize mt-1 mb-0">No Area</p>
+                        {% endif %}
                         <!-- Superuser functionality-->
                         {% if request.user.is_superuser %}
                         <small class="ml-3">
@@ -131,7 +131,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div>
                                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                         <span class="icon">
@@ -143,7 +142,7 @@
                                         value="Add to Bag">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                               
+
                             </div>
                         </form>
                     </div>

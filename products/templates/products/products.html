@@ -38,8 +38,8 @@
         </div>
     </div>
     <div class="row">
-        <!-- Get the count of products and the count if the user searches -->
         <div class="col-12 col-md-6 mb-2 ms-1 me-1">
+            <!-- Get the count of products and the count if the user searches -->
             <div class = "mb-2">
                 <span class="small"><a href="{% url 'products' %}">All Products</a> | </span>
                 {% if products|length == 1 %}
@@ -50,6 +50,7 @@
                 <strong>"{{ search_term }}"</strong>{% endif %}
                 {% endif %}
             </div>
+            <!-- Add search functionality and dropdowns -->
             <div class="sort-select-wrapper w-50">
                 <select id="sort-selector"
                     class="rounded-3 border border-dark border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -143,6 +144,7 @@
         </div>
     </div>
 </div>
+<!-- Add back to top button icon -->
 <div class = "top-jump-button p-3 float-end">
     <a class="top-jump">
         <i class="fas fa-arrow-alt-circle-up fa-3x" style="color:#000"></i>
@@ -153,6 +155,7 @@
 {% block postloadjs %}
 {{ block.super }}
 <script>
+    // Create the click event to scroll to top
     $('.top-jump').click(function (e) {
         window.scrollTo(0, 0)
     })
