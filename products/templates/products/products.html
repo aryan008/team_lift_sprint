@@ -37,15 +37,28 @@
             <hr class="w-100 mb-2">
         </div>
     </div>
-    <!-- Get the count of products and the count if the user searches -->
-    <div class="col-12 col-md-6 text-left mb-1 ms-1">
-        {% if products|length == 1 %}
-        1 product {% if search_term %} result for: 
-        <strong>"{{ search_term }}"</strong>{% endif %}
-        {% else %}
-        {{ products|length }} products{% if search_term %} result for: 
-        <strong>"{{ search_term }}"</strong>{% endif %}
-        {% endif %}
+    <div class="row">
+        <!-- Get the count of products and the count if the user searches -->
+        <div class="col-12 col-md-6 text-left mb-1 ms-1 order-2 order-md-1">
+            {% if products|length == 1 %}
+            1 product {% if search_term %} result for: 
+            <strong>"{{ search_term }}"</strong>{% endif %}
+            {% else %}
+            {{ products|length }} products{% if search_term %} result for: 
+            <strong>"{{ search_term }}"</strong>{% endif %}
+            {% endif %}
+        </div>
+        <div class="dropdown col-12 col-md-6 order-1 order-md-2">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort by...
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+              <li><a href="{% url 'products' %}?sort=name&direction=asc" class="dropdown-item">Name
+                (A-Z)</a></li>
+            </ul>
+          </div>
     </div>
     <!-- Individual Products -->
     <div class="row">
