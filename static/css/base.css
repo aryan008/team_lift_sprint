@@ -71,4 +71,16 @@ header.masthead {
 }
 
 
+/* Setup of the back to top button */
+.top-jump-button {
+    height: 35px;
+    width: 35px;
+    position: fixed;
+}
+
+.top-jump {
+    cursor: pointer;
+}
+
+
 
