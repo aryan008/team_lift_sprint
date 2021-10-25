@@ -37,6 +37,16 @@
             <hr class="w-100 mb-2">
         </div>
     </div>
+    <!-- Get the count of products and the count if the user searches -->
+    <div class="col-12 col-md-6 text-left mb-1 ms-1">
+        {% if products|length == 1 %}
+        1 product {% if search_term %} result for: 
+        <strong>"{{ search_term }}"</strong>{% endif %}
+        {% else %}
+        {{ products|length }} products{% if search_term %} result for: 
+        <strong>"{{ search_term }}"</strong>{% endif %}
+        {% endif %}
+    </div>
     <!-- Individual Products -->
     <div class="row">
         <div class="container col-10">
