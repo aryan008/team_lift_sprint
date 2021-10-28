@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<!-- Masthead -->
+<header class="masthead">
+    <div class="container position-relative pt-5 p-2 g-0">
+        <div class="row">
+            <div class="col-8">
+                <div class="text-white">
+                    <h1>Welcome to Team Lift Sprint!</h1>
+                    <h3>See below for our amazing products...</h3>
+                    <p class="text-white-50 mb-0 lead">Need more Info? Contact Us.</p>
+                </div>
+            </div>
+            <div class="col-4 d-none d-md-block">
+                <div>
+                    <div>
+                        <img src="{{ MEDIA_URL }}/media/products_home.jpg" class="rounded-circle"
+                            alt="Man running in nature" style='height: 200px; width: 200px; object-fit: cover'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</header>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
