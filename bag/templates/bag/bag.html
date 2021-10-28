@@ -2,31 +2,36 @@
 {% load static %}
 
 {% block page_header %}
-<!-- Masthead -->
-<header class="masthead">
     <div class="container position-relative pt-5 p-2 g-0">
         <div class="row">
-            <div class="col-8">
-                <div class="text-white">
-                    <h1>Welcome to Team Lift Sprint!</h1>
-                    <h3>See below for our amazing products...</h3>
-                    <p class="text-white-50 mb-0 lead">Need more Info? Contact Us.</p>
-                </div>
-            </div>
-            <div class="col-4 d-none d-md-block">
-                <div>
-                    <div>
-                        <img src="{{ MEDIA_URL }}/media/products_home.jpg" class="rounded-circle"
-                            alt="Man running in nature" style='height: 200px; width: 200px; object-fit: cover'>
-                    </div>
-                </div>
-            </div>
+            <div class="col"></div>
         </div>
     </div>
-    <br>
-</header>
 {% endblock %}
 
 {% block content %}
-
+<div class="overlay"></div>
+    <div class="container position-relative pt-5 g-0">
+        <div class="row">
+            <div class="col">
+                <h2 class="fw-bold text-center text-capitalize mb-4">Shopping Bag</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col">
+                {% if bag_items %}
+                    <div class="table-responsive rounded"></div>
+                {% else %}
+                    <p class="lead mb-5">Currently no items in your bag.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-1 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Resume Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
