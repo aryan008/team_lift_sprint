@@ -78,7 +78,9 @@ header.masthead {
     position: fixed;
 }
 
-.top-jump {
+.top-jump,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
