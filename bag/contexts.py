@@ -13,8 +13,19 @@ def bag_contents(request):
 
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
-        total += quantity * product.price
-        product_total = quantity * product.price
+        if product.on_sale is True:
+            total += quantity * Decimal(
+                product.price * (
+                    100 - product.discount_on_product) / 100).quantize(
+                        Decimal('0.00'))
+            product_total = quantity * Decimal(
+                product.price * (
+                    100 - product.discount_on_product) / 100).quantize(
+                        Decimal('0.00'))
+        else:
+            total += quantity * product.price
+            product_total = quantity * product.price
+
         product_count += quantity
         bag_items.append({
             'item_id': item_id,
