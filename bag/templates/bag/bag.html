@@ -13,10 +13,11 @@
 {% block content %}
 <div class="overlay"></div>
     <div class="container position-relative pt-5 g-0">
+        <!-- Overlay for start of shopping bag page -->
         <div class="row">
             <div class="col">
                 <h2 class="fw-bold text-center text-capitalize mb-4">Shopping Bag<span><i class="ps-3 fas fa-shopping-basket"></i></span></h2>
-                <hr>
+                <p class="m-1 text-center bg-dark text-white rounded-0 fw-bold d-none d-md-block">FREE STANDARD DELIVERY WHEN YOU SPEND €100.</p>
             </div>
         </div>
         <div class="row mb-5">
@@ -24,36 +25,37 @@
                 {% if bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
-                            <thead class="text-black">
+                            <thead class="text-black border-bottom text-center fs-5">
+                                <!-- Bag items column headers -->
                                 <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
+                                    <th scope="col">Product Image</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Quantity</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
                             {% for item in bag_items %}
                                 <tr>
+                                    <!-- Bag items for loop for name, sales price, price, description -->
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                                    </td>
-                                    <td class="py-3">
                                         {% if item.product.on_sale is True %}
                                         <p class="my-0">
-                                            <strong>£{{ item.product.sales_price }}</strong>
+                                            <strong>€{{ item.product.sales_price }}</strong>
                                         </p>
                                         {% else %}
                                         <p class="my-0">
-                                            <strong>£{{ item.product.price }}</strong>
+                                            <strong>€{{ item.product.price }}</strong>
                                         </p>
                                         {% endif %}
+                                        <p class="my-0 small fst-italic">{{ item.product.description }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <!-- Update form for editing item quantities and removing items.
+                                        Taken from Boutique Ado mini project and edited appropriately. -->
+                                    <td class="py-3 w-20">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -81,37 +83,42 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-end" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                        <!-- Update and remove item buttons -->
+                                        <a class="update-link btn btn-success btn-sm mt-1"><small>Update Item</small></a>
+                                        <a class="remove-item btn btn-danger btn-sm mt-1 float-end" id="remove_{{ item.item_id }}"><small>Remove Item</small></a>
                                     </td>
+                                    <!-- Product Subtotal -->
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.product_total }}</p>
+                                        <p class="my-0 ms-2"><strong>€{{ item.product_total }}</strong></p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
+                                <!-- Calculating totals and delivery charge.
+                                    Taken from Boutique Ado mini project and edited appropriately. -->
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery Fee: €{{ delivery|floatformat:2 }}</h6>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                            You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
                                         </p>
                                     {% endif %}
+                                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
                             <tr>
+                                <!-- Shopping and checkout buttons -->
                                 <td colspan="5" class="text-right">
                                     <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
-                                        <span class="icon">
+                                        <span>
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="" class="btn btn-dark rounded-0 btn-lg">
+                                    <a href="" class="btn btn-dark rounded-0 btn-lg ms-2">
                                         <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
+                                        <span>
                                             <i class="fas fa-lock"></i>
                                         </span>
                                     </a>
@@ -120,8 +127,9 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Currently no items in your bag.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-1 btn-lg">
+                <!-- Else block for no items in the bag -->
+                    <p class="lead fw-bold mb-5">Currently no items in your bag.</p>
+                    <a href="{% url 'products' %}" class="btn btn-dark rounded-1 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
