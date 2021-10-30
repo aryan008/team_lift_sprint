@@ -96,7 +96,7 @@
                             <tr>
                                 <!-- Calculating totals and delivery charge.
                                     Taken from Boutique Ado mini project and edited appropriately. -->
-                                <td colspan="5" class="pt-5 text-right">
+                                <td colspan="5" class="pt-5 text-right text-end">
                                     <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery Fee: €{{ delivery|floatformat:2 }}</h6>
                                     {% if free_delivery_delta > 0 %}
@@ -109,7 +109,7 @@
                             </tr>
                             <tr>
                                 <!-- Shopping and checkout buttons -->
-                                <td colspan="5" class="text-right">
+                                <td colspan="5" class="text-right text-end">
                                     <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 btn-lg">
                                         <span>
                                             <i class="fas fa-chevron-left"></i>
