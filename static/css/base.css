@@ -96,4 +96,9 @@ header.masthead {
     height: 5px;
 }
 
-
+/* Bag display edits */
+.notification-bag-display{
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
