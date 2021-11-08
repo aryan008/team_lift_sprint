@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <!-- Page header for checkout -->
+    <div class="container position-relative pt-5 p-2 g-0">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -15,23 +16,28 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container position-relative pt-5 g-0">
+        <!-- Page narrative for order summary -->
         <div class="row">
             <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Checkout</h2>
+                <h2 class="logo-font mt-5 text-center text-capitalize">Order Review</h2>
                 <hr>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ product_count }})</p>
-                <div class="row">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
-                    </div>
-                </div>
+            <div class="col-12 col-lg-6 order-2 mb-5">
+                <!-- Order heading -->
+                <h6 class="mb-2 mt-md-3 fw-bold">YOUR ORDER</h6>
+                <!-- Product count on checkout cart -->
+                <p class="text-muted">
+                    <small class = "text-capitalize">
+                    {% if product_count == 1 %}
+                        1 item in your bag
+                    {% else %}
+                        {{ product_count }} items in your bag{% endif %}
+                    </small>
+                </p>
+                <hr>
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
@@ -107,13 +113,13 @@
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
+						<a href="{% url 'view_bag' %}" class="btn btn-outline-dark rounded-0">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Bag</span>
 						</a>
-						<button id="submit-button" class="btn btn-black rounded-0">
+						<button id="submit-button" class="btn btn-dark rounded-0">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
@@ -123,7 +129,7 @@
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
-							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+							<span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
 						</p>
 					</div>
                 </form>
