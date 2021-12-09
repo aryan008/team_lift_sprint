@@ -112,6 +112,9 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'team_lift_sprint.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-amethyst-whale-3ec78u8n.ws-eu21.gitpod.io',
+    ]
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
