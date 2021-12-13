@@ -33,6 +33,17 @@
     border-radius: .25rem;
 }
 
+/* Set CSS for country select box */
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 /* Confirming payment overlay */
 #loading-overlay {
 	display: none;
