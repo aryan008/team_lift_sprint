@@ -1,40 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{% block head_title %}{% endblock %}</title>
-    {% block extra_head %}
-    {% endblock %}
-  </head>
-  <body>
-    {% block body %}
-
-    {% if messages %}
-    <div>
-      <strong>Messages:</strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
+{% extends "base.html" %}
+<!-- Header-->
+{% block page_header %}
+    <div class="container position-relative pt-5 p-2 g-0">
+        <div class="row">
+            <div class="col"></div>
+        </div>
     </div>
-    {% endif %}
-
-    <div>
-      <strong>Menu:</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
+{% endblock %}
+{% block content %}
+<!-- Section-->
+<section class="py-5">
+    <div class="container position-relative pt-5 g-0">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="allauth-form-inner-content">
+                    {% block inner_content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
     </div>
-    {% block content %}
-    {% endblock %}
-    {% endblock %}
-    {% block extra_body %}
-    {% endblock %}
-  </body>
-</html>
+</section>
+{% endblock %}
