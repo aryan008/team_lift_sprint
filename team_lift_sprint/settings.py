@@ -114,7 +114,7 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'team_lift_sprint.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-tomato-bandicoot-uguspgk5.ws-eu23.gitpod.io',
+    'https://8000-amber-dragonfly-uiq2vm6p.ws-eu23.gitpod.io',
     ]
 
 # Database
