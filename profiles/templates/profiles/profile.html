@@ -24,5 +24,52 @@
                 <hr>
             </div>
         </div>
-        {{ profile }}
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <!-- Delivery info for profile -->
+                <h4 class="mb-2 mt-md-3 fw-bold">Default Delivery Information</h4>
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    <fieldset class="rounded mb-1">
+                        <legend class="fieldset-label px-2 w-auto">Contact details</legend>
+                        <div class="mb-1">
+                            {{ form.default_full_name | as_crispy_field }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.default_email | as_crispy_field }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.default_phone_number | as_crispy_field }}
+                        </div>
+                    </fieldset>
+                    <fieldset class="rounded mb-1">
+                        <legend class="fieldset-label px-2 w-auto">Delivery address</legend>
+                        <div class="mb-1">
+                            {{ form.default_street_address1 | as_crispy_field }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.default_street_address2 | as_crispy_field }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.default_town_or_city | as_crispy_field }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.default_county | as_crispy_field }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.default_postcode | as_crispy_field }}
+                        </div>
+                        <div class="mb-1">
+                            {{ form.default_country | as_crispy_field }}
+                        </div>
+                    </fieldset>
+                    <button class="btn btn-success mt-2 text-uppercase float-right">Update Information</button>
+                </form>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h4 class="mb-2 mt-md-3 fw-bold">Order History</h4>
+                {{ orders }}
+            </div>
+        </div>
+    </div>
 {% endblock %}
