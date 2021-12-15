@@ -52,13 +52,13 @@
                 <ul class="dropdown-menu dropdown-menu-dark bg-dark text-white" aria-labelledby="dropdownMenuButton2">
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
-                    <li><a class="dropdown-item" href="#">Site Management</a></li>
+                        <li><a class="dropdown-item" href="{% url 'add_product' %}">Site Management</a></li>
                     {% endif %}
-                    <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
+                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
                     {% else %}
-                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_login' %}">Log In</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                        <li><a class="dropdown-item" href="{% url 'account_login' %}">Log In</a></li>
                     {% endif %}
                 </ul>
             </li>
