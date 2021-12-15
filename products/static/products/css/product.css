@@ -1,7 +1,7 @@
-#profile-update-form .form-control {
+#product-admin-form .form-control {
     color: #000;
 }
 
-#profile-update-form input::placeholder {
+#product-admin-form input::placeholder {
     color: #aab7c4;
 }
