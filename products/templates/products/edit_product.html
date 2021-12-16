@@ -31,8 +31,14 @@
                     {% csrf_token %}
                     <!-- Form for editing product -->
                     <fieldset class="rounded mb-1">
-                        <legend class="fieldset-label mb-1 px-2 w-auto">Edit Product Details</legend>
-                        {{ form | crispy }}
+                        <legend class="fieldset-label mb-2 mt-2 px-2 w-auto">Edit Product Details</legend>
+                        {% for field in form %}
+                            {% if field.name != 'image' %}
+                                {{ field | as_crispy_field }}
+                            {% else %}
+                                {{ field }}
+                            {% endif %}
+                        {% endfor %}
                     </fieldset>
                     <div>
                         <a class="btn btn-dark" href="{% url 'products' %}">Cancel</a>
@@ -42,4 +48,13 @@
             </div>            
         </div>
     </div>
+{% endblock %}
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
 {% endblock %}
