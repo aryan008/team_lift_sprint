@@ -91,6 +91,13 @@
                             <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                         {% endif %}
+                        <!-- Superuser functionality-->
+                        {% if request.user.is_superuser %}
+                        <small class="ml-3 mt-1 text-center">
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                        {% endif %}
                         <div class="card-body">
                             <!-- Product Name-->
                             <h5 class="card-title text-center fw-bold">{{ product.name }}</h5>
