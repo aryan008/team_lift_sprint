@@ -31,11 +31,11 @@
           <p class="my-0 m-1 small text-muted">Qty: {{ item.quantity }}</p>
           {% if item.product.on_sale is True %}
           <p class="my-0 ms-1 small"><strong>
-              €{{ item.product.sales_price }}</strong>
+              €{{ item.product.sales_price }} each</strong>
           </p>
           {% else %}
           <p class="my-0 ms-1 small"><strong>
-              €{{ item.product.price }}</strong>
+              €{{ item.product.price }} each</strong>
           </p>
           {% endif %}
         </div>
