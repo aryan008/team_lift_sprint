@@ -1,0 +1,1 @@
+web: gunicorn team_lift_sprint.wsgi:application

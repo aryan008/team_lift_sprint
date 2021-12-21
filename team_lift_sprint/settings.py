@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-+vi^7n&#z(ix%*%9!l&kvvo#x#t&b14eb4c1m6)#*60lc8^g9g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['adam-team-lift-sprint.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -123,12 +123,17 @@ CSRF_TRUSTED_ORIGINS = [
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
