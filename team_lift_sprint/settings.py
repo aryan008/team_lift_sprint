@@ -119,6 +119,7 @@ WSGI_APPLICATION = 'team_lift_sprint.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-sapphire-kingfisher-htz5r414.ws-eu23.gitpod.io',
+    'https://adam-team-lift-sprint.herokuapp.com/',
     ]
 
 # Database
