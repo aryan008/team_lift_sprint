@@ -32,6 +32,7 @@
           {% if item.product.on_sale is True %}
           <p class="my-0 ms-1 small"><strong>
               €{{ item.product.sales_price }} each</strong>
+              <p><i class = "text-danger">You're saving €{{ item.product_saving }} on this item!</i></p>
           </p>
           {% else %}
           <p class="my-0 ms-1 small"><strong>

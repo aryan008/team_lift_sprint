@@ -22,7 +22,9 @@ def bag_contents(request):
                 product.price * (
                     100 - product.discount_on_product) / 100).quantize(
                         Decimal('0.00'))
-            product_saving = quantity * product.discount_on_product
+            product_saving = Decimal(product.price * (
+                product.discount_on_product / 100)).quantize(
+                        Decimal('0.00'))
         else:
             total += quantity * product.price
             product_total = quantity * product.price
