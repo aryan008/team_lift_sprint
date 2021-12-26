@@ -15,11 +15,14 @@ def profile(request):
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
+            # Save the valid form
             form.save()
             messages.success(request, 'Profile updated successfully')
 
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            # Error message if profile form didnt save
+            messages.error(request, 'Update failed.\
+                Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -35,6 +38,7 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """ Get the order history of user """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
