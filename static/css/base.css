@@ -150,3 +150,21 @@ header.masthead {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+
+/* Hover elements on site wide buttons */
+.btn-dark:hover {
+    color: #fafafa;
+    background-color: #345991;
+    border-color: #345991;
+  }
+
+.nav-link:hover {
+    text-decoration: underline;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.banner-contact-link:hover {
+    font-size: 1.5rem;
+}
