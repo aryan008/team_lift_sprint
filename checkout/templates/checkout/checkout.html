@@ -40,7 +40,7 @@
                 </p>
                 {% for item in bag_items %}
                     <div class="row">
-                        <div class="col-2 mb-1">
+                        <div class="col-2 mb-2">
                             <!-- Product Image -->
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
@@ -55,16 +55,16 @@
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 fst-italic text-muted">{{ item.product.description }}</p>
                             {% if item.product.on_sale is True %}
-                                <p class="my-0">€{{ item.product.sales_price }}</p>
+                                <p class="my-0 mb-1 text-muted fw-bold">PPU: €{{ item.product.sales_price }}</p>
                             {% else %}
-                                <p class="my-0 text-muted fw-bold">PPU: €{{ item.product.price }}</p>
+                                <p class="my-0 mb-1 text-muted fw-bold">PPU: €{{ item.product.price }}</p>
                             {% endif %}
                         </div>
                         <div class="col-3 text-right">
                             <!-- Quantity -->
                             <p class="my-0 small fw-bold">Quantity: {{ item.quantity }}</p>
-                        </div>
-                        
+                            <p class="my-0 fw-bold">Subtotal: €{{ item.product_total }}</p>
+                        </div>                        
                     </div>
                 {% endfor %}
                 <hr class="mt-2 mb-3">
