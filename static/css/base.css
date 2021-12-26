@@ -169,6 +169,20 @@ header.masthead {
     font-size: 1.5rem;
 }
 
+.cart-nav {
+    padding-top: 2px;
+}
+
+.bag-nav:hover{
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    font-weight: normal !important;
+}
+
+.bag-icon:hover {
+    color: rgb(204, 145, 36);
+}
+
 /* Footer links update for hover */
 .footer-contact-links {
     color: #000

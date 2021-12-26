@@ -36,7 +36,7 @@
     </ul>
         <!-- Search form -->
         <form method="GET" action="{% url 'products' %}" class="d-flex border border-dark">
-            <input class="form-control" type="search" name="q" placeholder="Search a product" aria-label="Search store button">
+            <input class="form-control" type="search" name="q" placeholder="Search..." aria-label="Search store button">
             <button class="btn btn-dark rounded-0" type="submit" aria-label="Search store button"><span class="input-group">
                     <i class="fas fa-search"></i>
                 </span></button>
@@ -44,16 +44,16 @@
     <!-- Account Management -->
     <div class="dropdown">
         <ul class="nav mt-2 ms-xl-3 mt-xl-0">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown mt-1 me-1 rounded-3 me-1">
                 <button type="button" class="btn btn-dark bg-dark dropdown-toggle d-lg-block collapse-margin"
                     id="dropdownMenuButton1" data-bs-toggle="dropdown">
                     My Account
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark bg-dark text-white" aria-labelledby="dropdownMenuButton2">
                     {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                        <li><a class="dropdown-item" href="{% url 'add_product' %}">Site Management</a></li>
-                    {% endif %}
+                        {% if request.user.is_superuser %}
+                            <li><a class="dropdown-item" href="{% url 'add_product' %}">Site Management</a></li>
+                        {% endif %}
                         <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
                         <li><a class="dropdown-item" href="{% url 'account_logout' %}">Log Out</a></li>
                     {% else %}
@@ -62,22 +62,20 @@
                     {% endif %}
                 </ul>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'view_bag' %}">
-                    <div class="text-center">
-                        <p class="my-0 text-dark">
-                            {% if grand_total %}
+            <!-- Cart link -->
+            <li class="nav-item cart-nav bg-dark rounded-3 mt-1 pe-1 ps-1 d-lg-block collapse-margin">
+                <a class="bag-nav text-decoration-none" href="{% url 'view_bag' %}">
+                    <p class="my-0 mt-1 text-white">
+                        {% if grand_total %}
+                            <i class="fas fa-shopping-cart bag-icon"> {{product_count}}</i> -
                             €{{ grand_total|floatformat:2 }}
-                            {% else %}
+                        {% else %}
                             €0.00
-                            {% endif %}
-                        </p>
-                    </div>
+                        {% endif %}
+                    </p>
                 </a>
             </li>
         </ul>
     </div>
-    <!-- Cart link -->
-
-    </div>
+</div>
 
