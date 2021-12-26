@@ -5,6 +5,7 @@ from .models import Order
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
+        # Order form fields for user
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
                   'town_or_city', 'postcode', 'country',
@@ -16,6 +17,7 @@ class OrderForm(forms.ModelForm):
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
+        # Placeholder fields for user
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
@@ -30,10 +32,12 @@ class OrderForm(forms.ModelForm):
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':
+                # if not country, initialise placeholder text on form
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
+            # apply stripe input class for style
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False

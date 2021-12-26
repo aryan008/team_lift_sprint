@@ -2,11 +2,13 @@ from django.contrib import admin
 from .models import Order, OrderLineItem
 
 
+# Initial Order admin class
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
 
+# Order admin class for admin panel
 class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
 
