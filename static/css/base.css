@@ -153,7 +153,7 @@ header.masthead {
 
 
 /* Hover elements on site wide buttons */
-.btn-dark:hover {
+.home-page-button:hover {
     color: #fafafa;
     background-color: #345991;
     border-color: #345991;
@@ -169,6 +169,7 @@ header.masthead {
     font-size: 1.5rem;
 }
 
+/* Footer links update for hover */
 .footer-contact-links {
     color: #000
 }
