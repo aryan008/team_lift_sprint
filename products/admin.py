@@ -4,6 +4,7 @@ from .models import Category, Product
 # Register your models here.
 
 
+# Admin category name class
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
@@ -11,6 +12,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
+# Admin product display fields
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -23,6 +25,7 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
     )
 
+    # Ordering by sku
     ordering = ('sku',)
 
 

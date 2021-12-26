@@ -4,6 +4,7 @@ from decimal import Decimal
 # Create your models here.
 
 
+# Category model
 class Category(models.Model):
 
     class Meta:
@@ -19,6 +20,7 @@ class Category(models.Model):
         return self.friendly_name
 
 
+# Product model
 class Product(models.Model):
     AREA = (
         ('individual', 'Individual'),
@@ -26,7 +28,8 @@ class Product(models.Model):
         ('universal', 'Universal'),
         )
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -40,6 +43,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    # Sales price calculation where product is on sale
     def sales_price(self):
         '''Calculate the new price after applying the product discount
         Source of help: https://helperbyte.com/questions/77886/
