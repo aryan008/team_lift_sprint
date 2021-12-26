@@ -22,9 +22,11 @@ def bag_contents(request):
                 product.price * (
                     100 - product.discount_on_product) / 100).quantize(
                         Decimal('0.00'))
+            product_saving = quantity * product.discount_on_product
         else:
             total += quantity * product.price
             product_total = quantity * product.price
+            product_saving = 0
 
         product_count += quantity
         bag_items.append({
@@ -32,6 +34,7 @@ def bag_contents(request):
             'quantity': quantity,
             'product': product,
             'product_total': product_total,
+            'product_saving': product_saving,
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
