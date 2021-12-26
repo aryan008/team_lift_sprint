@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 <!-- Header-->
 {% block page_header %}
+<header class="masthead">
     <div class="container position-relative pt-5 p-2 g-0">
         <div class="row">
-            <div class="col"></div>
+            <div class="col-12">
+                <div class="text-white">
+                    <h1>Equipment for Personal or Team Use</h1>
+                    <p class="text-white-50 mb-0 lead">Check out our clearance section...</p>
+                    <p class="text-white mb-0">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href = "{% url 'products' %}" class="btn btn-danger btn-lg mt-4 me-3" type="button">Shop now!</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <br>
+</header>
 {% endblock %}
 {% block content %}
 <!-- Section-->
