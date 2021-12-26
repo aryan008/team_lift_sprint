@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
+#os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
+# 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['adam-team-lift-sprint.herokuapp.com', 'localhost']
 
@@ -118,7 +120,7 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'team_lift_sprint.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-sapphire-kingfisher-htz5r414.ws-eu23.gitpod.io',
+    'https://8000-sapphire-alligator-lbavmwgd.ws-eu25.gitpod.io',
     'https://adam-team-lift-sprint.herokuapp.com/',
     ]
 

@@ -53,15 +53,19 @@ card.addEventListener('change', function (event) {
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
+    // prevent default action
     ev.preventDefault();
+    // multiple submission prevention by disabling the bag element/button
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
 
+    // get the checked attribute boolean value for saving information
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
     // From using {% csrf_token %} in the form
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    // creating the variable to pass into the checkout cache view
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
@@ -69,10 +73,14 @@ form.addEventListener('submit', function(ev) {
     };
     var url = '/checkout/cache_checkout_data/';
 
+    // Post function to cache view and wait for response with then function
+    // callback functionality using the done method for execution
     $.post(url, postData).done(function () {
+        // stripe payment method from card and execute on result
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
+                // billing stripe data
                 billing_details: {
                     name: $.trim(form.full_name.value),
                     phone: $.trim(form.phone_number.value),
@@ -86,6 +94,7 @@ form.addEventListener('submit', function(ev) {
                     }
                 }
             },
+            // shipping stripe data if different from billing
             shipping: {
                 name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
@@ -99,6 +108,7 @@ form.addEventListener('submit', function(ev) {
                 }
             },
         }).then(function(result) {
+            // error handling on the callback functionality
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
                 var html = `
@@ -112,11 +122,13 @@ form.addEventListener('submit', function(ev) {
                 card.update({ 'disabled': false});
                 $('#submit-button').attr('disabled', false);
             } else {
+                // if status is succeeded on stripe then submit the form
                 if (result.paymentIntent.status === 'succeeded') {
                     form.submit();
                 }
             }
         });
+        // 400 response will trigger a page reload
     }).fail(function () {
         // just reload the page, the error will be in django messages
         location.reload();
