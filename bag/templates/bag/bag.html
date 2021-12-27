@@ -16,8 +16,8 @@
         <!-- Overlay for start of shopping bag page -->
         <div class="row">
             <div class="col">
-                <h2 class="fw-bold text-center text-capitalize mb-4 mt-3">Shopping Bag<span><i class="ps-3 fas fa-shopping-basket"></i></span></h2>
-                <p class="m-1 text-center bg-dark text-white rounded-0 fw-bold d-none d-md-block">FREE STANDARD DELIVERY WHEN YOU SPEND €100.</p>
+                <h2 class="fw-bold text-center text-capitalize mb-4 mt-3 ms-1">Shopping Bag<span><i class="ps-3 fas fa-shopping-basket"></i></span></h2>
+                <p class="m-1 text-center bg-dark text-white rounded-0 fw-bold d-none d-md-block ms-1">FREE STANDARD DELIVERY WHEN YOU SPEND €100.</p>
             </div>
         </div>
         <div class="row mb-5">
@@ -33,18 +33,18 @@
                     <div class="row">
                         <div class="col">
                             {% include "bag/checkout-buttons.html" %}
-                            <p class="text-muted mb-5">A summary of your bag is below</p>
+                            <p class="text-muted mb-3 ms-2">A summary of your bag is below:</p>
                         </div>
                     </div>
                     {% for item in bag_items %}
                     <div class="row">
-                        <div class="col-12 col-sm-6 mb-2">
+                        <div class="col-12 col-sm-6 mb-2 ms-2">
                             {% include "bag/product-image.html" %}
                         </div>
                         <div class="col-12 col-sm-6 mb-2">
                             {% include "bag/product-info.html" %}
                         </div>
-                        <div class="col-12 col-sm-6 order-sm-last">
+                        <div class="col-12 col-sm-6 order-sm-last ms-2 mb-2">
                             <p class="my-0"><strong>€{{ item.product_total }}</p></strong>
                         </div>
                         <div class="col-12 col-sm-6">
@@ -58,7 +58,7 @@
                     </div>
                     {% endfor %}
                     <!-- Add back to top button icon -->
-                    <div class="position-relative mt-4 me-5 mb-2">
+                    <div class="position-relative mt-4 mb-2">
                         <div class="top-jump-button position-absolute bottom-50 end-50">
                             <a class="top-jump">
                                 <i class="fas fa-arrow-alt-circle-up fa-3x" style="color:#000"></i>

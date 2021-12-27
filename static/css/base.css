@@ -290,4 +290,28 @@ header.masthead {
         font-size: .8rem;
     }
 
+    .delivery-info{
+        font-size: .8rem
+    }
+
+    .checkout-button{
+        font-size: .9rem;
+    }
+
+    .bag-image{
+        max-width: 95%;
+    }
+
+    .bag-form{
+        max-width: 60%;
+    }
+
+    .float-end{
+        margin-right: 7.6rem;
+    }
+
+    .bag-final-buttons{
+        font-size: .7rem;
+    }
+
 }
