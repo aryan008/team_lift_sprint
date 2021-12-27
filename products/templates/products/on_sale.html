@@ -7,10 +7,10 @@
     <div class="container position-relative pt-5 p-2 g-0">
         <div class="row">
             <div class="col-8">
-                <div class="text-white">
+                <div class="text-white non-home-narrative">
                     <h1>Welcome to Team Lift Sprint!</h1>
                     <h3>See below for our amazing products...</h3>
-                    <a class="text-white-50 mb-0 lead banner-contact-link" href="{% url 'contact' %}" alt="Contact us">Need more Info? Contact Us.</a>
+                    <a class="text-white-50 mb-0 lead banner-contact-link d-none d-md-block" href="{% url 'contact' %}" alt="Contact us">Need more Info? Contact Us.</a>
                 </div>
             </div>
             <div class="col-4 d-none d-md-block">
@@ -33,14 +33,14 @@
 <div class="container g-0">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="text-dark"><strong class="text-uppercase">On Sale</h2>
+            <h2 class="text-dark product-heading"><strong class="text-uppercase">On Sale</h2>
             <hr class="w-100 mb-2">
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-6 mb-2 ms-1 me-1">
             <!-- Get the count of products and the count if the user searches -->
-            <div class = "mb-2">
+            <div class = "mb-2 product-mini-narrative">
                 <span class="small"><a href="{% url 'products' %}">All Products</a> | </span>
                 {% if products|length == 1 %}
                 1 product {% if search_term %} result for:
@@ -51,9 +51,9 @@
                 {% endif %}
             </div>
             <!-- Add search functionality and dropdowns -->
-            <div class="sort-select-wrapper w-50">
+            <div class="search-bar sort-select-wrapper w-50">
                 <select id="sort-selector"
-                    class="rounded-3 border border-dark border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    class="rounded-3 border border-dark bg-dark text-light border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to
                         high)</option>
@@ -98,19 +98,23 @@
                             <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                         </small>
                         {% endif %}
-                        <div class="card-body">
+                        <div class="card-body product-body">
+                            <!-- Button to view product -->
+                            <div class="text-center">
+                                <a href="{% url 'product_detail' product.id %}" class = "badge rounded-pill bg-dark text-light mb-1">View</a>
+                            </div>
                             <!-- Product Name-->
-                            <h5 class="card-title text-center fw-bold">{{ product.name }}</h5>
+                            <h5 class="card-title product-narrative text-center fw-bold">{{ product.name }}</h5>
                             <!-- Product price and discounted price if appropriate-->
                             {% if product.on_sale is True %}
                             <p class="text-center">
                                 <span
-                                    class="lead ps-1 fw-light pt-1 text-danger text-decoration-line-through">€{{ product.price }}</span>
-                                <span class="lead ps-1 fw-bold fst-italic pt-1">€{{ product.sales_price }}</span>
+                                    class="product-narrative lead ps-1 fw-light pt-1 text-danger text-decoration-line-through">€{{ product.price }}</span>
+                                <span class="product-narrative lead ps-1 fw-bold fst-italic pt-1">€{{ product.sales_price }}</span>
                             </p>
                             <p class = "text-center fw-light text-danger"><i class="fas fa-arrow-down"></i>({{ product.discount_on_product|floatformat:0 }}%)</p>
                             {% else %}
-                            <p class="lead ps-1 text-center fw-bold fst-italic pt-1">€{{ product.price }}</p>
+                            <p class="lead ps-1 text-center fw-bold fst-italic pt-1 product-narrative">€{{ product.price }}</p>
                             {% endif %}
                             <!-- Product category-->
                             {% if product.category %}

@@ -252,4 +252,38 @@ header.masthead {
         text-align: center;
         color: white;
     }
+
+    .non-home-narrative{
+        margin-left: 2rem;
+    }
+
+    .non-home-narrative h1{
+        font-size: 1.2rem;
+    }
+
+    .non-home-narrative h3{
+        font-size: .8rem;
+    }
+
+    .product-heading{
+        font-size: 1.2rem;
+    }
+
+    .product-mini-narrative{
+        font-size: .9rem;
+    }
+
+    .search-bar {
+        font-size: .6rem;
+    }
+
+    .product-body{
+        font-size: .8rem;
+    }
+
+    .product-narrative{
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+
 }

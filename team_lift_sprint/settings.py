@@ -121,7 +121,7 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'team_lift_sprint.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-sapphire-crow-g9wmq1at.ws-eu25.gitpod.io',
+    'https://8000-coffee-lizard-efmzpcd0.ws-eu25.gitpod.io',
     'https://adam-team-lift-sprint.herokuapp.com/',
     ]
 
