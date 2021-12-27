@@ -286,4 +286,8 @@ header.masthead {
         margin-bottom: 2px;
     }
 
+    .product-detail-button{
+        font-size: .8rem;
+    }
+
 }

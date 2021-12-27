@@ -124,11 +124,11 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-1 mt-5">
+                                    <a href="{% url 'products' %}" class="btn btn-dark rounded-1 mt-5 product-detail-button">
                                         <span class="icon"><i class="fas fa-chevron-left"></i></span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <input type="submit" class="btn btn-success rounded-1 text-uppercase ms-3 mt-5"
+                                    <input type="submit" class="btn btn-success rounded-1 text-uppercase ms-lg-3 mt-5 product-detail-button"
                                         value="Add to Bag">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
