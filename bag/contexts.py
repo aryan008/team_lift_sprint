@@ -26,7 +26,7 @@ def bag_contents(request):
                         Decimal('0.00'))
             product_saving = Decimal(product.price * (
                 product.discount_on_product / 100)).quantize(
-                        Decimal('0.00'))
+                        Decimal('0.00')) * quantity
         else:
             # Else block if product not on sale
             total += quantity * product.price
