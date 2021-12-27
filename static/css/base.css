@@ -314,4 +314,18 @@ header.masthead {
         font-size: .7rem;
     }
 
+    .message-container {
+        position: fixed;
+        top: 100px;
+        left: 5px;
+        width: 300px;
+        z-index: 99999999999;
+    }
+
+    .notification-bag-display{
+        height: 100px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
 }
