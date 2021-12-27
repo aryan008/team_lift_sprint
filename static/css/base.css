@@ -193,3 +193,35 @@ header.masthead {
     font-weight: bold;
     color: #2f97c0;
 }
+
+/* Mobile layout */
+@media (max-width: 991px) {
+    .site-title{
+        font-size: 1.2rem;
+    }
+
+    .masthead-narrative {
+        font-size: .9rem;
+        width: fit-content;
+        margin-left: 2rem;
+    }
+
+    .site-navbar ul li a,
+    .site-navbar ul li button{
+        font-size: .8rem;
+    }
+
+    .form-search {
+        height: 30px;
+    }
+
+    .home-page-narrative h2,
+    .home-page-narrative p{
+        font-size: 1rem;
+    }
+
+    .area-right,
+    .area-left{
+        padding-left: 5rem;
+    }
+}

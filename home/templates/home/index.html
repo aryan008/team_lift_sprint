@@ -8,11 +8,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-white">
-                    <h1>Equipment for Personal or Team Use</h1>
-                    <p class="text-white-50 mb-0 lead">Check out our clearance section...</p>
-                    <p class="text-white mb-0">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
+                    <h1 class = "masthead-narrative">Equipment for Personal or Team Use</h1>
+                    <p class="text-white-50 mb-0 lead masthead-narrative">Check out our clearance section...</p>
+                    <p class="text-white mb-0 masthead-narrative">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
                     <div class="d-grid gap-2 d-md-block">
-                        <a href = "{% url 'products' %}" class="btn btn-danger btn-lg mt-4 me-3" type="button">Shop now!</a>
+                        <a href = "{% url 'products' %}" class="btn btn-danger btn-lg mt-4 me-3 masthead-narrative" type="button">Shop now!</a>
                     </div>
                 </div>
             </div>
@@ -31,14 +31,14 @@
             <div class="col-lg-6 image-area g-0">
                 <img src="{{ MEDIA_URL }}individual.webp" alt="Man lifting weights" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
-            <div class="col-lg-6 area-descriptor area-right g-0">
+            <div class="col-xs-12 col-lg-6 area-descriptor area-right g-0 home-page-narrative">
                 <h2 class="text-uppercase fw-bold mb-4">Individual Training</h2>
 
                 <p class="lead fst-italic">Need to up your game for your home gym and workouts?</p>
                 <a href="{% url 'products' %}?category=weightlifting,track,cardio" class="btn btn-dark home-page-button me-1 mt-3" type="button">Shop Individual</a>
             </div>
             <!-- Team -->
-            <div class="col-lg-6 area-descriptor area-left g-0">
+            <div class="col-lg-6 area-descriptor area-left g-0 home-page-narrative">
                 <h2 class="text-uppercase fw-bold mb-4">Team Training</h2>
 
                 <p class="lead fst-italic">Prepare your teams professionally and with purpose!</p>
@@ -51,14 +51,14 @@
             <div class="col-lg-6 image-area g-0">
                 <img src="{{ MEDIA_URL }}weightroom.webp" alt="Dumbbells on a rack" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
-            <div class="col-lg-6 area-descriptor area-right g-0">
+            <div class="col-lg-6 area-descriptor area-right g-0 home-page-narrative">
                 <h2 class="text-uppercase fw-bold mb-4">Weightroom</h2>
 
                 <p class="lead fst-italic">Add to your home/gym weightlifting collection!</p>
                 <a href="{% url 'products' %}?category=weightlifting,team equipment,gym equipment" class="btn btn-dark home-page-button me-1 mt-3" type="button">Shop Weightroom Essentials</a>
             </div>
             <!-- Pitch/Track -->
-            <div class="col-lg-6 area-descriptor area-left g-0">
+            <div class="col-lg-6 area-descriptor area-left g-0 home-page-narrative">
                 <h2 class="text-uppercase fw-bold mb-4">Pitch/Track</h2>
 
                 <p class="lead fst-italic">Prepare you or your teams for their specific sport!</p>
