@@ -215,9 +215,19 @@ header.masthead {
         height: 30px;
     }
 
+    .home-page-narrative{
+        height:200px;
+    }
+
     .home-page-narrative h2,
     .home-page-narrative p{
         font-size: 1rem;
+    }
+
+    .area-descriptor,
+    .area-descriptor a{
+        padding-top: .5rem;
+        margin-bottom: 2rem;
     }
 
     .area-right,
