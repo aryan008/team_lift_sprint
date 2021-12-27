@@ -27,10 +27,10 @@
         <div class="row">
             <div class="col-12 col-lg-6 order-2 mb-5">
                 <!-- Order heading -->
-                <h4 class="mb-2 mt-md-3 fw-bold">YOUR ORDER</h4>
+                <h4 class="mb-2 mt-md-3 ms-3 fw-bold">YOUR ORDER</h4>
                 <hr>
                 <!-- Product count on checkout cart -->
-                <p class="text-muted">
+                <p class="text-muted ms-1">
                     <small class = "text-capitalize">
                     {% if product_count == 1 %}
                         1 item in your bag
@@ -53,23 +53,24 @@
                         <div class="col-7">
                             <!-- Product Name, description and if statement for price -->
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 fst-italic text-muted">{{ item.product.description }}</p>
+                            <p class="my-0 fst-italic text-muted checkout-narrative">{{ item.product.description }}</p>
                             {% if item.product.on_sale is True %}
-                                <p class="my-0 mb-1 text-muted fw-bold">PPU: €{{ item.product.sales_price }}</p>
+                                <p class="my-0 mb-1 text-muted fw-bold checkout-narrative">PPU: €{{ item.product.sales_price }}</p>
                             {% else %}
-                                <p class="my-0 mb-1 text-muted fw-bold">PPU: €{{ item.product.price }}</p>
+                                <p class="my-0 mb-1 text-muted fw-bold checkout-narrative">PPU: €{{ item.product.price }}</p>
                             {% endif %}
+                            <p class="my-0 fw-bold checkout-narrative">Subtotal: €{{ item.product_total }}</p>
                         </div>
                         <div class="col-3 text-right">
                             <!-- Quantity -->
-                            <p class="my-0 small fw-bold">Quantity: {{ item.quantity }}</p>
-                            <p class="my-0 fw-bold">Subtotal: €{{ item.product_total }}</p>
+                            <p class="my-0 small fw-bold checkout-narrative">Qty: {{ item.quantity }}</p>
+                            
                         </div>                        
                     </div>
                 {% endfor %}
                 <hr class="mt-2 mb-3">
                 <!-- Creating the total and subtotal -->
-                <div class="row">
+                <div class="row ms-1 me-2 checkout-narrative">
                     <div class="col-5">
                         <p>
                             <strong>Total </strong><small>(excl. Delivery Charge):</small>
@@ -97,7 +98,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 order-1">
-                <h4 class="mb-2 mt-md-3 fw-bold">Delivery Information</h4>
+                <h4 class="mb-2 mt-md-3 ms-3 fw-bold text-uppercase">Delivery Information</h4>
                 <hr>
                 <!-- Form for processing payments -->
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -121,10 +122,10 @@
                         <div class="start">
                             <!-- User option to save delivery information if logged in -->
 							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+								<label class="form-check-label checkout-narrative" for="id-save-info">Save this delivery information to my profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
-								<label class="form-check-label" for="id-save-info">
+								<label class="form-check-label checkout-narrative" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                                     <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
@@ -143,7 +144,7 @@
                     </fieldset>
                     <!--Buttons and cost on card-->
                     <div class="submit-button text-right mt-3 mb-3">                    
-						<a href="{% url 'view_bag' %}" class="btn btn-dark rounded-0">
+						<a href="{% url 'view_bag' %}" class="btn btn-dark rounded-0 ms-2">
 							<span>
 								<i class="fas fa-chevron-left"></i>
 							</span>
@@ -155,7 +156,7 @@
 								<i class="fas fa-lock"></i>
 							</span>
 						</button>
-						<p class="small text-danger mt-2">
+						<p class="small text-danger mt-2 ms-1">
 							<span>
 								<i class="fas fa-exclamation-circle"></i>
 							</span>

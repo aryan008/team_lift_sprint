@@ -328,4 +328,8 @@ header.masthead {
         overflow-y: auto;
     }
 
+    .checkout-narrative{
+        font-size: .8rem;
+    }
+
 }
