@@ -204,6 +204,7 @@ header.masthead {
         font-size: .9rem;
         width: fit-content;
         margin-left: 2rem;
+        --bs-gutter-x: 1.5rem;
     }
 
     .site-navbar ul li a,
@@ -221,12 +222,16 @@ header.masthead {
 
     .home-page-narrative h2,
     .home-page-narrative p{
-        font-size: 1rem;
+        font-size: .8rem;
+    }
+
+    .home-page-button {
+        font-size: .8rem;
     }
 
     .area-descriptor,
     .area-descriptor a{
-        padding-top: .5rem;
+        padding-top: 1rem;
         margin-bottom: 2rem;
     }
 

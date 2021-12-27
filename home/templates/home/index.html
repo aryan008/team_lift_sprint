@@ -28,43 +28,45 @@
     <div class="container-fluid g-0">
         <div class="row">
             <!-- Individual -->
-            <div class="col-lg-6 image-area g-0">
+            <div class="col-md-6 image-area g-0">
                 <img src="{{ MEDIA_URL }}individual.webp" alt="Man lifting weights" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
-            <div class="col-xs-12 col-lg-6 area-descriptor area-right g-0 home-page-narrative">
+            <div class="col-md-6 area-descriptor area-right g-0 home-page-narrative">
                 <h2 class="text-uppercase fw-bold mb-4">Individual Training</h2>
 
                 <p class="lead fst-italic">Need to up your game for your home gym and workouts?</p>
                 <a href="{% url 'products' %}?category=weightlifting,track,cardio" class="btn btn-dark home-page-button me-1 mt-3" type="button">Shop Individual</a>
             </div>
+            <hr class = "d-md-none">
             <!-- Team -->
-            <div class="col-lg-6 area-descriptor area-left g-0 home-page-narrative">
+            <div class="col-md-6 area-descriptor area-left g-0 home-page-narrative">
                 <h2 class="text-uppercase fw-bold mb-4">Team Training</h2>
 
                 <p class="lead fst-italic">Prepare your teams professionally and with purpose!</p>
                 <a href="{% url 'products' %}?category=team equipment,gym equipment" class="btn btn-dark home-page-button me-1 mt-3" type="button">Shop Teams</a>
             </div>
-            <div class="col-lg-6 image-area g-0">
+            <div class="col-md-6 image-area g-0">
                 <img src="{{ MEDIA_URL }}team.webp" alt="Team lining up for training" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
             <!-- Weightroom -->
-            <div class="col-lg-6 image-area g-0">
+            <div class="col-md-6 image-area g-0">
                 <img src="{{ MEDIA_URL }}weightroom.webp" alt="Dumbbells on a rack" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
-            <div class="col-lg-6 area-descriptor area-right g-0 home-page-narrative">
+            <div class="col-md-6 area-descriptor area-right g-0 home-page-narrative">
                 <h2 class="text-uppercase fw-bold mb-4">Weightroom</h2>
 
                 <p class="lead fst-italic">Add to your home/gym weightlifting collection!</p>
                 <a href="{% url 'products' %}?category=weightlifting,team equipment,gym equipment" class="btn btn-dark home-page-button me-1 mt-3" type="button">Shop Weightroom Essentials</a>
             </div>
+            <hr class = "d-md-none">
             <!-- Pitch/Track -->
-            <div class="col-lg-6 area-descriptor area-left g-0 home-page-narrative">
+            <div class="col-md-6 area-descriptor area-left g-0 home-page-narrative">
                 <h2 class="text-uppercase fw-bold mb-4">Pitch/Track</h2>
 
                 <p class="lead fst-italic">Prepare you or your teams for their specific sport!</p>
                 <a href="{% url 'products' %}?category=track,team equipment" class="btn btn-dark home-page-button me-1 mt-3" type="button">Shop Outdoor Essentials</a>
             </div>
-            <div class="col-lg-6 image-area g-0">
+            <div class="col-md-6 image-area g-0">
                 <img src="{{ MEDIA_URL }}pitch.webp" alt="Lined pitch for running" style='height: 100%; width: 100%; object-fit: cover'>
             </div>
         </div>
