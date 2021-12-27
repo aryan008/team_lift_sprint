@@ -1,0 +1,12 @@
+<p class="my-0"><strong>{{ item.product.name }}</strong></p>
+{% if item.product.on_sale is True %}
+<p class="my-0">
+    <strong>€{{ item.product.sales_price }}</strong>
+    <span><i class="text-danger">You're saving €{{ item.product_saving }} on this item!</i></span>
+</p>
+{% else %}
+<p class="my-0">
+    <strong>€{{ item.product.price }}</strong>
+</p>
+{% endif %}
+<p class="my-0 small fst-italic">{{ item.product.description }}</p>
