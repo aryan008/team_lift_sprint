@@ -12,7 +12,6 @@ The site has been tested on a number of devices including desktop, tablets and m
 * [Site Owner/Developer and Product/Business Goals](#site-owner/developer-and-productbusiness-goals)
 * [First Time Visitor Goals](#first-time-visitor-goals)
 * [Returning and Frequent Visitor Goals](#returning-and-frequent-visitor-goals)
-* [Breakdown of site design](#breakdown-of-site-design-)
 * [User Experience (UX)](#user-experience-ux)
   * *The 5 planes of User Experience – Decisions and Reasons*
    1.	[Strategy plane](#strategy-plane)
@@ -20,6 +19,7 @@ The site has been tested on a number of devices including desktop, tablets and m
    3.	[Structure plane](#structure-plane)
    4.	[Skeleton plane](#skeleton-plane)
    5.	[Surface plane](#surface-plane)
+   6.	[Breakdown of site design](#breakdown-of-site-design)
    
   *	[Who/ What/ How](#who-what-how)
   *	[User stories](#user-stories)
@@ -99,3 +99,38 @@ As a first-time visitor of the site, I want:
 2.	View my previous orders
 3.	Log in and out easily
 4.	Save/Update my contact details
+
+
+## User Experience (UX)
+### _The 5 planes of User Experience – Decisions and Reasons_
+#### Strategy Plane
+
+Question |	Response for site design
+-------- | ---------
+Is the content culturally appropriate? |	Design will be simplistic in terms of UX and is based on leading sporting equipment sites - dark initial interface with training images and clear product viewing
+Is the content relevant? |	Acting as an training product hub, only relevant “Training” content will be displayed
+Can we provide content in an intuitive way? |	The site will have a series of toast messages/redirects/buttons and, using Python and JavaScript, will feel interactive to the site user. Django's allauth functionality manages the user from registration to their profile management
+Is the technology appropriate? |	Team Lift Sprint is essentially a online training store with CRUD functionality for all user types (Visitor/user/superuser), and as such Django/Python is the primary source of technology for the site back-end. A combination of CSS and JavaScript will be used for applicable user experience on the front-end
+Who is my target audience? |	Discussed in the opening part of this ReadMe.
+Product considerations |	No overload of content/imagery on the site as per appropriation. Clear feedback loops from must be present for all user types on what they are clicking on in the site. Navigation/layout must be easy across all devices for the users
+
+##### Strategy feasibility scoping
+Opportunity |	Importance |	Feasibility
+-------- | --------- | -----------
+Ability for unregistered users to purchase an item | 5 | 5
+CRUD functionality on user's bag items regardless of registered or not | 5 | 5
+Django allauth technology for registration and managing of user accounts | 5 | 5
+Feedback loops on all site users CRUD Functionality with regards to items - messages of bag edits | 5 | 5
+Success message on purchasing an item, including order number and confirmation | 5 | 5
+Ability for logged in users to view their profile and saved address | 4 | 5
+A section allowing the users to purchase recommended items based on their interests - e.g. a track athlete on grass | 3 | 2
+Superuser functionality to to perform CRUD operations on all items | 5 | 5
+Pagination on all products view | 3 | 2
+User error handling – appropriate redirects on user interaction and display message | 5 | 5
+A split of products based on what the user is looking for - themselves/team/indoor/outdoor | 3 | 5
+Footer links include FAQ's that is standard across all ecommerce sites | 4 | 5
+Varying product images for each product (side view/back) | 3 | 3
+Integration of secure payment system | 5 | 5
+Pre paying the user has the ability to edit their bag items | 5 | 5
+Sort functionality on all product views | 3 | 5
+Products on sale are clearly defined and shown how much the user saves by purchasing | 4 | 5
