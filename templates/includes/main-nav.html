@@ -1,5 +1,5 @@
 <div class="collapse navbar-collapse container-fluid site-navbar" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mx-auto m-2 mb-lg-0 ms-lg-4">
+    <ul class="navbar-nav me-auto mx-auto m-2 ms-lg-4">
         <!-- All products -->
         <li class="nav-item">
             <a class="nav-link text-dark fw-bold" href="{% url 'products' %}">All Products</a>
@@ -35,7 +35,7 @@
         </li>
     </ul>
         <!-- Search form -->
-        <form method="GET" action="{% url 'products' %}" class="d-flex border border-dark form-search">
+        <form method="GET" action="{% url 'products' %}" class="d-flex border border-dark form-search ms-lg-4">
             <input class="form-control" type="search" name="q" placeholder="Search..." aria-label="Search store button">
             <button class="btn btn-dark rounded-0" type="submit" aria-label="Search store button"><span class="input-group">
                     <i class="fas fa-search"></i>
@@ -43,7 +43,7 @@
         </form>
     <!-- Account Management -->
     <div class="dropdown">
-        <ul class="nav mt-2 ms-xl-3 mt-xl-0">
+        <ul class="nav mt-2 ms-lg-4 mt-xl-0">
             <li class="nav-item dropdown mt-1 me-1 rounded-3 me-1">
                 <button type="button" class="btn btn-dark bg-dark dropdown-toggle d-lg-block collapse-margin"
                     id="dropdownMenuButton1" data-bs-toggle="dropdown">

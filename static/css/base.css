@@ -195,6 +195,13 @@ header.masthead {
 }
 
 /* Mobile layout */
+@media (max-width: 1399px) {
+    .form-search{
+        max-width: 50%;
+        margin-bottom: 1rem;
+    }
+}
+
 @media (max-width: 991px) {
     .site-title{
         font-size: 1.2rem;
@@ -349,7 +356,11 @@ header.masthead {
 }
 
 @media (max-width: 585px) {
-    .bag-form{
+    .bag-form {
         width: 50%;
+    }
+
+    .form-search {
+        max-width: 80%;
     }
 }
