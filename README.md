@@ -18,11 +18,7 @@ The site has been tested on a number of devices including desktop, tablets and m
    2.	[Scope plane](#scope-plane)
    3.	[Structure plane](#structure-plane)
    4.	[Skeleton plane](#skeleton-plane)
-   5.	[Surface plane](#surface-plane)
-   6.	[Breakdown of site design](#breakdown-of-site-design)
-   
-  *	[Who/ What/ How](#who-what-how)
-  *	[User stories](#user-stories)
+   5.	[Breakdown of site design](#breakdown-of-site-design)
 
 * [Design Features](#design-features)
   1. [Wireframes](#wireframes)
@@ -168,3 +164,33 @@ How does the user know to scroll/what to do? | Clear CTA buttons on the site lan
 What if a user makes a mistake on their bag and wishes to edit | CRUD functionality is present on the user’s bag before payment is made – if the user wants to edit/delete their item, buttons are present for the user to perform this action in the bag view.
 User error – what if it happens? | Toast messages appear on the site indicating to the user what has happened.
 Information architecture | Using the tree structure with no more than 3 clicks for the user to reach a destination.
+
+#### Skeleton Plane
+Question |	Response for site design
+-------- | ---------
+How will the users get around? | Easy navigation for the user depending on their user status as mentioned above.
+How will I present the content? | Following industry norms of the header -> content -> footer approach across all pages through the use of Django "extends" functionality.
+How do I show relevant content? | By making the content audience appropriate as defined by the site user goals.
+How do I structure the features and usability? | Non-registered user: Home/All products/Login/Create account navbar links and prompt buttons on the home page. Registered user: Home/All Products/Logout/Profile
+
+#### Surface Plane
+Question |	Response for site design
+-------- | ---------
+What is the visual language? |	Django extends as noted above. Colouring as per testing norms, layout is informative, Fonts as per media display standard, images/toast messages are clear and pop to the user, CTA buttons for site progression.
+What is the economy? |	The most important user/owner elements are easily recognised
+Readability and consistency |	Each site page is familiar to the user in terms of font/styling consistency
+
+
+<h1 align = "center">UPPPPDAAAAATE</h1>
+#### Breakdown of site design
+
+#### Wireframes
+* Desktop/tablet wireframe - <h1 align = "center">UPPPPDAAAAATE</h1>[attached](static/rm_files/wireframe-desktop-tablet.pdf)
+* Mobile wireframe - <h1 align = "center">UPPPPDAAAAATE</h1>[attached](static/rm_files/wireframe-mobile.pdf)
+
+#### Typography
+Lato is used as the main font on the site, as imported through Google Fonts. Sans-serif is used as the fallback font. According to an article on [perpetual media group](http://www.perpetualmediagroup.ca/tenbestfontsforprintandweb/):
+_“The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness.”_
+
+Further, in this [blog post](https://www.justinmind.com/blog/best-google-web-fonts-website/), Lato is ranked as #1 on the “30 best Google Fonts for your website”. It is known that the designer of this font, Lukasz Dziedzic, _“created Lato to work transparently in body text and also to stand out individually when used in larger-sized titles”_.
+With these descriptions in mind, Lato is used for the site design/accompanying text.
