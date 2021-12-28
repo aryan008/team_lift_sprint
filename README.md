@@ -27,6 +27,7 @@ The site has been tested on a number of devices including desktop, tablets and m
 * [Design & UX – How do they come together?](#design--ux--how-do-they-come-together)
   * [User goals](#user-goals)
   * [Site owner/designer goals](#site-owner/designer-goals)
+  * [Application-features](#application-features)
 
 * [Information Architecture?](#information-architecture)
   *	[Site Logic and diagram](#site-logic-and-diagram)
@@ -75,13 +76,13 @@ As a first-time visitor of the site, I want:
 3.	To purchase relevant equipment related to individual/team sports
 4.	Create a profile - including login/register functionality
 5.	An instant feedback loop from site navigation on what I am doing
-6.	Easy navigation of the site
+6.	Easy navigation of the site including searching for a term
 7.	Built-in safety protocols – user authentication, appropriate redirects, site action feedback
 8.	The ability to edit/delete any items in my bag
 9.	Secure card payment protocols
 10.	Ability to view my checkout items if I have accidentally exited the site
 11.	Buy an item without registering
-12.	Browse products easily
+12.	Browse products easily including sorting them
 13.	View and purchase whats on sale
 14.	Have a FAQ section where I can get in touch with the company regarding shipping/delivery, etc.
 15.	See if I have any shipping costs
@@ -120,12 +121,17 @@ A section allowing the users to purchase recommended items based on their intere
 Superuser functionality to to perform CRUD operations on all items | 5 | 5
 Pagination on all products view | 3 | 2
 User error handling – appropriate redirects on user interaction and display message | 5 | 5
+Wish List | 3 | 1
 A split of products based on what the user is looking for - themselves/team/indoor/outdoor | 3 | 5
 Footer links include FAQ's that is standard across all ecommerce sites | 4 | 5
 Varying product images for each product (side view/back) | 3 | 3
 Integration of secure payment system | 5 | 5
+Calculations for VAT & postage in different countries | 4 | 1
+Cart products saved to profile | 4 | 3
 Pre paying the user has the ability to edit their bag items | 5 | 5
 Sort functionality on all product views | 3 | 5
+Title on products page for categories | 3 | 5
+Pagination | 3 | 5
 Products on sale are clearly defined and shown how much the user saves by purchasing | 4 | 5
 
 #### Scope Plane
@@ -133,11 +139,11 @@ What's in? |	What's out?
 -------- | ---------
 Ability for unregistered users to purchase an item | A section allowing the users to purchase recommended items based on their interests - e.g. a track athlete on grass
 CRUD functionality on user's bag items regardless of registered or not | Varying product images for each product (side view/back)
-Django allauth technology for registration and managing of user accounts | 
-Feedback loops on all site users CRUD Functionality with regards to items - messages of bag edits
-Success message on purchasing an item, including order number and confirmation
-Ability for logged in users to view their profile and saved address
-Superuser functionality to to perform CRUD operations on all items
+Django allauth technology for registration and managing of user accounts | Pagination
+Feedback loops on all site users CRUD Functionality with regards to items - messages of bag edits| Wish List
+Success message on purchasing an item, including order number and confirmation | Calculations for VAT & postage in different countries
+Ability for logged in users to view their profile and saved address | Cart products saved to profile
+Superuser functionality to to perform CRUD operations on all items | Title on products page for categories
 Pagination on all products view
 User error handling – appropriate redirects on user interaction and display message
 A split of products based on what the user is looking for - themselves/team/indoor/outdoor
@@ -204,13 +210,13 @@ User Goal | Feature(s)/ Content in response | Goal Met?
 (3)|	Content of the home page displays clear CTA on which section the user should click. Further, Navbar links are split appropriately based on product category|	Yes
 (4)|	Available in the navbar for non-registered/non-logged in users.|	Yes
 (5)|	The use of toast popups and checkout success features provides feedback to users on edit/delete/checkout bag items.|	Yes
-(6)|	Site is simplistic in nature as an online store - 3 click approach taken as noted in the UX section of this ReadMe|	Yes
+(6)|	Site is simplistic in nature as an online store - 3 click approach taken as noted in the UX section of this ReadMe. Search bar included in navbar|	Yes
 (7)|	Django allauth templates are included in the project for use of their safety protocols|	Yes
 (8)|	Any user can edit/delete bag items when they view their bag before checkout.|	Yes
 (9)|	Stripe safety protocols and card processing is applied, allowing the user to securely checkout.|	Yes
 (10)|	Cookie storage in the browser allows an individual to exit the site and reenter without the loss of any items in their bag.|	Yes
 (11)|	All non-registered user CRUD functionality is present despite not having an account.|	Yes
-(12)|	As per (3) above.|	Yes
+(12)|	As per (3) above. Sort function present on all product pages|	Yes
 (13)|	On sale section linked in the navbar. Further, all products that are on sale have a red pill image showing how much they are on sale, plus the percentage discount on the product. On checkout, the user is shown how much they are saving in euro by purchasing this on sale item.|	Yes
 (14)| FAQ links are present at the bottom of each html page of the site.| Yes
 (15)| Delivery costs are shown in both the bag, toast notifications and checkout views, as well as an indication of how much extra they should spend to ibtain free delivery.| Yes
@@ -231,6 +237,85 @@ Goal | Feature(s)/ Content in response | Goal Met?
 (6)|	Administrator access to manage all products/add a product on the database present on superuser login.|	Yes
 (7)| Use of django authorization, CSRF, Heroku, Stripe and secret key variables all ensure a secure site.| Yes
 
+### Application features
+
+##### Bootstrap Usage
+The Bootstrap toolkit was used throughout including:
+
+* Grid
+* Navbar
+* Buttons
+* Toasts
+* Cards
+* Forms
+
+##### Toasts
+
+Bootstrap toasts were used to feedback to the user on success, information and error messages during product CRUD usage.
+Successful
+
+<h1 align = "center">UPPPPDAAAAATE</h1>
+Informational
+<h1 align = "center">UPPPPDAAAAATE</h1>
+Error
+<h1 align = "center">UPPPPDAAAAATE</h1>
+Product Reviews
+
+### Items on sale
+
+The site superuser/owner can use their priviliges to select whether a product is on sale through the site management. They can set the percentage discount, and the updated product will then be included with other sale products from the respective view.
+Each product on sale will have a Sale pill badge, original price with a strike through, sales price and arrow percentage discount in the product card.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+##### Bag/Checkout/Checkout success
+
+The site has separate pages for bag, checkout and checkout success corresponding to each stage of the purchase process. The customer is able to alter the quantity in the cart between 1 and 99. The price for individual products, sub-total of quantity for each product, overall bag total and grand total after shipping cost (if applicable) is shown.
+
+##### Checkout
+
+Name, email, phone, address and card details are required on the checkout page.
+A checkbox provides an option to save the contact and address details back to the profile.
+
+##### Free shipping
+
+A purchase below €100 will incur a 5% of order total shipping cost.
+The shipping cose is waived for orders over €100.
+
+##### Profile
+
+Customer’s contact details and order history are saved in their profile. Contact details can be updated on the profile or check out pages.
+Security is in place to ensure only the customer who submitted the order can see the order history.
+
+##### Add/Edit products
+
+A site owner can create new product for the Site Management link on the navbar. Existing products can be updated via the Edit and Delete links on each item in the product views.
+
+##### Search box
+
+Full search capability on product titles and description.
+
+##### Defensive programming
+
+* Confirm Deletion
+* HTML validity
+* Admin pages protected from non-admin access
+* Errors 404 and 500 handled by pages within the site
+* Comprehensive user notifications through toast/feedback loop noted
+
+##### Crispy forms
+
+Used to improve function and style of forms.
+
+##### AWS S3 hosting
+
+Static and media files hosted on AWS S3.
+
+##### Responsive on all device sizes tested
+
+The use of the Bootstrap grid system and additional media queries enables the site to display effectively on a broad range of desktop, tablet and mobile screen sizes. See the testing section of this file for further information on this. To note, the media queries present are:
+* max-width: 1399px
+* max-width: 991px
+* max-width: 585px
 
 ## Information architecture
 
