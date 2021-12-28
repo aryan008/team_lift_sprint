@@ -29,7 +29,7 @@ The site has been tested on a number of devices including desktop, tablets and m
   * [Site owner/designer goals](#site-owner/designer-goals)
   * [Application-features](#application-features)
 
-* [Information Architecture?](#information-architecture)
+* [Information Architecture](#information-architecture)
   *	[Site Logic and diagram](#site-logic-and-diagram)
   *	[User Types and permissions](#user-types-and-permissions)
   *	[CRUD Functionality](#crud---create-read-update-and-delete)
@@ -394,41 +394,54 @@ See [link](static/rm_files/logic-diagram.pdf) for the database schema implemente
 ### Frameworks, Libraries and Programmes
 
 [jQuery](https://jquery.com/)
+
 Used as part of JavaScript.
 
 [GitHub](https://github.com/)
+
 Used to store projects code upon Git push.
 
 [Django](https://www.djangoproject.com/)
+
 Site structure.
 
 [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+
 Used for templating and used in navbar/toasts/buttons/grid/breakpoints/lists and forms.
 
 [Git](https://en.wikipedia.org/wiki/Git)
+
 Used for version control through the Gitpod terminal and the Git add/commit/push action sequence.
 
 [Microsoft Word](https://www.microsoft.com/en-ie/microsoft-365/word)
+
 Used for designing of the wireframes as I am completing this project on my work laptop with no access to Balsamiq.
 
 [Favicon](https://favicon.io/favicon-converter/)
+
 Used to create the icons of the site.
 
 [Font awesome](https://fontawesome.com/)
+
 Used to add in the button icons throughout the site.
 
 [Google fonts](https://fonts.google.com/)
+
 Used to add the Lato font and related font weights to the CSS style file using the @import url function. To improve site load times, this file is loaded into the head element of the base HTML page and backed up by using sans-serif in CSS.
 
 [Heroku](https://www.heroku.com/about)
+
 A web hosting service that supports Python applications.
 
 [Postgres](https://www.postgresql.org/)
+
 Live database.
 
 [AWS S3](https://aws.amazon.com/s3/)
+
 Hosting live static and media files.
 
 [JSON](https://www.json.org/json-en.html)
+
 An open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs. Used for storing the attribute information per the “About” page in this project
 
