@@ -40,12 +40,14 @@ The site has been tested on a number of devices including desktop, tablets and m
   *	[Frameworks, Libraries and Programmes](#frameworks-libraries-and-programmes)
 
 * [Testing](#testing)
-  * [Code validation](#code-validation)
-  * [Accessibility testing](#accessibility-testing)
-  * [Responsive testing](#responsive-testing)
-  * [Manual testing](#manual-testing)
-  * [Testing user stories from User Experience (UX) section](#testing-user-stories-from-user-experience-ux-section)
-  * [Known bugs](#known-bugs)
+
+The following areas of testing were reviewed:
+  * Code validation
+  * Accessibility testing
+  * Responsive testing
+  * Manual testing
+  * Testing user stories from User Experience (UX) section
+  * Known bugs
 
 * [Deployment](#deployment)
   * [Process of deployment](#process-of-deployment)
@@ -443,5 +445,17 @@ Hosting live static and media files.
 
 [JSON](https://www.json.org/json-en.html)
 
-An open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs. Used for storing the attribute information per the “About” page in this project
+An open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs. Used for storing the attribute information for the products and categories of this file.
 
+## Testing
+
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+See [link](static/rm_files/logic-diagram.pdf) for testing of the following areas:
+
+* Code validation
+* Accessibility testing
+* Responsive testing
+* Manual testing
+* Testing user stories from User Experience (UX) section
+* Known bugs
