@@ -92,6 +92,7 @@ As a first-time visitor of the site, I want:
 12.	Browse products easily
 13.	View and purchase whats on sale
 14.	Have a FAQ section where I can get in touch with the company regarding shipping/delivery, etc.
+15.	See if I have any shipping costs
 
 
 ## Returning and Frequent Visitor Goals
@@ -134,3 +135,36 @@ Integration of secure payment system | 5 | 5
 Pre paying the user has the ability to edit their bag items | 5 | 5
 Sort functionality on all product views | 3 | 5
 Products on sale are clearly defined and shown how much the user saves by purchasing | 4 | 5
+
+#### Scope Plane
+What's in? |	What's out?
+-------- | ---------
+Ability for unregistered users to purchase an item | A section allowing the users to purchase recommended items based on their interests - e.g. a track athlete on grass
+CRUD functionality on user's bag items regardless of registered or not | Varying product images for each product (side view/back)
+Django allauth technology for registration and managing of user accounts | 
+Feedback loops on all site users CRUD Functionality with regards to items - messages of bag edits
+Success message on purchasing an item, including order number and confirmation
+Ability for logged in users to view their profile and saved address
+Superuser functionality to to perform CRUD operations on all items
+Pagination on all products view
+User error handling – appropriate redirects on user interaction and display message
+A split of products based on what the user is looking for - themselves/team/indoor/outdoor
+Footer links include FAQ's that is standard across all ecommerce sites
+Integration of secure payment system
+Pre paying the user has the ability to edit their bag items
+Sort functionality on all product views
+Products on sale are clearly defined and shown how much the user saves by purchasing
+
+#### Structure Plane
+Question |	Response for site design
+-------- | ---------
+How do I navigate easily? | Navbar is present across all site pages and is fixed to the top. Pages present on the account management section of the navbar will depend on the following: Unregistered user - On the home page, prompt to create an account/login. Home/product sections are present regardless of user status. Registered user – As above but including navbar links for profile page as well as log out option. Superuser – As above but including a navbar link for managing the site products. Throughout the site, buttons/navbar links are present to allow the user to bring them to the areas they wish to visit. On the products pages, a "bring to top" button is available for the user to click rather than scrolling needlessly back up.
+How is the information presented? | Using sporting equipment site style colours/features and text content that allow the user to achieve their goals. Dark navbar background to light product interface for a clear separation of site navigation to bag additions/management. Clear feedback loop for all users whenever the user performs CRUD functionality. The buttons through the site pop to the user, clearly demonstrating what will happen should they click on them.
+State changes | There is a clear state change at the navbar level depending on the user of the site as previously mentioned – no account, registered user, superuser. Appropriate redirects/CTA buttons are present when the user interacts with both the navbar and the buttons of the site, including “keep shopping”/"checkout securely"/"View bag" both in the html pages and the toast forms. Upon checking out, a clear state change a success message appears for the order which allows them to see their purchase. Finally, state changes are present on all CRUD function buttons when the user interacts with them along with the Toast messages, tying in with the feedback loop that the user action was performed successfully.
+Is the site consistent? | Correct styling and fonts are applied throughout the site, which was achieved using the "extends" functionality in Django.
+Is the site predictable? | All navigation is familiar to the user in terms of font/styling consistency.
+Is the site appropriately visible? | See the testing section of this ReadMe file for visibility testing.
+How does the user know to scroll/what to do? | Clear CTA buttons on the site landing page on where the user wishes to visit.
+What if a user makes a mistake on their bag and wishes to edit | CRUD functionality is present on the user’s bag before payment is made – if the user wants to edit/delete their item, buttons are present for the user to perform this action in the bag view.
+User error – what if it happens? | Toast messages appear on the site indicating to the user what has happened.
+Information architecture | Using the tree structure with no more than 3 clicks for the user to reach a destination.
