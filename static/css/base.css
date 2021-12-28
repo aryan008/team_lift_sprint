@@ -222,7 +222,8 @@ header.masthead {
 
     .home-page-narrative h2,
     .home-page-narrative p{
-        font-size: .8rem;
+        font-size: 1.2rem;
+        margin-top: 2rem;
     }
 
     .home-page-button {
@@ -304,7 +305,7 @@ header.masthead {
     }
 
     .bag-form{
-        max-width: 60%;
+        width: 100%;
     }
 
     .float-end{
@@ -345,5 +346,10 @@ header.masthead {
     .checkout-success-text{
         font-size: .8rem;
     }
+}
 
+@media (max-width: 585px) {
+    .bag-form{
+        width: 50%;
+    }
 }

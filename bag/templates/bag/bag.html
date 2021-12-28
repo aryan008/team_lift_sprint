@@ -23,7 +23,7 @@
         <div class="row mb-5">
             <div class="col">
                 {% if bag_items %}
-                <div class="d-block d-md-none">
+                <div class="d-block d-sm-none">
                     <!-- Mobile display for total and checkout for UX -->
                     <div class="row">
                         <div class="col">
@@ -45,7 +45,7 @@
                             {% include "bag/product-info.html" %}
                         </div>
                         <div class="col-12 col-sm-6 order-sm-last ms-2 mb-2">
-                            <p class="my-0"><strong>€{{ item.product_total }}</p></strong>
+                            <p class="my-0"><strong>Subtotal: €{{ item.product_total }}</p></strong>
                         </div>
                         <div class="col-12 col-sm-6">
                             {% include "bag/quantity-form.html" %}
@@ -66,12 +66,12 @@
                         </div>
                     </div>
                 </div>
-                    <div class="table-responsive rounded d-none d-md-block">
+                    <div class="table-responsive rounded d-none d-sm-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black border-bottom text-center fs-5">
                                 <!-- Bag items column headers -->
                                 <tr>
-                                    <th scope="col">Product Image</th>
+                                    <th scope="col">Image</th>
                                     <th scope="col">Description</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Subtotal</th>
