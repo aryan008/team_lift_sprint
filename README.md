@@ -254,12 +254,14 @@ A visitor who registers for an account automatically becomes a "user". Users hav
 Administrators have all the rights of a logged in user, but they also have the right to manage the information of all products in the store, as well as add a product. They can verify email addresses of users that wish to create an account. They can delete any user except themselves. This is a security feature so that an administrator doesn't accidentally delete their own account.
 
 ### CRUD Functionality
--------- | --------- | -------- | -------- | --------
-Visitor|	No|	Yes|	No|	No|
-User|	Yes|	Yes|	Yes|	Yes – own profile/entry
-Admin|	Yes|	Yes|	Yes|	Yes – other profiles
 
-As seen in the table above, all CRUD functionality is present in the application, however, CRUD operations are restricted to some user types.
+User type | Create |	Read |	Update |	Delete
+-------- | --------- | -------- | -------- | --------
+Visitor|	Yes|	Yes|	Yes|	Yes|
+User|	Yes|	Yes|	Yes|	Yes
+Admin|	Yes|	Yes|	Yes|	Yes
+
+As seen in the table above referencing purchasing a product, all CRUD functionality is present in the application. However, some CRUD operations are restricted to particular user types - noted below.
 
 #### Create
 
