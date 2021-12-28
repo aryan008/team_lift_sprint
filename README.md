@@ -662,41 +662,30 @@ Please see this [link](https://docs.github.com/en/repositories/creating-and-mana
 8. Select Grant Public Read Access to the objects
 <h1 align = "center">UPPPPDAAAAATE</h1>
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
 ## Credits
 ### Content
 
 * [Code Institute](https://codeinstitute.net/): Their sample [README.md](https://github.com/Code-Institute-Solutions/SampleREADME) was used as a design guide for my ReadMe file.
+* The site was based on the Code Institute Boutique Ado project and as such the majority of django models/form/quanity javascript/sort functionality are based on this logic, however they are tailored to my project needs.
+* Deployment notes - [Sneaker Dadi](https://github.com/thirdelement/sneaker-dadi): Their sample [README.md](https://github.com/thirdelement/sneaker-dadi#readme) was used as a guide for my ReadMe deployment section above.
 * [Markdown help](https://guides.github.com/features/mastering-markdown/#) for this ReadMe documentation.
-* Code Institutes [pre-installed gitpod repository](https://github.com/Code-Institute-Org/gitpod-full-template)
+* Code Institutes [pre-installed gitpod repository](https://github.com/Code-Institute-Org/gitpod-full-template).
 * Responsive image at the top of the ReadMe file is from [Am I Responsive](http://ami.responsivedesign.is/).
-* Bootstrap 5: [Link](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-* Inspiration for the project was taken from [Whoop.com](https://www.whoop.com/?gclid=Cj0KCQjw24qHBhCnARIsAPbdtlJMEeBAwL6vnVGpczV1gEFtw6Z9vybBGAYaTQhIIfbe7UPaKCGNbxAaAjisEALw_wcB)
-* Deployment notes - Amy O Shea MS3 project [here](https://github.com/AmyOShea/MS3-Cocktail-Hour)
+* Bootstrap 5: [Link](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
+* Inspiration for the project was taken from [mcsport.ie](https://www.mcsport.ie/).
+* Stripe styling provided from Stripe website on the checkout form, including payment processing spinner.
 
 ### Media
 #### Attribute sources/links
-Attribute name|Information link|Image source|Credit to artist
--------- | --------- | -------- | --------
-Hydration| [Here](https://www.usada.org/athletes/substances/nutrition/fluids-and-hydration/)| [Here](https://images.unsplash.com/photo-1548780607-46c78f38182d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80)| Mitchell Luo
-Stretch| [Here](https://blog.bridgeathletic.com/stretching-improves-your-health-strength-training)| [Here](https://images.unsplash.com/photo-1600026453194-11ae289732b8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RyZXRjaGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60)| Michael DeMoya
-Self Myofascial Release (SMR)| [Here](https://puori.com/blogs/puorilife/benefits-of-self-myofascial-release)| [Here](https://pyxis.nymag.com/v1/imgs/51c/954/4f1bb1fa9fd1f868cd635fe12ccd755a3a-foamrollerlede.rhorizontal.w600.jpg)| Derek Haven
-Cold Therapy| [Here](https://training-conditioning.com/article/hot-topic-cool-solutions-when-and-why-to-use-hot-cold-therapy-on-athletes/)| [Here](https://www.centreofexcellence.com/media/image/e9/08/9275b6ca0b64a0125467f1d892c8.jpeg)| Grace Yi Yun
-Nutrition| [Here](https://kairostech.io/the-role-of-diet-nutrition-in-sports-performance/)| [Here](https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)| Katie Smith
-Training| [Here](https://www.ais.gov.au/position_statements/content/training-load-in-relation-to-loading-and-unloading-phases-of-training)| [Here](https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)|Sven Mieke
-Sleep| [Here](https://www.sleepfoundation.org/physical-activity/athletic-performance-and-sleep)| [Here](https://images.unsplash.com/photo-1529435022610-ccc7cab8499e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80)| Hamza Bounaim
-Feeling| [Here](https://metrifit.com/blog/why-should-you-monitor-your-athletes/)| [Here](https://images.unsplash.com/photo-1519311965067-36d3e5f33d39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80)| Victor Freitas
+* Products - The product images were taken either from [Rogue](https://www.rogueeurope.eu/?locale=en-GB) or [Mcsport](https://www.mcsport.ie/)
+* Home page images from [Unsplash](https://unsplash.com):
+  * Pitch - [Link](https://unsplash.com/photos/fDmpxdV69eA). Credit to Artist @thomascpark
+  * Weightlifter - [Link](https://unsplash.com/photos/7kEpUPB8vNk). Credit to Artist @Anastase Maragos
+  * Team Photo - [Link](https://unsplash.com/photos/6XUKomqujZM). Credit to Artist Alora Griffiths
+  * Weight rack - [Link](https://unsplash.com/photos/uwk8IS-HfJ8). Credit to Artist @Rick Barrett
 
 #### Font awesome
-Link for font awesome “About” page entries: [Link](https://fontawesome.com/)
+Link for font awesome “Button”/"Bag"/"Footer" icons: [Link](https://fontawesome.com/)
 
 #### Favicon
 Favicon creation at: [Link](https://favicon.io/favicon-converter/)
@@ -706,17 +695,10 @@ Link for Google Fonts: [Link](https://fonts.google.com/)
  
 ### Code
  
-* Crisp images on about page: [Link](https://css-tricks.com/almanac/properties/i/image-rendering/)
-* JavaScript window path active class: [Link](https://codepen.io/figarali/pen/araWdP)
-* Python username/login/logout features: From Code Institute Task manager project
-* Python/JSON Attributes help: From Code Institute
+* JSON Fixtures file help: From Code Institute
 * Bootstrap Navbar: [Link](https://getbootstrap.com/docs/5.0/forms/form-control/)
-* “Are you sure you want to delete?”: [Link](https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete)
-* Password reset check: [Link](https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727518)
-* Python date difference formulae: [Link](https://stackoverflow.com/questions/8419564/difference-between-two-dates-in-python)
-* Python reverse a list: [Link](https://www.programiz.com/python-programming/methods/list/reverse)
-* Mongo DB Index Creation: [Link](https://docs.mongodb.com/manual/indexes/)
 * Support for creating the ReadMe file linked table of content: [here](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents) and [here](https://www.setcorrect.com/portfolio/work11/)
+* Support from @jo_ci and related CSRF error on django 4.0 update - [link](https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-trusted-origins)
 
 ### Acknowledgements
 
