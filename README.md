@@ -230,3 +230,68 @@ Goal | Feature(s)/ Content in response | Goal Met?
 (5)|	Noted above.|	Yes
 (6)|	Administrator access to manage all products/add a product on the database present on superuser login.|	Yes
 (7)| Use of django authorization, CSRF, Heroku, Stripe and secret key variables all ensure a secure site.| Yes
+
+
+## Information architecture
+
+### Site Logic and diagram
+The site logic was developed using Python, Django, Json, Heroku, JavaScript and JQuery. Django templating language was utilised in the creation of the site.
+See below "User Types and Permissions"/"CRUD Functionality" sections for more information.
+
+<h1 align = "center">UPPPPDAAAAATE</h1>
+See [link](static/rm_files/logic-diagram.pdf) for a diagram of the site logic.
+
+### User Types and permissions
+There are three types of users that this website is designed for:
+
+#### Visitor/Non registered User
+A visitor is anyone who navigates to this website and can see home/products pages. Visitors can view the products, their narrative, add them to a cart with all CRUD functionality and checkout with an order number. They can also register for an account/login with email verification.
+
+#### Logged in User
+A visitor who registers for an account automatically becomes a "user". Users have the same rights as visitors, plus they have access to their own profile where they can see all of their past orders and create their default profile information for checkout purposes. These users can change/forgot their password and log out.
+
+#### Administrator/Superuser
+Administrators have all the rights of a logged in user, but they also have the right to manage the information of all products in the store, as well as add a product. They can verify email addresses of users that wish to create an account. They can delete any user except themselves. This is a security feature so that an administrator doesn't accidentally delete their own account.
+
+### CRUD Functionality
+-------- | --------- | -------- | -------- | --------
+Visitor|	No|	Yes|	No|	No|
+User|	Yes|	Yes|	Yes|	Yes – own profile/entry
+Admin|	Yes|	Yes|	Yes|	Yes – other profiles
+
+As seen in the table above, all CRUD functionality is present in the application, however, CRUD operations are restricted to some user types.
+
+#### Create
+
+Narrative|User|Admin|Visitor
+-------- | --------- | -------- | --------
+Account creation|Yes|Yes|Yes
+Purchase a product|Yes|Yes|No
+Password functionality|Yes|Yes|No
+
+#### Read
+Narrative|User|Admin|Visitor
+-------- | --------- | -------- | --------
+Home/Products Pages|Yes|Yes|Yes
+User profile|Yes|Yes|No
+Past orders|Yes|Yes|No
+Manage/verify users|No|Yes|No
+
+#### Update
+Narrative|User|Admin|Visitor
+-------- | --------- | -------- | --------
+Password|Yes|Yes|No
+Bag items|Yes|Yes|Yes
+
+#### Delete
+Narrative|User|Admin|Visitor
+-------- | --------- | -------- | --------
+Account|Yes|No|No
+Bag items|Yes|Yes|Yes
+Manage users|No|Yes|No
+
+### Database model
+
+<h1 align = "center">UPPPPDAAAAATE</h1>
+See [link](static/rm_files/logic-diagram.pdf) for the database schema implemented in the file.
+
