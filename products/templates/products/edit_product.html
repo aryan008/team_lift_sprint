@@ -30,7 +30,7 @@
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data" id="product-admin-form">
                     {% csrf_token %}
                     <!-- Form for editing product -->
-                    <fieldset class="rounded mb-1">
+                    <fieldset class="rounded mb-1 me-2 ms-2">
                         <legend class="fieldset-label mb-2 mt-2 px-2 w-auto">Edit Product Details</legend>
                         {% for field in form %}
                             {% if field.name != 'image' %}
@@ -41,7 +41,7 @@
                         {% endfor %}
                     </fieldset>
                     <div>
-                        <a class="btn btn-dark" href="{% url 'products' %}">Cancel</a>
+                        <a class="btn btn-danger me-2 ms-2" href="{% url 'products' %}">Cancel</a>
                         <button class="btn btn-dark" type="submit">Update Product</button>
                     </div>
                 </form>

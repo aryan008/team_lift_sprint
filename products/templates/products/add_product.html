@@ -30,7 +30,7 @@
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data" id="product-admin-form">
                     {% csrf_token %}
                     <!-- Form for adding product -->
-                    <fieldset class="rounded mb-1">
+                    <fieldset class="rounded mb-1 me-2 ms-2">
                         <legend class="fieldset-label mb-1 px-2 w-auto">Add Product Details</legend>
                         {% for field in form %}
                             {% if field.name != 'image' %}
@@ -41,8 +41,8 @@
                         {% endfor %}
                     </fieldset>
                     <div>
-                        <a class="btn btn-dark" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-dark" type="submit">Add Product</button>
+                        <a class="btn btn-danger ms-2 me-2" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-dark ms-2 me-2" type="submit">Add Product</button>
                     </div>
                 </form>
             </div>            

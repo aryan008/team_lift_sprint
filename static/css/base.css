@@ -337,4 +337,13 @@ header.masthead {
         font-size: .8rem;
     }
 
+    .allauth-text-mobile,
+    .order-history-mobile{
+        font-size: .9rem;
+    }
+
+    .checkout-success-text{
+        font-size: .8rem;
+    }
+
 }
