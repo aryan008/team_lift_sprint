@@ -226,7 +226,8 @@ header.masthead {
     }
 
     .home-page-button {
-        font-size: .8rem;
+        font-size: 1.2rem;
+
     }
 
     .area-descriptor,
@@ -326,6 +327,10 @@ header.masthead {
         height: 100px;
         overflow-x: hidden;
         overflow-y: auto;
+    }
+
+    .mobile-toast{
+        font-size: .8rem;
     }
 
     .checkout-narrative{
