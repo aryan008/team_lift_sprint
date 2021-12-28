@@ -459,3 +459,265 @@ See [link](static/rm_files/logic-diagram.pdf) for testing of the following areas
 * Manual testing
 * Testing user stories from User Experience (UX) section
 * Known bugs
+
+
+## Deployment
+
+### Making a Local Clone
+
+1. Log into GitHub and locate the Sneaker-Dadi repository
+2. Under the repository name, click ‘Clone or download’.
+3. To clone the repository using HTTPS, under ‘Clone with HTTPS’, copy the link.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in step 3.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+7. Click Enter. Your local clone will be created.
+
+Please see this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) for more detailed explanation.
+
+8. Following Stripe documentation, create a Stripe account and in Developers on the API key tab find the public and secret key.
+9. Also in Stripe create a Webhook and find the Webhook secret key.
+10. Create an env.py file to contain the following environment variables.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+11. Create a .gitignore file ensuring *.sqlite3, *.pyc and pycache are added.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+12. Install all project requirements with pip install –r requirements.txt
+13. Run database migrations
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+14. Load category and product fixtures in following order
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+15. Create a superuser
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+16. Run the app
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+### Deploy to Heroku
+
+1. Login to Heroku
+2. Create new app
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+3. Add name , choose closest region and click Create app
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+4. In Resources create a new Postgres database
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+5. Select Hobby Dev-Free plan and click Submit Order Form
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+6. In your IDE install dj_database_url and psycopg2
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+7. Import dj_database_url in settings.py
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+8. Replace default database with a call to dj_database_url.parse and give it the database URL from Heroku
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+9. Run all migrations again for the Postgres database (see steps 11 to 13 in Making a Local Clone)
+10. Install gunicorn to act as a webserver
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+11. Freeze requirements
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+12. Create a Procfile to tell Heroku to create a web dyno to run gunicorn to serve the Django app. This should contain the following:
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+13. Login to Heroku from your IDE using your API key as the password
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+14. Temporarily disable collectstatic so Heroku will not collect static files when we deploy.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+15. In Settings, create the following Config Vars
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+16. Add the Heroku hostname to ALLOWED_HOSTS in settings.py
+
+17. Commit & push to GitHub
+18.Initialise your IDE with Heroku and push to it.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+19. In Heroku on the Deploy tab select GitHub as Deployment method
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+20. Search for respository and click Connect
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+21. Click Enable Automatic Deploys
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+### Configuring S3
+
+1. Create an AWS account
+2. Create a bucket for S3
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+3. Uncheck Block all public access and acknowledge settings
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+4. Enable static website hosting & Save changes.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+5. Add default values for index, error doc & click Save.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+6. In Permissions on CORS paste the following:
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+7. Click Edit in Bucket policy to create a security policy
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+8. Click Policy Generator and for Principal enter * and actions add Get Object
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+9. Enter the ARN from step 7.
+10. Click Add statement
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+11. Click Generate Policy
+12. Copy Policy JSON Document
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+13. Paste into Bucket policy (with slash & asterisk at end of Resource for full access) & Save changes.
+14. Click Edit in Access Control List, check box for List access for Everyone & Save changes.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+### AWS IAM (Identity & Access Management)
+
+1. In AWS navigate to IAM, User groups, Create user group
+2. Enter a name and click Create group
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+3. In Policies, click Create Policy
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+4. On the JSON tab, click Import managed policy
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+5. Search for S3 and import the AmazonS3FullAccess policy
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+6. Add in the ARN from the AWS Policy Generator page
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+7. Click Next Tags and Review
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+8. Add a name, Description and click Create policy
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+9.Attach the policy to the group created.
+10. In User Groups select your group
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+11. In Permissions, click Attach Policies
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+12. Select the policy created & click Add permissions
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+13. In Users, click Add users
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+14. Add username and Access Type as Programmatic access & click Next
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+15. Select to add user to our policy, click Next and Create User
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+16. Click Download.csv to get your access credentials.
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+### Connect Django to S3
+
+1. Install boto3
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+2. Install Django Storages
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+3. Freeze requirements
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+4. Add the following settings for Django to connect to S3
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+5.In Heroku Config Vars add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY and delete the DISABLE_COLLECTSTATIC variable
+6. In settings.py tell Django where static files are located
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+7. Create a media folder on S3 and upload files
+<h1 align = "center">UPPPPDAAAAATE</h1>
+
+8. Select Grant Public Read Access to the objects
+<h1 align = "center">UPPPPDAAAAATE</h1>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+## Credits
+### Content
+
+* [Code Institute](https://codeinstitute.net/): Their sample [README.md](https://github.com/Code-Institute-Solutions/SampleREADME) was used as a design guide for my ReadMe file.
+* [Markdown help](https://guides.github.com/features/mastering-markdown/#) for this ReadMe documentation.
+* Code Institutes [pre-installed gitpod repository](https://github.com/Code-Institute-Org/gitpod-full-template)
+* Responsive image at the top of the ReadMe file is from [Am I Responsive](http://ami.responsivedesign.is/).
+* Bootstrap 5: [Link](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+* Inspiration for the project was taken from [Whoop.com](https://www.whoop.com/?gclid=Cj0KCQjw24qHBhCnARIsAPbdtlJMEeBAwL6vnVGpczV1gEFtw6Z9vybBGAYaTQhIIfbe7UPaKCGNbxAaAjisEALw_wcB)
+* Deployment notes - Amy O Shea MS3 project [here](https://github.com/AmyOShea/MS3-Cocktail-Hour)
+
+### Media
+#### Attribute sources/links
+Attribute name|Information link|Image source|Credit to artist
+-------- | --------- | -------- | --------
+Hydration| [Here](https://www.usada.org/athletes/substances/nutrition/fluids-and-hydration/)| [Here](https://images.unsplash.com/photo-1548780607-46c78f38182d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80)| Mitchell Luo
+Stretch| [Here](https://blog.bridgeathletic.com/stretching-improves-your-health-strength-training)| [Here](https://images.unsplash.com/photo-1600026453194-11ae289732b8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RyZXRjaGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60)| Michael DeMoya
+Self Myofascial Release (SMR)| [Here](https://puori.com/blogs/puorilife/benefits-of-self-myofascial-release)| [Here](https://pyxis.nymag.com/v1/imgs/51c/954/4f1bb1fa9fd1f868cd635fe12ccd755a3a-foamrollerlede.rhorizontal.w600.jpg)| Derek Haven
+Cold Therapy| [Here](https://training-conditioning.com/article/hot-topic-cool-solutions-when-and-why-to-use-hot-cold-therapy-on-athletes/)| [Here](https://www.centreofexcellence.com/media/image/e9/08/9275b6ca0b64a0125467f1d892c8.jpeg)| Grace Yi Yun
+Nutrition| [Here](https://kairostech.io/the-role-of-diet-nutrition-in-sports-performance/)| [Here](https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80)| Katie Smith
+Training| [Here](https://www.ais.gov.au/position_statements/content/training-load-in-relation-to-loading-and-unloading-phases-of-training)| [Here](https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80)|Sven Mieke
+Sleep| [Here](https://www.sleepfoundation.org/physical-activity/athletic-performance-and-sleep)| [Here](https://images.unsplash.com/photo-1529435022610-ccc7cab8499e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80)| Hamza Bounaim
+Feeling| [Here](https://metrifit.com/blog/why-should-you-monitor-your-athletes/)| [Here](https://images.unsplash.com/photo-1519311965067-36d3e5f33d39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80)| Victor Freitas
+
+#### Font awesome
+Link for font awesome “About” page entries: [Link](https://fontawesome.com/)
+
+#### Favicon
+Favicon creation at: [Link](https://favicon.io/favicon-converter/)
+
+#### Google Fonts
+Link for Google Fonts: [Link](https://fonts.google.com/)
+ 
+### Code
+ 
+* Crisp images on about page: [Link](https://css-tricks.com/almanac/properties/i/image-rendering/)
+* JavaScript window path active class: [Link](https://codepen.io/figarali/pen/araWdP)
+* Python username/login/logout features: From Code Institute Task manager project
+* Python/JSON Attributes help: From Code Institute
+* Bootstrap Navbar: [Link](https://getbootstrap.com/docs/5.0/forms/form-control/)
+* “Are you sure you want to delete?”: [Link](https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete)
+* Password reset check: [Link](https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727518)
+* Python date difference formulae: [Link](https://stackoverflow.com/questions/8419564/difference-between-two-dates-in-python)
+* Python reverse a list: [Link](https://www.programiz.com/python-programming/methods/list/reverse)
+* Mongo DB Index Creation: [Link](https://docs.mongodb.com/manual/indexes/)
+* Support for creating the ReadMe file linked table of content: [here](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents) and [here](https://www.setcorrect.com/portfolio/work11/)
+
+### Acknowledgements
+
+* Tutor support at Code Institute for their support.
