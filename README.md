@@ -23,10 +23,6 @@ The site has been tested on a number of devices including desktop, tablets and m
 * [Design Features](#design-features)
   1. [Wireframes](#wireframes)
   2.	[Typography](#typography)
-  3.	[Database model](#database-model)
-  4.	[Imagery](#imagery)
-  5.	[Features implemented](#features-implemented)
-  6.	[Features left to implement](#features-left-to-implement)
 
 * [Design & UX – How do they come together?](#design--ux--how-do-they-come-together)
   * [User goals](#user-goals)
@@ -36,7 +32,7 @@ The site has been tested on a number of devices including desktop, tablets and m
   *	[Site Logic and diagram](#site-logic-and-diagram)
   *	[User Types and permissions](#user-types-and-permissions)
   *	[CRUD Functionality](#crud---create-read-update-and-delete)
-  *	[Mongo DB Database Structure](#mongo-db-database-structure)
+  *	[Database model](#database-model)
 
 * [Technology and Languages used](#technology-and-languages-used)
   *	[Languages](#languages)
@@ -184,6 +180,8 @@ Readability and consistency |	Each site page is familiar to the user in terms of
 <h1 align = "center">UPPPPDAAAAATE</h1>
 #### Breakdown of site design
 
+## Design Features
+
 #### Wireframes
 * Desktop/tablet wireframe - <h1 align = "center">UPPPPDAAAAATE</h1>[attached](static/rm_files/wireframe-desktop-tablet.pdf)
 * Mobile wireframe - <h1 align = "center">UPPPPDAAAAATE</h1>[attached](static/rm_files/wireframe-mobile.pdf)
@@ -194,3 +192,41 @@ _“The semi-rounded details of the letters give Lato a feeling of warmth, while
 
 Further, in this [blog post](https://www.justinmind.com/blog/best-google-web-fonts-website/), Lato is ranked as #1 on the “30 best Google Fonts for your website”. It is known that the designer of this font, Lukasz Dziedzic, _“created Lato to work transparently in body text and also to stand out individually when used in larger-sized titles”_.
 With these descriptions in mind, Lato is used for the site design/accompanying text.
+
+## Design & UX – How do they come together?
+
+### User goals
+
+User Goal | Feature(s)/ Content in response | Goal Met?
+-------- | --------- | --------
+(1)|	Colour/Font/Layout/Navigation/CTA structure. Responsive button elements and appropriate redirects/toast/CRUD messages. Clear call to action on user progression from site landing to purchasing item(s).|	Yes
+(2)|	Displayed on the landing “home” page|	Yes
+(3)|	Content of the home page displays clear CTA on which section the user should click. Further, Navbar links are split appropriately based on product category|	Yes
+(4)|	Available in the navbar for non-registered/non-logged in users.|	Yes
+(5)|	The use of toast popups and checkout success features provides feedback to users on edit/delete/checkout bag items.|	Yes
+(6)|	Site is simplistic in nature as an online store - 3 click approach taken as noted in the UX section of this ReadMe|	Yes
+(7)|	Django allauth templates are included in the project for use of their safety protocols|	Yes
+(8)|	Any user can edit/delete bag items when they view their bag before checkout.|	Yes
+(9)|	Stripe safety protocols and card processing is applied, allowing the user to securely checkout.|	Yes
+(10)|	Cookie storage in the browser allows an individual to exit the site and reenter without the loss of any items in their bag.|	Yes
+(11)|	All non-registered user CRUD functionality is present despite not having an account.|	Yes
+(12)|	As per (3) above.|	Yes
+(13)|	On sale section linked in the navbar. Further, all products that are on sale have a red pill image showing how much they are on sale, plus the percentage discount on the product. On checkout, the user is shown how much they are saving in euro by purchasing this on sale item.|	Yes
+(14)| FAQ links are present at the bottom of each html page of the site.| Yes
+(15)| Delivery costs are shown in both the bag, toast notifications and checkout views, as well as an indication of how much extra they should spend to ibtain free delivery.| Yes
+(16)| Frequent vistor (1) - password functionality present on the login section of the navbar | Yes
+(17)| Frequent vistor (2) - Ability to view past orders for registered users on their profile page on the navbar | Yes
+(18)| Frequent vistor (3) - Present on the navbar | Yes
+(19)| Frequent vistor (4) - Registered users can update their contact/delivery/billing details on the profile app, which feed directly into the checkout app for their next purchase | Yes
+
+### Site owner/designer goals
+
+Goal | Feature(s)/ Content in response | Goal Met?
+-------- | --------- | --------
+(1)|	Noted above.|	Yes
+(2)|	Noted above.|	Yes
+(3)|	Noted in the testing section of this file.|	Yes
+(4)|	All 4 languages have been utilised in the creation.|	Yes
+(5)|	Noted above.|	Yes
+(6)|	Administrator access to manage all products/add a product on the database present on superuser login.|	Yes
+(7)| Use of django authorization, CSRF, Heroku, Stripe and secret key variables all ensure a secure site.| Yes
