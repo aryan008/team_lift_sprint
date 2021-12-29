@@ -468,7 +468,8 @@ See [link](static/rm_files/logic-diagram.pdf) for testing of the following areas
 1. Log into GitHub and locate the Team_Lift_Sprint repository
 2. Under the repository name, click ‘Clone or download’.
 3. To clone the repository using HTTPS, under ‘Clone with HTTPS’, copy the link.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-1-3.JPG)
 
 4. Open Git Bash
 5. Change the current working directory to the location where you want the cloned directory to be made.
@@ -482,21 +483,26 @@ Please see this [link](https://docs.github.com/en/repositories/creating-and-mana
 8. Following Stripe documentation, create a Stripe account and in Developers on the API key tab find the public and secret key.
 9. Also in Stripe create a Webhook and find the Webhook secret key.
 10. Create an env.py file to contain the following environment variables.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-1-10.JPG)
 
 11. Create a .gitignore file ensuring pycache is added.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-1-11.JPG)
 
 12. Install all project requirements with the following command: pip3 install –r requirements.txt
 13. Run database migrations with the following command: python3 manage.py migrate
 14. Load category and product fixtures in following order:
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-1-14.JPG)
 
 15. Create a superuser
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-1-15.JPG)
 
 16. Run the app
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-1-16.JPG)
 
 ### Deploy to Heroku
 
