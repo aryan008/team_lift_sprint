@@ -587,107 +587,119 @@ Please see this [link](https://docs.github.com/en/repositories/creating-and-mana
 
 1. Create an AWS account
 2. Create a bucket for S3
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
 3. Uncheck Block all public access and acknowledge settings
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-3a.JPG)
+
+![image](media/readme/deploy-3-3b.JPG)
 
 4. Enable static website hosting & Save changes.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-4.JPG)
 
 5. Add default values for index, error doc & click Save.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-5.JPG)
 
 6. In Permissions on CORS paste the following:
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-6.JPG)
 
 7. Click Edit in Bucket policy to create a security policy
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-7.JPG)
 
 8. Click Policy Generator and for Principal enter * and actions add Get Object
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-8.JPG)
 
 9. Enter the ARN from step 7.
 10. Click Add statement
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-10.JPG)
 
 11. Click Generate Policy
 12. Copy Policy JSON Document
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-12.JPG)
 
 13. Paste into Bucket policy (with slash & asterisk at end of Resource for full access) & Save changes.
 14. Click Edit in Access Control List, check box for List access for Everyone & Save changes.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-3-14.JPG)
 
 ### AWS IAM (Identity & Access Management)
 
 1. In AWS navigate to IAM, User groups, Create user group
 2. Enter a name and click Create group
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-4-2.JPG)
 
 3. In Policies, click Create Policy
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-4-3.JPG)
 
 4. On the JSON tab, click Import managed policy
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-4-4.JPG)
 
 5. Search for S3 and import the AmazonS3FullAccess policy
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-4-5.JPG)
 
 6. Add in the ARN from the AWS Policy Generator page
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
 7. Click Next Tags and Review
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-4-7.JPG)
 
 8. Add a name, Description and click Create policy
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
 9.Attach the policy to the group created.
 10. In User Groups select your group
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
 11. In Permissions, click Attach Policies
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-4-11.JPG)
 
 12. Select the policy created & click Add permissions
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-4-12.JPG)
 
 13. In Users, click Add users
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
 14. Add username and Access Type as Programmatic access & click Next
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
 15. Select to add user to our policy, click Next and Create User
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
 16. Click Download.csv to get your access credentials.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-4-16.JPG)
 
 ### Connect Django to S3
 
 1. Install boto3
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-5-1.JPG)
 
 2. Install Django Storages
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-5-2.JPG)
 
 3. Freeze requirements
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-5-3.JPG)
 
 4. Add the following settings for Django to connect to S3
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-5-4.JPG)
 
 5.In Heroku Config Vars add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY and delete the DISABLE_COLLECTSTATIC variable
 6. In settings.py tell Django where static files are located
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-5-6.JPG)
 
 7. Create a media folder on S3 and upload files
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-5-7.JPG)
 
 8. Select Grant Public Read Access to the objects
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-5-8.JPG)
  
 ## Credits
 ### Content
