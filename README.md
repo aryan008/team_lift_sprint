@@ -465,14 +465,16 @@ See [link](static/rm_files/logic-diagram.pdf) for testing of the following areas
 
 ### Making a Local Clone
 
-1. Log into GitHub and locate the Sneaker-Dadi repository
+1. Log into GitHub and locate the Team_Lift_Sprint repository
 2. Under the repository name, click ‘Clone or download’.
 3. To clone the repository using HTTPS, under ‘Clone with HTTPS’, copy the link.
 <h1 align = "center">UPPPPDAAAAATE</h1>
+
 4. Open Git Bash
 5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type git clone, and then paste the URL you copied in step 3.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+6. Type git clone, and then paste the URL you copied in step 3:
+$ git clone https://github.com/aryan008/team_lift_sprint
+
 7. Click Enter. Your local clone will be created.
 
 Please see this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) for more detailed explanation.
@@ -482,14 +484,12 @@ Please see this [link](https://docs.github.com/en/repositories/creating-and-mana
 10. Create an env.py file to contain the following environment variables.
 <h1 align = "center">UPPPPDAAAAATE</h1>
 
-11. Create a .gitignore file ensuring *.sqlite3, *.pyc and pycache are added.
+11. Create a .gitignore file ensuring pycache is added.
 <h1 align = "center">UPPPPDAAAAATE</h1>
 
-12. Install all project requirements with pip install –r requirements.txt
-13. Run database migrations
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
-14. Load category and product fixtures in following order
+12. Install all project requirements with the following command: pip3 install –r requirements.txt
+13. Run database migrations with the following command: python3 manage.py migrate
+14. Load category and product fixtures in following order:
 <h1 align = "center">UPPPPDAAAAATE</h1>
 
 15. Create a superuser
