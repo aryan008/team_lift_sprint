@@ -508,59 +508,80 @@ Please see this [link](https://docs.github.com/en/repositories/creating-and-mana
 
 1. Login to Heroku
 2. Create new app
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-2.JPG)
 
 3. Add name , choose closest region and click Create app
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-3.JPG)
 
 4. In Resources create a new Postgres database
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-4.JPG)
 
 5. Select Hobby Dev-Free plan and click Submit Order Form
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-5.JPG)
 
 6. In your IDE install dj_database_url and psycopg2
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-6a.JPG)
+
+![image](media/readme/deploy-2-6b.JPG)
 
 7. Import dj_database_url in settings.py
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-7.JPG)
 
 8. Replace default database with a call to dj_database_url.parse and give it the database URL from Heroku
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-8.JPG)
 
 9. Run all migrations again for the Postgres database (see steps 11 to 13 in Making a Local Clone)
 10. Install gunicorn to act as a webserver
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-10.JPG)
 
 11. Freeze requirements
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-11.JPG)
 
 12. Create a Procfile to tell Heroku to create a web dyno to run gunicorn to serve the Django app. This should contain the following:
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-12.JPG)
 
 13. Login to Heroku from your IDE using your API key as the password
-<h1 align = "center">UPPPPDAAAAATE</h1>
 
-14. Temporarily disable collectstatic so Heroku will not collect static files when we deploy.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+![image](media/readme/deploy-2-13.JPG)
+
+14. Temporarily disable collectstatic so Heroku will not collect static files when we deploy- heroku config:set DISABLE_COLLECTSTATIC=1 --app team-lift-sprint
 
 15. In Settings, create the following Config Vars
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-15.JPG)
 
 16. Add the Heroku hostname to ALLOWED_HOSTS in settings.py
 
+![image](media/readme/deploy-2-16.JPG)
+
 17. Commit & push to GitHub
 18.Initialise your IDE with Heroku and push to it.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-18.JPG)
+
+![image](media/readme/deploy-2-18b.JPG)
 
 19. In Heroku on the Deploy tab select GitHub as Deployment method
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-19.JPG)
 
 20. Search for respository and click Connect
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-20.JPG)
 
 21. Click Enable Automatic Deploys
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+![image](media/readme/deploy-2-21.JPG)
 
 ### Configuring S3
 
