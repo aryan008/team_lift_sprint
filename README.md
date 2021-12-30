@@ -18,7 +18,6 @@ The site has been tested on a number of devices including desktop, tablets and m
    2.	[Scope plane](#scope-plane)
    3.	[Structure plane](#structure-plane)
    4.	[Skeleton plane](#skeleton-plane)
-   5.	[Breakdown of site design](#breakdown-of-site-design)
 
 * [Design Features](#design-features)
   1. [Wireframes](#wireframes)
@@ -183,10 +182,6 @@ Question |	Response for site design
 What is the visual language? |	Django extends as noted above. Colouring as per testing norms, layout is informative, Fonts as per media display standard, images/toast messages are clear and pop to the user, CTA buttons for site progression.
 What is the economy? |	The most important user/owner elements are easily recognised
 Readability and consistency |	Each site page is familiar to the user in terms of font/styling consistency
-
-
-<h1 align = "center">UPPPPDAAAAATE</h1>
-#### Breakdown of site design
 
 ## Design Features
 
@@ -385,8 +380,7 @@ The use of the Bootstrap grid system and additional media queries enables the si
 The site logic was developed using Python, Django, Json, Heroku, JavaScript and JQuery. Django templating language was utilised in the creation of the site.
 See below "User Types and Permissions"/"CRUD Functionality" sections for more information.
 
-<h1 align = "center">UPPPPDAAAAATE</h1>
-See [link](static/rm_files/logic-diagram.pdf) for a diagram of the site logic.
+See the [attached link](media/readme/site-logic-diagram.pdf) for a diagram of the site logic.
 
 ### User Types and permissions
 There are three types of users that this website is designed for:
