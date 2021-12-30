@@ -2,7 +2,7 @@
 
 View the live project at the following [link](https://adam-team-lift-sprint.herokuapp.com/).
 
-<h1 align = "center">UPPPPDAAAAATE</h1>![See how the site looks across the devices](static/rm_files/responsive.PNG)
+![See how the site looks across the devices](media/readme/responsive-view.JPG)
 
 Team Lift Sprint is an online shopping site that sell a manner of goods related to sport and/or sporting equipment. It is designed for Strength & Conditioning coaches, team managers, players and those focusing on getting the best out of their performance. The website provides status and feedback to users at all stages of the shopping process, as well as items on sale and correct UX design. Coming from a sporting background myself, the site itself comprises a number of categories which are discussed in detail below with the aim that Team Lift Sprint be a "one stop shop" for all those either training individually or in a group.
 
@@ -255,20 +255,37 @@ The Bootstrap toolkit was used throughout including:
 ##### Toasts
 
 Bootstrap toasts were used to feedback to the user on success, information and error messages during product CRUD usage.
-Successful
 
-<h1 align = "center">UPPPPDAAAAATE</h1>
-Informational
-<h1 align = "center">UPPPPDAAAAATE</h1>
-Error
-<h1 align = "center">UPPPPDAAAAATE</h1>
-Product Reviews
+Successful:
+
+![image](media/readme/success-toast.JPG)
+
+Informational:
+
+![image](media/readme/success-informational.JPG)
+
+Error:
+
+![image](media/readme/success-error.JPG)
+
+As products are added/edited from the products/bag views, the corresponding toast message and cart reflect this change in status as shown:
+
+![image](media/readme/toast-and-cart.JPG)
+
+![image](media/readme/toast-and-cart2.JPG)
 
 ### Items on sale
 
 The site superuser/owner can use their priviliges to select whether a product is on sale through the site management. They can set the percentage discount, and the updated product will then be included with other sale products from the respective view.
 Each product on sale will have a Sale pill badge, original price with a strike through, sales price and arrow percentage discount in the product card.
-<h1 align = "center">UPPPPDAAAAATE</h1>
+
+See view of item on sale:
+
+![image](media/readme/item-on-sale.JPG)
+
+and the view where the superuser changes the boolean value with no sales price:
+
+![image](media/readme/item-on-sale-post.JPG)
 
 ##### Bag/Checkout/Checkout success
 
@@ -278,6 +295,8 @@ The site has separate pages for bag, checkout and checkout success corresponding
 
 Name, email, phone, address and card details are required on the checkout page.
 A checkbox provides an option to save the contact and address details back to the profile.
+
+![image](media/readme/checkout-profile-option-save.JPG)
 
 ##### Free shipping
 
@@ -289,13 +308,53 @@ The shipping cose is waived for orders over €100.
 Customer’s contact details and order history are saved in their profile. Contact details can be updated on the profile or check out pages.
 Security is in place to ensure only the customer who submitted the order can see the order history.
 
-##### Add/Edit products
+![image](media/readme/profile-order-history.JPG)
+
+##### Add/Edit/Delete products
 
 A site owner can create new product for the Site Management link on the navbar. Existing products can be updated via the Edit and Delete links on each item in the product views.
+
+Product editing (pre & post):
+
+![image](media/readme/edit-product-1.JPG)
+
+![image](media/readme/edit-product-2.JPG)
+
+Product addition and subsequent deletion:
+
+![image](media/readme/product-addition-1.JPG)
+
+![image](media/readme/product-addition-2.JPG)
+
+![image](media/readme/product-addition-3.JPG)
+
+![image](media/readme/product-addition-4.JPG)
 
 ##### Search box
 
 Full search capability on product titles and description.
+
+![image](media/readme/searchbox.JPG)
+
+and subsequent search for the term "barbell":
+
+![image](media/readme/searchbox-2.JPG)
+
+##### Order Success
+
+Upon ordering, a customer will get a successful order message with a reference number. From their profile view (if registered and signed in), they will see this order as well as any previous orders they have made:
+
+![image](media/readme/order-success-1.JPG)
+
+![image](media/readme/order-success-2.JPG)
+
+![image](media/readme/order-success-3.JPG)
+
+##### Footer Links
+
+The footer of each page contains 3 clickable HTML files which the site user can view - FAQ, Contact Us and Shipping Info:
+
+![image](media/readme/footer-help-links.JPG)
 
 ##### Defensive programming
 
