@@ -435,8 +435,9 @@ Manage users|No|Yes|No
 
 ### Database model
 
-<h1 align = "center">UPPPPDAAAAATE</h1>
-See [link](static/rm_files/logic-diagram.pdf) for the database schema implemented in the file.
+See below for the database schema implemented in the file:
+
+![image](media/readme/database-schema.JPG)
 
 ## Technology and Languages used
 
