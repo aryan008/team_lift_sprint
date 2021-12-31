@@ -31,7 +31,7 @@
         </li>
         <!-- Clearance -->
         <li class="nav-item">
-            <a class="nav-link text-danger fw-bold" href="{% url 'on_sale' %}">ON SALE</a>
+            <a class="nav-link text-danger fw-bold on-sale-text" href="{% url 'on_sale' %}">ON SALE</a>
         </li>
     </ul>
         <!-- Search form -->
@@ -49,7 +49,7 @@
                     id="dropdownMenuButton1" data-bs-toggle="dropdown">
                     My Account
                 </button>
-                <ul class="dropdown-menu dropdown-menu-dark bg-dark text-white" aria-labelledby="dropdownMenuButton2">
+                <ul class="dropdown-menu dropdown-menu-dark bg-dark text-white" aria-label="account management">
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                             <li><a class="dropdown-item" href="{% url 'add_product' %}">Site Management</a></li>

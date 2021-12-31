@@ -26,6 +26,10 @@ header.masthead {
     padding-bottom: 10rem;
   }
 
+.on-sale-text{
+    color: #9C1C28 !important;
+}
+
 /* Image and text area */
 .image-area {
     background-repeat: no-repeat;
