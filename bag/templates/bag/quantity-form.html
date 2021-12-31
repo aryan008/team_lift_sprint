@@ -4,7 +4,7 @@
         <div class="input-group">
             <div class="input-group-prepend">
                 <button class="decrement-qty btn btn-sm btn-danger rounded-0" 
-                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}" aria-label = "button to decrease quantity">
                     <span>
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
@@ -13,10 +13,10 @@
             <input class="form-control form-control-sm qty_input text-center" type="number"
                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
                 data-item_id="{{ item.item_id }}"
-                id="id_qty_{{ item.item_id }}">
+                id="id_qty_{{ item.item_id }}" aria-label = "enter a number for bag count">
             <div class="input-group-append">
                 <button class="increment-qty btn btn-sm btn-success rounded-0"
-                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}" aria-label = "button to increase quantity">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
