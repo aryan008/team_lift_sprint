@@ -86,3 +86,27 @@ See below for results on various pages:
 * Profile Page
 
 ![image](media/readme/profile-page.JPG)
+
+[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used on all pages to review site performance across a number of metrics. Green scores were awarded on the site across all lighthouse metrics as a result of this performance testing.
+
+See below for results on various pages:
+
+* Home Page
+
+![image](media/readme/lh-home-page.JPG)
+
+* Products Page
+
+![image](media/readme/lh-products-page.JPG)
+
+* Bag Page
+
+![image](media/readme/lh-bag-page.JPG)
+
+* Checkout Page
+
+![image](media/readme/lh-checkout-page.JPG)
+
+* Profile Page
+
+![image](media/readme/lh-profile-page.JPG)
