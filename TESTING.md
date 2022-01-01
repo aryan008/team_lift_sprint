@@ -110,3 +110,67 @@ See below for results on various pages:
 * Profile Page
 
 ![image](media/readme/lh-profile-page.JPG)
+
+### Responsive testing
+
+The site adheres to the Bootstrap grid layout and breakpoints. Additional media queries have been used to align many aspects of the site. The media breakpoints have been noted in the README.md file.
+[Responsinator](https://www.responsinator.com/) has also been used to review the layout online across a broad range of physical and virtual desktop, tablet and mobile devices.
+<h1>UUUPPPPDAAAATE</h1>
+
+Virtual devices have consisted of the following on Google Chrome:
+<h1>UUUPPPPDAAAATE</h1>
+
+#### Snippets of site page screenshots across device widths
+
+Widths used to test the below are:
+* 1400px - desktop
+* 768px - ipad
+* 320px - iPhone 5SE
+
+##### Home page
+
+![image](media/readme/home-desktop.JPG)
+
+![image](media/readme/home-tablet.JPG)
+
+![image](media/readme/home-mobile.JPG)
+
+##### Products page
+
+![image](media/readme/products-desktop.JPG)
+
+![image](media/readme/products-tablet.JPG)
+
+![image](media/readme/products-mobile.JPG)
+
+##### View product page
+
+![image](media/readme/view-product-desktop.JPG)
+
+![image](media/readme/view-product-tablet.JPG)
+
+![image](media/readme/view-product-mobile.JPG)
+
+##### Bag page
+
+![image](media/readme/bag-desktop.JPG)
+
+![image](media/readme/bag-tablet.JPG)
+
+![image](media/readme/bag-mobile.JPG)
+
+##### Checkout page
+
+![image](media/readme/checkout-desktop.JPG)
+
+![image](media/readme/checkout-tablet.JPG)
+
+![image](media/readme/checkout-mobile.JPG)
+
+##### Profile page
+
+![image](media/readme/profile-desktop.JPG)
+
+![image](media/readme/profile-tablet.JPG)
+
+![image](media/readme/profile-mobile.JPG)
