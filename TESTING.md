@@ -3,7 +3,7 @@
 As per the table of contents, the following areas of testing were reviewed:
 
 * Code validation
-* Accessibility testing
+* Accessibility/Lighthouse testing
 * Responsive testing
 * Manual testing
 * Testing user stories from User Experience (UX) section
@@ -48,3 +48,41 @@ The below three errors are present on the HTML pages where the sort function is 
 
 As above explanations, these are not true errors but due to the templating language present in Django/Python language. HTML validation showed no further errors and as such this project has passed this testing protocol.
 
+##### JSHint JavaScript Validator Services
+
+See below screenshots for results on JSHint validation on seperate JS code (3) - no errors present:
+
+![image](media/readme/countryfield-js-checker.JPG)
+
+![image](media/readme/sort&jump-js-checker.JPG)
+
+![image](media/readme/stripe-js-checker.JPG)
+
+##### PEP8 online
+<h1>UUUUPPPPDAAAATE</h1>
+
+### Accessibility/Lighthouse testing
+
+[WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used on all pages to review site accessibility. No errors on the site occurred as a result of this accessibility testing.
+
+See below for results on various pages:
+
+* Home Page
+
+![image](media/readme/home-page.JPG)
+
+* Products Page
+
+![image](media/readme/products-page.JPG)
+
+* Bag Page
+
+![image](media/readme/bag-page.JPG)
+
+* Checkout Page
+
+![image](media/readme/checkout-page.JPG)
+
+* Profile Page
+
+![image](media/readme/profile-page.JPG)
