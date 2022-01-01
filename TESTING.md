@@ -117,8 +117,9 @@ The site adheres to the Bootstrap grid layout and breakpoints. Additional media 
 [Responsinator](https://www.responsinator.com/) has also been used to review the layout online across a broad range of physical and virtual desktop, tablet and mobile devices.
 <h1>UUUPPPPDAAAATE</h1>
 
-Virtual devices have consisted of the following on Google Chrome:
-<h1>UUUPPPPDAAAATE</h1>
+Virtual devices have consisted of testing on the following screen types on Google Chrome:
+
+![image](media/readme/tested-widths.JPG)
 
 #### Snippets of site page screenshots across device widths
 
