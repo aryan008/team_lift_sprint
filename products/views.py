@@ -5,8 +5,8 @@ from django.db.models import Q
 from django.db.models import F, Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, ReviewProduct
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -67,9 +67,33 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ReviewForm()
+    # Set the automatic availability of product review to true
+    can_add_review = True
+
+    # The users product review
+    if request.user.is_authenticated:
+        checkReview = ReviewProduct.objects.filter(
+            user=request.user, product=product).count()
+        if checkReview > 0:
+            can_add_review = False
+            review = get_object_or_404(
+                ReviewProduct, product=product, user=request.user)
+            form = ReviewForm(instance=review)
+
+    # Get reviews
+    reviews = ReviewProduct.objects.filter(product=product)
+
+    # Get number of reviews
+    # Credit: Great Adib - https://www.youtube.com/watch?v=MmLRE2fCcec&t=46s
+    number_of_reviews = ReviewProduct.objects.filter(product=product).count()
 
     context = {
         'product': product,
+        'form': form, 
+        'can_add_review': can_add_review,
+        'reviews': reviews,
+        'number_of_reviews': number_of_reviews,
     }
 
     return render(request, 'products/product_detail.html', context)
