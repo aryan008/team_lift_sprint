@@ -156,10 +156,10 @@
                     <form method="POST" action="">
                         {% csrf_token %}
                         <fieldset>
-                            <div>
+                            <div class = "review_text_field">
                                 {{ form.review_text_field | as_crispy_field }}
                             </div>
-                            <div>
+                            <div class = "review_star_rating">
                                 {{ form.review_star_rating | as_crispy_field }}
                             </div>
                         </fieldset>

@@ -83,6 +83,16 @@ def product_detail(request, product_id):
                 ReviewProduct, product=product, user=request.user)
             form = ReviewForm(instance=review)
 
+    if request.method == 'POST' and request.user.is_authenticated:
+        review_star_rating = request.POST.get('review_star_rating', '')
+        review_text_field = request.POST.get('review_text_field', '')
+        review = ReviewProduct.objects.create(
+            product=product, user=request.user, review_star_rating=review_star_rating,
+            review_text_field=review_text_field)
+
+        messages.success(request, 'Successfully added review')
+        return redirect(reverse('product_detail', args=[product.id]))
+
     # Get the reviews of this product
     reviews = ReviewProduct.objects.filter(product=product)
 
