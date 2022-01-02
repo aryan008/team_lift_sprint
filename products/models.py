@@ -55,6 +55,7 @@ class Product(models.Model):
         return on_sale_price
 
 
+# Review product model
 class ReviewProduct(models.Model):
     STARS = (
         (1, '1'),
@@ -63,7 +64,7 @@ class ReviewProduct(models.Model):
         (4, '4'),
         (5, '5'),
         )
-    
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(
         Product, related_name='reviews', on_delete=models.CASCADE)

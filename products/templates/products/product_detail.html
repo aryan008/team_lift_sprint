@@ -136,14 +136,44 @@
                         </form>
                     </div>
                 </div>
-                <hr class="w-100 mb-2">
-                <div class="col-12 col-md-6 col-lg-4 m-3">
-                    <h2>Product Reviews</h2>
-                    <p>Reviews ({{ number_of_reviews }})</p>
-                </div>
             </div>
         </div>
-        {% endblock %}
+        <hr class="w-100 mb-2">
+        <!--Product review section -->
+        <div class="col-12 col-md-6 col-lg-4 m-2">
+            <h2 class="text-dark product-heading"><strong class="text-uppercase">Product Reviews</h2>
+            <!-- Number of reviews -->
+            <p>Reviews ({{ number_of_reviews }})</p>
+            <!-- Check if item previously reviewed -->
+            {% if user.is_authenticated %}
+                {% if can_add_review %}
+                    <p>No previous review</p>
+                {% endif %}
+            {% endif %}
+            <!-- Add review -->
+            {% if user.is_authenticated %}
+                <h5>Add Product Review: {{ product.name }}</h5>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <fieldset>
+                        <div>
+                            {{ form.review_text_field | as_crispy_field }}
+                        </div>
+                        <div>
+                            {{ form.review_star_rating | as_crispy_field }}
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-success">Submit Review</button>
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                </form>
+            {% endif %}
+            <!-- Instructions to sign up or login to review a product -->
+            {% if not user.is_authenticated %}
+                <p>Please <a class="text-info" href="{% url 'account_login' %}">login</a> or <a class="text-info"
+                        href="{% url 'account_signup' %}">register</a> to add a review.</p>
+            {% endif %}
+        </div>
+{% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}

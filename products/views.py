@@ -73,19 +73,20 @@ def product_detail(request, product_id):
 
     # The users product review
     if request.user.is_authenticated:
+        # Count how many reviews this person has left on this product
         checkReview = ReviewProduct.objects.filter(
             user=request.user, product=product).count()
+        # If above 0, they cant add a review but old review shown
         if checkReview > 0:
             can_add_review = False
             review = get_object_or_404(
                 ReviewProduct, product=product, user=request.user)
             form = ReviewForm(instance=review)
 
-    # Get reviews
+    # Get the reviews of this product
     reviews = ReviewProduct.objects.filter(product=product)
 
     # Get number of reviews
-    # Credit: Great Adib - https://www.youtube.com/watch?v=MmLRE2fCcec&t=46s
     number_of_reviews = ReviewProduct.objects.filter(product=product).count()
 
     context = {
