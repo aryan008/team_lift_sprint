@@ -187,11 +187,11 @@ Area | Test Narrative | Applicable screenshot (if needed) | Result
 Navbar | Team lift sprint click results in redirect to homepage | | Pass
 Navbar | Navbar items and drop-down menus link to correct site page | | Pass
 Navbar | Search box functionality works as expected | See User story 6) below | Pass
-Navbar | Entering no text into the searchbar and hitting search results in an error  | [Link](media/readme/mt-1) | Pass
+Navbar | Entering no text into the searchbar and hitting search results in an error  | [Link](media/readme/mt-1.JPG) | Pass
 Navbar | Hover on bag button changes colour | | Pass
-Navbar | Account dropdown pages present depend on user access rights | [Link](media/readme/mt-2) and [Link](media/readme/mt-3) | Pass
+Navbar | Account dropdown pages present depend on user access rights | [Link](media/readme/mt-2.JPG) and [Link](media/readme/mt-3.JPG) | Pass
 Navbar | On below large screens, the navbar condenses to the burger icon | See responsive screenshots | Pass
-Navbar | The bag € amount updates appropriately and corresponds with actual cost | [Link](media/readme/mt-4) | Pass
+Navbar | The bag € amount updates appropriately and corresponds with actual cost | [Link](media/readme/mt-4.JPG) | Pass
 Home page | The media images resize and stack on mobile | | Pass
 Home page | The category buttons appropriately redirect to the correct product types | | Pass
 Home page | The shop now button brings to all products | | Pass
@@ -208,7 +208,7 @@ Products | Spring back to top button locates correctly on page | | Pass
 On sale | Page only shows items on sale, inclusive of above "Products" tests | | Pass
 Product detail | Name, description, category, image, price/sale price with strikethrough all correctly related to product | | Pass
 Product detail | Quantity buttons displayed | | Pass
-Product detail | Quantity buttons minus sign disabled below "2" | [Link](media/readme/mt-5) and [Link](media/readme/mt-6) | Pass
+Product detail | Quantity buttons minus sign disabled below "2" | [Link](media/readme/mt-5.JPG) and [Link](media/readme/mt-6.JPG) | Pass
 Product detail | Add to bag/Continue shopping work appropriately | See user story response 11) and 15) below | Pass
 Product detail | No image picture is displayed if a product image is missing | | Pass
 Shopping bag | Item name, quantity, sale save amount, image, description and subtotal all work correctly | | Pass
@@ -217,25 +217,25 @@ Shopping bag | Update quantity and remove buttons appropriately work for each it
 Shopping bag | Grand total/delivery fee accurately reflects the correct amount | | Pass
 Shopping bag | Delivery fee above €100 is correctly waived | | Pass
 Shopping bag | Checkout button and keep shopping button work appropriately | | Pass
-Shopping bag | For items on sale, the sale price is correctly used | [Link](media/readme/mt-7) and [Link](media/readme/mt-8) | Pass
+Shopping bag | For items on sale, the sale price is correctly used | [Link](media/readme/mt-7.JPG) and [Link](media/readme/mt-8.JPG) | Pass
 Shopping bag | Putting quantity to 0 and hitting update button works the same as the remove button | | Pass
-Shopping bag | On small devices, the key information is displayed at the top | [Link](media/readme/mt-9) | Pass
+Shopping bag | On small devices, the key information is displayed at the top | [Link](media/readme/mt-9.JPG) | Pass
 Checkout | Form and order to be processed correctly stack on mobile | | Pass
 Checkout | For a logged in user who has saved details, the checkout delivery/billing info is autopopulated | | Pass
 Checkout | For a logged in user who checks the checkbox, their profile delivery/billing info updates on the profile page | | Pass
 Checkout | The country dropdown field lists correctly | | Pass
 Checkout | Total card charge narrative and order grand total correctly match | | Pass
-Checkout | Item quantity, price/sale price, price per unit, subtotal and delivery charge all correctly shown | [Link](media/readme/mt-10) | Pass
+Checkout | Item quantity, price/sale price, price per unit, subtotal and delivery charge all correctly shown | [Link](media/readme/mt-10.JPG) | Pass
 Checkout | Create an account or login to save this information line redirects appropriately | | Pass
 Checkout | Stripe error handling on incorrect card processing notifies the user | See user story response 9) below | Pass
 Checkout | Edit bag button returns to bag page | | Pass
 Checkout | With correct complete order fulfillment, processing widget appears and success html page opens for user with details | | Pass
 Checkout | On complete order, for a logged in user this order is displayed on their profile | | Pass
 Checkout | Order will not be completed until the fields are correctly filled out | | Pass
-Checkout success | After placing order, toast notification detail shown | [Link](media/readme/mt-11) | Pass
+Checkout success | After placing order, toast notification detail shown | [Link](media/readme/mt-11.JPG) | Pass
 Checkout success | Keep shopping button correctly works | | Pass
-Checkout success | Order breakdown details correct on all item metrics upon successful payment | [Link](media/readme/mt-12) | Pass
-Checkout success | Stripe webhooks shows status 200 success and amount captured matches site total | [Link](media/readme/mt-13) | Pass
+Checkout success | Order breakdown details correct on all item metrics upon successful payment | [Link](media/readme/mt-12.JPG) | Pass
+Checkout success | Stripe webhooks shows status 200 success and amount captured matches site total | [Link](media/readme/mt-13.JPG) | Pass
 Checkout success | Order appears in logged in user profile page | | Pass
 Toast messages | Toast notifications are shown correctly for success, informational purposes and errors | | Pass
 Toast messages | Notifications are dismissed on click | | Pass
@@ -251,12 +251,12 @@ Profile | Order history has reference number link that takes the user to the det
 Profile | On clicking this reference number, an informational notification is displayed to confirm this is a past order | | Pass
 Site Management | On the products pages, each item has an edit/delete button | |
 Site Management | For above, clicking delete deletes the item in full and a toast notification appears | | Pass
-Site Management | For above, clicking edit brings the superuser to that specific item and allows them to edit the various metrics associated with it, including image change/discount percent/on sale boolean/description and category | [Link](media/readme/mt-14) | Pass
+Site Management | For above, clicking edit brings the superuser to that specific item and allows them to edit the various metrics associated with it, including image change/discount percent/on sale boolean/description and category | [Link](media/readme/mt-14.JPG) | Pass
 Site Management | For above, editing the product results in the new display updates across the site, including "on sale" recategorisation if appropriate and sale price update | | Pass
-Site Management | Clicking the site management in navbar allows a product to be added with all the appropriate info needed. Cancel button and add product button appropriately work | [Link](media/readme/mt-15) | Pass
-Site Management | Adding a product in site management displays it in the correct category, including sale price where appropriate | [Link add](media/readme/mt-16), [Link toast](media/readme/mt-17) & [Link result](media/readme/mt-18) | Pass
-Site Management | Editing a product works correctly | [Link](media/readme/mt-18) | Pass
-Site Management | Deleting a product works correctly | [Link](media/readme/mt-19) | Pass
+Site Management | Clicking the site management in navbar allows a product to be added with all the appropriate info needed. Cancel button and add product button appropriately work | [Link](media/readme/mt-15.JPG) | Pass
+Site Management | Adding a product in site management displays it in the correct category, including sale price where appropriate | [Link add](media/readme/mt-16.JPG), [Link toast](media/readme/mt-17.JPG) & [Link result](media/readme/mt-18.JPG) | Pass
+Site Management | Editing a product works correctly | [Link](media/readme/mt-18.JPG) | Pass
+Site Management | Deleting a product works correctly | [Link](media/readme/mt-19.JPG) | Pass
  
 
 ### Testing user stories from User Experience (UX) section
