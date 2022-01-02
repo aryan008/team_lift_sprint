@@ -180,6 +180,60 @@ Widths used to test the below are:
 ### Manual testing
 <h1>UUUUUUPPPPDAAAAATE</h1>
 
+The following is a breakdown of successful manual testing performed on the site, broken out by subcomponent.
+
+Area | Test Narrative | Applicable screenshot (if needed) | Result
+---- | -------------- | --------------------- | ------
+Navbar | Team lift sprint click results in redirect to homepage | | Pass
+Navbar | Navbar items and drop-down menus link to correct site page | | Pass
+Navbar | Search box functionality works as expected | See User story 6) below | Pass
+Navbar | Entering no text into the searchbar and hitting search results in an error  | [Link](media/readme/mt-1) | Pass
+Navbar | Hover on bag button changes colour | | Pass
+Navbar | Account dropdown pages present depend on user access rights | [Link](media/readme/mt-2) and [Link](media/readme/mt-3) | Pass
+Navbar | On below large screens, the navbar condenses to the burger icon | See responsive screenshots | Pass
+Navbar | The bag € amount updates appropriately and corresponds with actual cost | [Link](media/readme/mt-4) | Pass
+Home page | The media images resize and stack on mobile | | Pass
+Home page | The category buttons appropriately redirect to the correct product types | | Pass
+Home page | The shop now button brings to all products | | Pass
+Footer | Support/Contact links open the appropriate pages | | Pass
+Footer | Social links open up the correct website in a new browser window | | Pass
+Footer | Footer stays on bottom of page on all site pages | | Pass
+Products | Correct number of products displayed per type | | Pass
+Products | The sort functionality works on all pages | | Pass
+Products | Image cards correctly displayed on all screen sizes | | Pass
+Products | View buttons/image click for individual products appropriately bring to specific product detail | | Pass
+Products | Category tag present for all products | | Pass
+Products | Sale items have red pill badge/slashed old price and % discount | | Pass
+Products | Spring back to top button locates correctly on page | | Pass
+On sale | Page only shows items on sale, inclusive of above "Products" tests | | Pass
+Product detail | Name, description, category, image, price/sale price with strikethrough all correctly related to product | | Pass
+Product detail | Quantity buttons displayed | | Pass
+Product detail | Quantity buttons minus sign disabled below "2" | [Link](media/readme/mt-5) and [Link](media/readme/mt-6) | Pass
+Product detail | Add to bag/Continue shopping work appropriately | See user story response 11) and 15) below | Pass
+Product detail | No image picture is displayed if a product image is missing | | Pass
+Shopping bag | Item name, quantity, sale save amount, image, description and subtotal all work correctly | | Pass
+Shopping bag | Sale save amount for on sale items updates appropriately with quantity of that item | | Pass
+Shopping bag | Update quantity and remove buttons appropriately work for each item | | Pass
+Shopping bag | Grand total/delivery fee accurately reflects the correct amount | | Pass
+Shopping bag | Delivery fee above €100 is correctly waived | | Pass
+Shopping bag | Checkout button and keep shopping button work appropriately | | Pass
+Shopping bag | For items on sale, the sale price is correctly used | [Link](media/readme/mt-7) and [Link](media/readme/mt-8) | Pass
+Shopping bag | Putting quantity to 0 and hitting update button works the same as the remove button | | Pass
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ | | |
+ 
+
 ### Testing user stories from User Experience (UX) section
 
 The below is the testing section of both the first time and frequent visitors user story requirements. The table is split as following:
