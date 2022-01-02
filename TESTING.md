@@ -175,3 +175,189 @@ Widths used to test the below are:
 ![image](media/readme/profile-tablet.JPG)
 
 ![image](media/readme/profile-mobile.JPG)
+
+
+### Manual testing
+<h1>UUUUUUPPPPDAAAAATE</h1>
+
+### Testing user stories from User Experience (UX) section
+
+The below is the testing section of both the first time and frequent visitors user story requirements. The table is split as following:
+- User story requirement as per ReadMe file
+- Response design as per ReadMe file
+- Relevent project screenshot(s)/narrative
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+1 | My impression of the site to be a positive experience | Colour/Font/Layout/Navigation/CTA structure. Responsive button elements and appropriate redirects/toast/CRUD messages. Clear call to action on user progression from site landing to purchasing item(s). | Below
+
+![image](media/readme/1.1.JPG)
+
+![image](media/readme/1.2.JPG)
+
+![image](media/readme/1.3.JPG)
+
+![image](media/readme/1.4.JPG)
+
+![image](media/readme/1.5.JPG)
+
+![image](media/readme/1.6.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+2 | To understand the main purpose of the site | Displayed on the landing “home” page. | Below
+
+![image](media/readme/2.1.JPG)
+
+![image](media/readme/2.2.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+3 | To purchase relevant equipment related to individual/team sports | Content of the home page displays clear CTA on which section the user should click. Further, Navbar links are split appropriately based on product category | Below
+
+![image](media/readme/3.1.JPG)
+
+![image](media/readme/3.2.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+4 | Create a profile - including login/register functionality | Available in the navbar for non-registered/non-logged in users. | Below
+
+![image](media/readme/4.1.JPG)
+
+![image](media/readme/4.2.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+5 | An instant feedback loop from site navigation on what I am doing | The use of toast popups and checkout success features provides feedback to users on edit/delete/checkout bag items. | Below
+
+![image](media/readme/5.1.JPG)
+
+![image](media/readme/5.2.JPG)
+
+![image](media/readme/5.3.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+6 | Easy navigation of the site including searching for a term | Site is simplistic in nature as an online store - 3 click approach taken as noted in the UX section of this ReadMe. Search bar included in navbar | Below
+
+![image](media/readme/6.1.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+7 | Built-in safety protocols – user authentication, appropriate redirects, site action feedback | Django allauth templates are included in the project for use of their safety protocols | Below
+
+![image](media/readme/7.1.JPG)
+
+![image](media/readme/7.2.JPG)
+
+![image](media/readme/7.3.JPG)
+
+![image](media/readme/7.4.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+8 | The ability to edit/delete any items in my bag | Any user can edit/delete bag items when they view their bag before checkout. | Below
+
+![image](media/readme/8.1.JPG)
+
+![image](media/readme/8.2.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+9 | Secure card payment protocols | Stripe safety protocols and card processing is applied, allowing the user to securely checkout. | Below
+
+![image](media/readme/9.1.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+10 | Ability to view my checkout items if I have accidentally exited the site | Cookie storage in the browser allows an individual to exit the site and reenter without the loss of any items in their bag. | Manual check that cookie item has stored on site page inspection. Manual forced site browser exit - reopen of site has stored bag dictionary.
+11 | Buy an item without registering | All non-registered user CRUD functionality is present despite not having an account. | Noted in 3) above.
+12 | Browse products easily including sorting them | As per (3) above. Sort function present on all product pages | Below
+
+![image](media/readme/12.1.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+13 | View and purchase whats on sale | On sale section linked in the navbar. Further, all products that are on sale have a red pill image showing how much they are on sale, plus the percentage discount on the product. On checkout, the user is shown how much they are saving in euro by purchasing this on sale item. | Below
+
+![image](media/readme/13.1.JPG)
+
+![image](media/readme/13.2.JPG)
+
+![image](media/readme/13.3.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+14 | Have a FAQ section where I can get in touch with the company regarding shipping/delivery, etc. | FAQ links are present at the bottom of each html page of the site. | Below
+
+![image](media/readme/14.1.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+15 | See if I have any shipping costs | Delivery costs are shown in both the bag, toast notifications and checkout views, as well as an indication of how much extra they should spend to obtain free delivery. | Below
+
+![image](media/readme/15.1.JPG)
+
+![image](media/readme/15.2.JPG)
+
+![image](media/readme/15.3.JPG)
+
+![image](media/readme/15.4.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+16 | Ability to reset my password and forgot my password verification | Frequent vistor (1) - password functionality present on the login section of the navbar | Below
+
+![image](media/readme/16.1.JPG)
+
+![image](media/readme/16.2.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+17 | View my previous orders | Frequent vistor (2) - Ability to view past orders for registered users on their profile page on the navbar | Below
+
+![image](media/readme/17.1.JPG)
+
+![image](media/readme/17.2.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+18 | Log in and out easily | Frequent vistor (3) - Present on the navbar | Noted in 4) and 7) above
+19 | Save/Update my contact details | Frequent vistor (4) - Registered users can update their contact/delivery/billing details on the profile app, which feed directly into the checkout app for their next purchase | Below
+
+![image](media/readme/19.1.JPG)
+
+### Known bugs
+
+<h1>UUUUUUPPPPDAAAAATE</h1>
