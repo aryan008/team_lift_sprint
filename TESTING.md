@@ -237,18 +237,26 @@ Checkout success | Keep shopping button correctly works | | Pass
 Checkout success | Order breakdown details correct on all item metrics upon successful payment | [Link](media/readme/mt-12) | Pass
 Checkout success | Stripe webhooks shows status 200 success and amount captured matches site total | [Link](media/readme/mt-13) | Pass
 Checkout success | Order appears in logged in user profile page | | Pass
- | | |
- | | |
- | | |
- | | |
- | | |
- | | |
- | | |
- | | |
- | | |
- | | |
- | | |
- | | |
+Toast messages | Toast notifications are shown correctly for success, informational purposes and errors | | Pass
+Toast messages | Notifications are dismissed on click | | Pass
+Toast messages | On small devices, toasts are displayed appropriately and stacked | | Pass
+Toast messages | For CRUD bag toasts, price/image/quantity/subtotal/delivery/grand total all correctly display | | Pass
+Toast messages | Delivery "free" remaining amount displayed on bag toasts below €100 | | Pass
+Toast messages | View bag and checkout buttons appropriately work | | Pass
+Toast messages | Superuser CRUD product additions/modification/deletion messages are all appropriately correct | | Pass
+Profile | Default information is correct | | Pass
+Profile | On updating default information, this feeds through to prefilled checkout form correctly | See user story response 19) below | Pass
+Profile | Order history shows all previous orders of the site profile | See user story response 17) below | Pass
+Profile | Order history has reference number link that takes the user to the detail of that previous order | | Pass
+Profile | On clicking this reference number, an informational notification is displayed to confirm this is a past order | | Pass
+Site Management | On the products pages, each item has an edit/delete button | |
+Site Management | For above, clicking delete deletes the item in full and a toast notification appears | | Pass
+Site Management | For above, clicking edit brings the superuser to that specific item and allows them to edit the various metrics associated with it, including image change/discount percent/on sale boolean/description and category | [Link](media/readme/mt-14) | Pass
+Site Management | For above, editing the product results in the new display updates across the site, including "on sale" recategorisation if appropriate and sale price update | | Pass
+Site Management | Clicking the site management in navbar allows a product to be added with all the appropriate info needed. Cancel button and add product button appropriately work | [Link](media/readme/mt-15) | Pass
+Site Management | Adding a product in site management displays it in the correct category, including sale price where appropriate | [Link add](media/readme/mt-16), [Link toast](media/readme/mt-17) & [Link result](media/readme/mt-18) | Pass
+Site Management | Editing a product works correctly | [Link](media/readme/mt-18) | Pass
+Site Management | Deleting a product works correctly | [Link](media/readme/mt-19) | Pass
  
 
 ### Testing user stories from User Experience (UX) section
