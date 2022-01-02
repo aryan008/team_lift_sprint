@@ -219,7 +219,24 @@ Shopping bag | Delivery fee above €100 is correctly waived | | Pass
 Shopping bag | Checkout button and keep shopping button work appropriately | | Pass
 Shopping bag | For items on sale, the sale price is correctly used | [Link](media/readme/mt-7) and [Link](media/readme/mt-8) | Pass
 Shopping bag | Putting quantity to 0 and hitting update button works the same as the remove button | | Pass
- | | |
+Shopping bag | On small devices, the key information is displayed at the top | [Link](media/readme/mt-9) | Pass
+Checkout | Form and order to be processed correctly stack on mobile | | Pass
+Checkout | For a logged in user who has saved details, the checkout delivery/billing info is autopopulated | | Pass
+Checkout | For a logged in user who checks the checkbox, their profile delivery/billing info updates on the profile page | | Pass
+Checkout | The country dropdown field lists correctly | | Pass
+Checkout | Total card charge narrative and order grand total correctly match | | Pass
+Checkout | Item quantity, price/sale price, price per unit, subtotal and delivery charge all correctly shown | [Link](media/readme/mt-10) | Pass
+Checkout | Create an account or login to save this information line redirects appropriately | | Pass
+Checkout | Stripe error handling on incorrect card processing notifies the user | See user story response 9) below | Pass
+Checkout | Edit bag button returns to bag page | | Pass
+Checkout | With correct complete order fulfillment, processing widget appears and success html page opens for user with details | | Pass
+Checkout | On complete order, for a logged in user this order is displayed on their profile | | Pass
+Checkout | Order will not be completed until the fields are correctly filled out | | Pass
+Checkout success | After placing order, toast notification detail shown | [Link](media/readme/mt-11) | Pass
+Checkout success | Keep shopping button correctly works | | Pass
+Checkout success | Order breakdown details correct on all item metrics upon successful payment | [Link](media/readme/mt-12) | Pass
+Checkout success | Stripe webhooks shows status 200 success and amount captured matches site total | [Link](media/readme/mt-13) | Pass
+Checkout success | Order appears in logged in user profile page | | Pass
  | | |
  | | |
  | | |
