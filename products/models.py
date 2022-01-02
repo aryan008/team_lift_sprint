@@ -1,5 +1,6 @@
 from django.db import models
 from decimal import Decimal
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -52,3 +53,20 @@ class Product(models.Model):
         on_sale_price = Decimal(self.price * (
             100 - self.discount_on_product) / 100).quantize(Decimal('0.00'))
         return on_sale_price
+
+
+class ReviewProduct(models.Model):
+    STARS = (
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+        )
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(
+        Product, related_name='reviews', on_delete=models.CASCADE)
+    review_text_field = models.TextField(blank=True, null=True, max_length=300)
+    review_star_rating = models.IntegerField(choices=STARS)
+    date_review = models.DateTimeField(auto_now_add=True)

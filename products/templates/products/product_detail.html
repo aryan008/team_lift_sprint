@@ -136,6 +136,24 @@
                         </form>
                     </div>
                 </div>
+                <hr class="w-100 mb-2">
+                <div class="col-12 col-md-6 col-lg-4 m-3">
+                    <h3>Product Reviews</h3>
+                    {% for review in product.reviews.all %}
+                    <div class="notification space-below">
+                        <p>
+                            <strong>Date: </strong>{{ review.date_added|date:"Y-m-d" }},
+                            <strong>Stars: </strong>{{ review.stars }}
+                        </p>
+
+                        {{ review.content }}
+                    </div>
+                    {% empty %}
+                    <div class="notification space-below">
+                        No reviews yet...
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
         {% endblock %}
