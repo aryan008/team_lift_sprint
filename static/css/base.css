@@ -198,6 +198,15 @@ header.masthead {
     color: #2f97c0;
 }
 
+/* Review section of products */
+.review-section{
+    text-transform: none;
+}
+
+.review-instructions{
+    font-weight: lighter;
+}
+
 /* Mobile layout */
 @media (max-width: 1399px) {
     .form-search{
@@ -366,5 +375,16 @@ header.masthead {
 
     .form-search {
         max-width: 80%;
+    }
+
+    .review-count,
+    .review-narrative{
+        font-size: 1.1rem;
+        margin-left: 3px;
+    }
+
+    .review-form-field {
+        width: 90%;
+        margin-left: 5px;
     }
 }

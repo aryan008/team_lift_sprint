@@ -141,55 +141,64 @@
         <hr class="w-100 mb-2">
         <!--Product review section -->
         <h2 class="text-dark product-heading text-center"><strong class="text-uppercase">Product Reviews</strong></h2>
-            <div class="col-12 col-lg-6 mt-2">
+            <div class="col-12 col-lg-6 mt-2 mb-1 review-section">
                 <!-- Number of reviews -->
-                <p>Reviews: ({{ number_of_reviews }})</p>
+                <h3 class = "review-count">Reviews for this product: ({{ number_of_reviews }})</h3>
                 <!-- Check if item previously reviewed -->
                 {% if user.is_authenticated %}
                     {% if can_add_review %}
-                        <p>You havent given a review, add one now!</p>
+                        <h4 class = "review-narrative">You havent given a review, add one now!</h4>
+                    {% else %}
+                        <h5 class = "review-narrative">You've already added a review, see what other people are saying.
+                            <i class="fas fa-arrow-right fa-3x d-none d-lg-block" style="color:rgb(202, 96, 25)" ></i>
+                            <i class="fas fa-arrow-down d-lg-none fa-2x" style="color:rgb(202, 96, 25)"></i>
+                        </h5>
                     {% endif %}
                 {% endif %}
                 <!-- Add review -->
                 {% if user.is_authenticated %}
-                {% if can_add_review %}
-                    <h5>Add Product Review: {{ product.name }}</h5>
-                {% else %}
-                    <h5>Edit Your Review: {{ product.name }}</h5>
-                {% endif %}
-                    <form method="POST" action="">
-                        {% csrf_token %}
-                        <fieldset>
-                            <div class = "review_text_field">
-                                {{ form.review_text_field | as_crispy_field }}
-                            </div>
-                            <div class = "review_star_rating">
-                                {{ form.review_star_rating | as_crispy_field }}
-                            </div>
-                        </fieldset>
-                        <button type="submit" class="btn btn-success">Submit Review</button>
-                        <button type="button" class="btn btn-danger">Cancel</button>
-                    </form>
+                    {% if can_add_review %}
+                        <h5 class = "review-narrative">Add Product Review: {{ product.name }}</h5>
+                        <form method="POST" action="" class = "review-form">
+                            {% csrf_token %}
+                            <fieldset class = "review-form-field">
+                                <div class = "review_text_field mt-1 mb-1">
+                                    {{ form.review_text_field | as_crispy_field }}
+                                </div>
+                                <div class = "review_star_rating mt-1 mb-1">
+                                    {{ form.review_star_rating | as_crispy_field }}
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-success mt-2 ms-1">Submit Review</button>
+                        </form>
+                    {% else %}
+                    {% endif %}
                 {% endif %}
                 <!-- Instructions to sign up or login to review a product -->
                 {% if not user.is_authenticated %}
-                    <p>Please <a class="text-info" href="{% url 'account_login' %}">login</a> or <a class="text-info"
+                    <p class = "review-instructions">Please <a class="text-info" href="{% url 'account_login' %}">login</a> or <a class="text-info"
                             href="{% url 'account_signup' %}">register</a> to add a review.</p>
                 {% endif %}
             </div>
-            <div class="col-12 col-lg-6 mt-2">
+            <div class="col-12 col-lg-6 mt-2 mb-1 review-section text-dark pt-1">
             <!-- Previous reviews shown -->
-            <h5>Previous reviews</h5>
+            <h3 class = "text-center fw-bold">Previous reviews of {{ product.name }}</h3>
             {% if reviews %}
                 {% for review in product.reviews.all %}
-                    <p>{{ review.user }}</p>
-                    <p>{{ review.review_text_field }}</p>
-                    <p>{{ review.review_star_rating }}</p>
-                    <p>{{ review.date_review }}</p>
+                <div class="border border-1 border-dark rounded-1 bg-light pt-1 pb-1 mb-1 ps-1 ms-2">
+                    <h6>Submitted by user {{ review.user }} on {{ review.date_review|date:"d-m-Y" }}</h6>
+                    <p class = "fst-italic fw-normal">"{{ review.review_text_field }}"</p>
+                    <p>Reviewer rating: <strong>{{ review.review_star_rating }}/5</strong></p>
+                    {% for star in review.review_star_rating|ljust:review.review_star_rating %}
+                    <i class="fas fa-star text-warning"></i>
+                    {% endfor %}
                     {% if user.is_superuser %}
-                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">Delete</a>
+                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">Delete Review</a>
                     {% endif %}
+                </div>
                 {% endfor %}
+            {% else %}
+            <hr>
             {% endif %}
             </div>
 {% endblock %}

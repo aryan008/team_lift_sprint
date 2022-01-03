@@ -71,6 +71,9 @@ def product_detail(request, product_id):
     # Set the automatic availability of product review to true
     can_add_review = True
 
+    """ Help with product review sourced through:
+    https://www.youtube.com/watch?app=desktop&v=Y5vvGQyHtpM
+    """
     # The users product review
     if request.user.is_authenticated:
         # Count how many reviews this person has left on this product
@@ -84,8 +87,10 @@ def product_detail(request, product_id):
             form = ReviewForm(instance=review)
 
     if request.method == 'POST' and request.user.is_authenticated:
+        # Grab the variables
         review_star_rating = request.POST.get('review_star_rating', '')
         review_text_field = request.POST.get('review_text_field', '')
+        # Create the review object
         review = ReviewProduct.objects.create(
             product=product, user=request.user,
             review_star_rating=review_star_rating,
@@ -103,7 +108,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'form': form, 
+        'form': form,
         'can_add_review': can_add_review,
         'reviews': reviews,
         'number_of_reviews': number_of_reviews,
