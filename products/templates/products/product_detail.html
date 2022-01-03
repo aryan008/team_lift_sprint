@@ -152,7 +152,11 @@
                 {% endif %}
                 <!-- Add review -->
                 {% if user.is_authenticated %}
+                {% if can_add_review %}
                     <h5>Add Product Review: {{ product.name }}</h5>
+                {% else %}
+                    <h5>Edit Your Review: {{ product.name }}</h5>
+                {% endif %}
                     <form method="POST" action="">
                         {% csrf_token %}
                         <fieldset>
@@ -182,7 +186,9 @@
                     <p>{{ review.review_text_field }}</p>
                     <p>{{ review.review_star_rating }}</p>
                     <p>{{ review.date_review }}</p>
-                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger">Delete</a>
+                    {% if user.is_superuser %}
+                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">Delete</a>
+                    {% endif %}
                 {% endfor %}
             {% endif %}
             </div>
