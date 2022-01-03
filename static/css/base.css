@@ -383,8 +383,13 @@ header.masthead {
         margin-left: 3px;
     }
 
-    .review-form-field {
-        width: 90%;
+    .pw-title{
+        font-size: 1rem;
+    }
+
+    .review-form-field,
+    .previous-reviews {
+        width: 95%;
         margin-left: 5px;
     }
 }
