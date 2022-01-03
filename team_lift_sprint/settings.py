@@ -22,11 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = "648-_0-&&&f3*b24w5d%h-useqd(&kji8z@otd5li$0#(boh&6"
 # os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = "FALSE"
 #'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['adam-team-lift-sprint.herokuapp.com', 'localhost']
@@ -121,7 +121,7 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'team_lift_sprint.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-azure-goldfish-0mg1rk7a.ws-eu25.gitpod.io',
+    'https://8000-brown-spider-ipew51i9.ws-eu25.gitpod.io',
     'https://adam-team-lift-sprint.herokuapp.com/',
     ]
 

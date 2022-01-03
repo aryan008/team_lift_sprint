@@ -178,9 +178,11 @@
             <h5>Previous reviews</h5>
             {% if reviews %}
                 {% for review in product.reviews.all %}
+                    <p>{{ review.user }}</p>
                     <p>{{ review.review_text_field }}</p>
                     <p>{{ review.review_star_rating }}</p>
                     <p>{{ review.date_review }}</p>
+                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger">Delete</a>
                 {% endfor %}
             {% endif %}
             </div>

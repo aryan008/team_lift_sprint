@@ -87,10 +87,12 @@ def product_detail(request, product_id):
         review_star_rating = request.POST.get('review_star_rating', '')
         review_text_field = request.POST.get('review_text_field', '')
         review = ReviewProduct.objects.create(
-            product=product, user=request.user, review_star_rating=review_star_rating,
+            product=product, user=request.user,
+            review_star_rating=review_star_rating,
             review_text_field=review_text_field)
 
-        messages.success(request, 'Successfully added review')
+        messages.success(request, f"{ review.user }'s review of { review.product} has been \
+        successful.")
         return redirect(reverse('product_detail', args=[product.id]))
 
     # Get the reviews of this product
@@ -108,6 +110,24 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete a review """
+    if not request.user.is_superuser:
+        # Error message if not superuser
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    elif request.user.is_superuser:
+        review = ReviewProduct.objects.filter(pk=review_id).last()
+        product_id = review.product_id
+        # Delete the review
+        review.delete()
+        messages.success(request, f"{ review.user }'s review of { review.product} has been \
+        deleted.")
+        return redirect(reverse('product_detail', args=[product_id]))
 
 
 def on_sale(request):
