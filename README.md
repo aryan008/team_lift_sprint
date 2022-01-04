@@ -6,6 +6,8 @@ View the live project at the following [link](https://adam-team-lift-sprint.hero
 
 Team Lift Sprint is an online shopping site that sell a manner of goods related to sport and/or sporting equipment. It is designed for Strength & Conditioning coaches, team managers, players and those focusing on getting the best out of their performance. The website provides status and feedback to users at all stages of the shopping process, as well as items on sale and correct UX design. Coming from a sporting background myself, the site itself comprises a number of categories which are discussed in detail below with the aim that Team Lift Sprint be a "one stop shop" for all those either training individually or in a group.
 
+Categories are split between individual & team, with durther drilldowns into these whether they are indoor/outdoor, track, cardio, gym or cardio. The site is to encompass a one stop shop for all visitors, including a TLS blog where useful articles can be added. Logged in users will have the abilty to create a review of a product to help guide prospective purchasers for items, giving them an incentive to create an account and have their own profile page.
+
 The site has been tested on a number of devices including desktop, tablets and mobile - as shown in the testing readme file. The site is also designed to handle the full suite of user management, as defined in the Information architecture of this ReadMe file.
 
 ## Table of Contents
@@ -27,6 +29,7 @@ The site has been tested on a number of devices including desktop, tablets and m
   * [User goals](#user-goals)
   * [Site owner/designer goals](#site-owner/designer-goals)
   * [Application-features](#application-features)
+  * [Future-developments](#future-developments)
 
 * [Information Architecture](#information-architecture)
   *	[Site Logic and diagram](#site-logic-and-diagram)
@@ -87,6 +90,8 @@ As a first-time visitor of the site, I want:
 13.	View and purchase whats on sale
 14.	Have a FAQ section where I can get in touch with the company regarding shipping/delivery, etc.
 15.	See if I have any shipping costs
+16.	See any product reviews and enter one myself
+17.	Read any articles regarding fitness
 
 
 ## Returning and Frequent Visitor Goals
@@ -134,6 +139,8 @@ Sort functionality on all product views | 3 | 5
 Title on products page for categories | 3 | 5
 Pagination | 3 | 5
 Products on sale are clearly defined and shown how much the user saves by purchasing | 4 | 5
+Allow logged in users to submit a review of a product and see other reviews | 3 | 5
+Site admins can post fitness related content as a blog | 4 | 4
 
 #### Scope Plane
 What's in? |	What's out?
@@ -150,14 +157,16 @@ User error handling – appropriate redirects on user interaction and display me
 A split of products based on what the user is looking for - themselves/team/indoor/outdoor
 Footer links include FAQ's that is standard across all ecommerce sites
 Integration of secure payment system
+Allow logged in users to submit a review of a product
 Pre paying the user has the ability to edit their bag items
 Sort functionality on all product views
+Site admins can post fitness related content as a blog
 Products on sale are clearly defined and shown how much the user saves by purchasing
 
 #### Structure Plane
 Question |	Response for site design
 -------- | ---------
-How do I navigate easily? | Navbar is present across all site pages and is fixed to the top. Pages present on the account management section of the navbar will depend on the following: Unregistered user - On the home page, prompt to create an account/login. Home/product sections are present regardless of user status. Registered user – As above but including navbar links for profile page as well as log out option. Superuser – As above but including a navbar link for managing the site products. Throughout the site, buttons/navbar links are present to allow the user to bring them to the areas they wish to visit. On the products pages, a "bring to top" button is available for the user to click rather than scrolling needlessly back up.
+How do I navigate easily? | Navbar is present across all site pages and is fixed to the top. Pages present on the account management section of the navbar will depend on the following: Unregistered user - On the home page, prompt to create an account/login. Home/product sections are present regardless of user status. Blog section is available to all user types Registered user – As above but including navbar links for profile page as well as log out option. Users can also review products. Superuser – As above but including a navbar link for managing the site products. Throughout the site, buttons/navbar links are present to allow the user to bring them to the areas they wish to visit. On the products pages, a "bring to top" button is available for the user to click rather than scrolling needlessly back up. Superusers can also delete reviews as well as full CRUD usage on blog posts.
 How is the information presented? | Using sporting equipment site style colours/features and text content that allow the user to achieve their goals. Dark navbar background to light product interface for a clear separation of site navigation to bag additions/management. Clear feedback loop for all users whenever the user performs CRUD functionality. The buttons through the site pop to the user, clearly demonstrating what will happen should they click on them.
 State changes | There is a clear state change at the navbar level depending on the user of the site as previously mentioned – no account, registered user, superuser. Appropriate redirects/CTA buttons are present when the user interacts with both the navbar and the buttons of the site, including “keep shopping”/"checkout securely"/"View bag" both in the html pages and the toast forms. Upon checking out, a clear state change a success message appears for the order which allows them to see their purchase. Finally, state changes are present on all CRUD function buttons when the user interacts with them along with the Toast messages, tying in with the feedback loop that the user action was performed successfully.
 Is the site consistent? | Correct styling and fonts are applied throughout the site, which was achieved using the "extends" functionality in Django.
@@ -190,6 +199,8 @@ Readability and consistency |	Each site page is familiar to the user in terms of
 * Tablet wireframe - [attached](media/readme/wf-tablet.pdf)
 * Mobile wireframe - [attached](media/readme/wf-mobile.pdf)
 
+<h1>uuuuuuuupppppdaaaaate</h1>
+
 #### Typography
 Lato is used as the main font on the site, as imported through Google Fonts. Sans-serif is used as the fallback font. According to an article on [perpetual media group](http://www.perpetualmediagroup.ca/tenbestfontsforprintandweb/):
 _“The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness.”_
@@ -218,10 +229,12 @@ User Goal | Feature(s)/ Content in response | Goal Met?
 (13)|	On sale section linked in the navbar. Further, all products that are on sale have a red pill image showing how much they are on sale, plus the percentage discount on the product. On checkout, the user is shown how much they are saving in euro by purchasing this on sale item.|	Yes
 (14)| FAQ links are present at the bottom of each html page of the site.| Yes
 (15)| Delivery costs are shown in both the bag, toast notifications and checkout views, as well as an indication of how much extra they should spend to ibtain free delivery.| Yes
-(16)| Frequent vistor (1) - password functionality present on the login section of the navbar | Yes
-(17)| Frequent vistor (2) - Ability to view past orders for registered users on their profile page on the navbar | Yes
-(18)| Frequent vistor (3) - Present on the navbar | Yes
-(19)| Frequent vistor (4) - Registered users can update their contact/delivery/billing details on the profile app, which feed directly into the checkout app for their next purchase | Yes
+(16)| A verified user can add a review and rating to a product if they havent already, and can see other reviews | Yes 
+(17)| Site owners can add blog posts that allow all site visitors to view | Yes
+(18)| Frequent vistor (1) - password functionality present on the login section of the navbar | Yes
+(19)| Frequent vistor (2) - Ability to view past orders for registered users on their profile page on the navbar | Yes
+(20)| Frequent vistor (3) - Present on the navbar | Yes
+(21)| Frequent vistor (4) - Registered users can update their contact/delivery/billing details on the profile app, which feed directly into the checkout app for their next purchase | Yes
 
 ### Site owner/designer goals
 
@@ -232,7 +245,7 @@ Goal | Feature(s)/ Content in response | Goal Met?
 (3)|	Noted in the testing section of this file.|	Yes
 (4)|	All 4 languages have been utilised in the creation.|	Yes
 (5)|	Noted above.|	Yes
-(6)|	Administrator access to manage all products/add a product on the database present on superuser login.|	Yes
+(6)|	Administrator access to manage all products/add a product/blog management/review management on the database present on superuser login.|	Yes
 (7)| Use of django authorization, CSRF, Heroku, Stripe and secret key variables all ensure a secure site.| Yes
 
 ### Application features
@@ -345,6 +358,18 @@ Upon ordering, a customer will get a successful order message with a reference n
 
 ![image](media/readme/order-success-3.JPG)
 
+##### Review Product
+
+Site visitors can see can see reviews of products and what other people are saying about them.
+
+<h1>uuuuuuuupppppdaaaaate</h1>
+
+##### Blog posts
+
+Site visitors can view detailed blog posts regarding fitness posted by the site owners.
+
+<h1>uuuuuuuupppppdaaaaate</h1>
+
 ##### Footer Links
 
 The footer of each page contains 3 clickable HTML files which the site user can view - FAQ, Contact Us and Shipping Info:
@@ -374,6 +399,19 @@ The use of the Bootstrap grid system and additional media queries enables the si
 * max-width: 991px
 * max-width: 585px
 
+### Future developments
+
+There are a number of developments and rationale for these included below which I would like to implement into the site. However, given the time pressure I have decided to not include these in the final project.
+
+Future development | Rationale
+------------------ | ---------
+Authentication email | Due to security restrictions on my laptop, I cannot sent a "confirmation email link" for users who sign up on the site. This is something I would ideally add as it would lead to verified emails and possibly a newsletter
+A section allowing the users to purchase recommended items based on their interests | As the site would grow, having a related products app would benefit the site users - especially for users that are logged in
+Varying product images for each product (side view/back) | Varying product carousel would enhance the UX for the user
+Pagination | Not needed now, however if the site grew it would need pagination for the amount of products
+Wish List | Decided not to include as I feel the category drilldown is effective, but should be added to a growing ecommerce site
+Calculations for VAT & postage in different countries | Useful for non-Irish shipping
+
 ## Information architecture
 
 ### Site Logic and diagram
@@ -386,13 +424,13 @@ See the [attached link](media/readme/site-logic-diagram.pdf) for a diagram of th
 There are three types of users that this website is designed for:
 
 #### Visitor/Non registered User
-A visitor is anyone who navigates to this website and can see home/products pages. Visitors can view the products, their narrative, add them to a cart with all CRUD functionality and checkout with an order number. They can also register for an account/login with email verification.
+A visitor is anyone who navigates to this website and can see home/products pages. Visitors can view the products, their narrative, add them to a cart with all CRUD functionality and checkout with an order number. They can see blog posts and review any product reviews of items. They can also register for an account/login with email verification.
 
 #### Logged in User
-A visitor who registers for an account automatically becomes a "user". Users have the same rights as visitors, plus they have access to their own profile where they can see all of their past orders and create their default profile information for checkout purposes. These users can change/forgot their password and log out.
+A visitor who registers for an account automatically becomes a "user". Users have the same rights as visitors, plus they have access to their own profile where they can see all of their past orders and create their default profile information for checkout purposes. These users can change/forgot their password and log out. These users can add create a review for a particular product if they havent already.
 
 #### Administrator/Superuser
-Administrators have all the rights of a logged in user, but they also have the right to manage the information of all products in the store, as well as add a product. They can verify email addresses of users that wish to create an account. They can delete any user except themselves. This is a security feature so that an administrator doesn't accidentally delete their own account.
+Administrators have all the rights of a logged in user, but they also have the right to manage the information of all products in the store, as well as add a product. They can verify email addresses of users that wish to create an account. They can delete any user except themselves. This is a security feature so that an administrator doesn't accidentally delete their own account. They can also edit/add/delete blog posts and delete product reviews.
 
 ### CRUD Functionality
 
@@ -411,6 +449,8 @@ Narrative|User|Admin|Visitor
 Account creation|Yes|Yes|Yes
 Purchase a product|Yes|Yes|No
 Password functionality|Yes|Yes|No
+Blog post|No|Yes|No
+Leave a review|Yes|Yes|No
 
 #### Read
 Narrative|User|Admin|Visitor
@@ -419,12 +459,15 @@ Home/Products Pages|Yes|Yes|Yes
 User profile|Yes|Yes|No
 Past orders|Yes|Yes|No
 Manage/verify users|No|Yes|No
+Blog post|Yes|Yes|Yes
+Read a review|Yes|Yes|Yes
 
 #### Update
 Narrative|User|Admin|Visitor
 -------- | --------- | -------- | --------
 Password|Yes|Yes|No
 Bag items|Yes|Yes|Yes
+Blog post|No|Yes|No
 
 #### Delete
 Narrative|User|Admin|Visitor
@@ -432,12 +475,16 @@ Narrative|User|Admin|Visitor
 Account|Yes|No|No
 Bag items|Yes|Yes|Yes
 Manage users|No|Yes|No
+Blog post|No|Yes|No
+Item review|No|Yes|No
 
 ### Database model
 
 See below for the database schema implemented in the file:
 
 ![image](media/readme/database-schema.JPG)
+
+<h1>uuuuuuuupppppdaaaaate</h1>
 
 ## Technology and Languages used
 
@@ -768,6 +815,10 @@ Please see this [link](https://docs.github.com/en/repositories/creating-and-mana
 * Bootstrap 5: [Link](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
 * Inspiration for the project was taken from [mcsport.ie](https://www.mcsport.ie/).
 * Stripe styling provided from Stripe website on the checkout form, including payment processing spinner.
+* Blog class credit:
+  - (1) - https://dev.to/madhubankhatri/blog-website-using-django-55ji - Madhuban Khatri
+  - (2) - https://www.youtube.com/watch?app=desktop&v=GcqURKYfv00 - CodingWithMitch
+* Credit for help on product review - https://www.youtube.com/watch?v=reFJ9hBLFUY - Coding Stuff
 
 ### Media
 #### Attribute sources/links
