@@ -362,13 +362,29 @@ Upon ordering, a customer will get a successful order message with a reference n
 
 Site visitors can see can see reviews of products and what other people are saying about them.
 
-<h1>uuuuuuuupppppdaaaaate</h1>
+See a product with two reviews and user has one:
+
+![image](media/readme/review-2review.JPG)
+
+See a product with two reviews and user has none:
+
+![image](media/readme/review-2review-none.JPG)
+
+See a product with no reviews:
+
+![image](media/readme/review-noreview.JPG)
 
 ##### Blog posts
 
 Site visitors can view detailed blog posts regarding fitness posted by the site owners.
 
-<h1>uuuuuuuupppppdaaaaate</h1>
+See the blog page:
+
+![image](media/readme/blog-view.JPG)
+
+See the full blog post:
+
+![image](media/readme/blog-full.JPG)
 
 ##### Footer Links
 
