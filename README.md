@@ -498,9 +498,7 @@ Item review|No|Yes|No
 
 See below for the database schema implemented in the file:
 
-![image](media/readme/database-schema.JPG)
-
-<h1>uuuuuuuupppppdaaaaate</h1>
+![image](media/readme/database-schema-updated.JPG)
 
 ## Technology and Languages used
 
