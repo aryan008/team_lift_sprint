@@ -20,23 +20,26 @@
         </div>
     </div>
     <!--- To display editable post --->
-    <div class="row mb-3">
-            <div class="col-2 offset-1">
-                {{ post.title }}
+    <div class="container col-10">
+        <div class="row bg-light text-dark border border-dark rounded-2 border-2">
+            <div class="col-8 mt-1">
+                <h4 class = "fw-bold">{{ post.title }}</h4>
+                <a href="{% url 'edit_post' post.slug %}" class="btn btn-dark btn-sm">Edit Post</a>
+                <a class="text-light btn btn-danger btn-sm" href="{% url 'delete_post' post.slug %}">Delete</a></small>
             </div>
-            <a href="{% url 'edit_post' post.slug %}">Edit</a>
-            <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a></small>
-            <div class="col-1">
-                {{ post.author }}
+            <div class="col-8 mt-1">
+                <h6>Article by: <i><strong>{{ post.author }}</strong></i></h6>
             </div>
-            <div class="col-5">
-                {{ post.intro }}
+            <div class="col-11">
+                <p><i>{{ post.intro }}</i></p>
             </div>
-            <div class="row pb-2 mt-1">
-                <div class="col-8 offset-1">
-                    {{ post.date_added | date:"d M - Y | h:i"}}
-                </div>
+            <div class="col-11">
+                <p>{{ post.article }}</p>
             </div>
-        <hr>
+            <div class="col-8 mb-1">
+                <div class="text-muted">{{ post.date_added | date:"d M - Y | h:i"}}</div>
+            </div>
+        </div>
+        <a class="btn btn-dark rounded-0 mt-2 text-uppercase" href="{% url 'blog' %}"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
     </div>
 {% endblock %}
