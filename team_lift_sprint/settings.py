@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'wishlist',
 
     # Other
     'crispy_forms',
@@ -121,7 +122,7 @@ LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'team_lift_sprint.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-brown-spider-ipew51i9.ws-eu25.gitpod.io',
+    'https://8000-emerald-thrush-4kpriuyu.ws-eu25.gitpod.io',
     'https://adam-team-lift-sprint.herokuapp.com/',
     ]
 
