@@ -11,6 +11,9 @@ class Blog(models.Model):
 
 
 class Post(models.Model):
+    class Meta:
+        ordering = ['-date_added']
+
     blog = models.ForeignKey(
         Blog, related_name="posts", on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
