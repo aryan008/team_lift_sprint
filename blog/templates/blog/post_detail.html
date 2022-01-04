@@ -20,15 +20,22 @@
         </div>
     </div>
     <!--- To display all the Posts available --->
-    <div class="posts col-4 offset-1">
-        {% for post in posts %}
-            {% if posts %}
+    <div class="row mb-3">
+            <div class="col-2 offset-1">
                 {{ post.title }}
-                {{ post.date_added | date:"d M - Y | h:i"}}
+            </div>
+            <a href="{% url 'edit_post' post.slug %}">Edit</a>
+            <div class="col-1">
+                {{ post.author }}
+            </div>
+            <div class="col-5">
                 {{ post.intro }}
-            {% else %}
-                No Posts Available  
-            {% endif %}
-    {% endfor %}
+            </div>
+            <div class="row pb-2 mt-1">
+                <div class="col-8 offset-1">
+                    {{ post.date_added | date:"d M - Y | h:i"}}
+                </div>
+            </div>
+        <hr>
     </div>
 {% endblock %}
