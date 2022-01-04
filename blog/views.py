@@ -28,6 +28,28 @@ def post_detail(request, slug):
     return render(request, template, context)
 
 
+def add_post(request):
+    """ Add a post to the blog """
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save()
+            messages.success(request, 'Successfully added a post!')
+            return redirect(reverse('post_detail', args=[post.slug]))
+        else:
+            messages.error(
+                request, 'Failed to add blog post. Check if form is valid.')
+    else:
+        form = PostForm()
+
+    template = 'blog/add_post.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
 def edit_post(request, slug):
     """ Edit an existing Post """
 
