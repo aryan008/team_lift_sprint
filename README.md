@@ -195,11 +195,9 @@ Readability and consistency |	Each site page is familiar to the user in terms of
 ## Design Features
 
 #### Wireframes
-* Desktop wireframe - [attached](media/readme/wf-desktop.pdf)
-* Tablet wireframe - [attached](media/readme/wf-tablet.pdf)
-* Mobile wireframe - [attached](media/readme/wf-mobile.pdf)
-
-<h1>uuuuuuuupppppdaaaaate</h1>
+* Desktop wireframe - [attached](media/readme/wf-desktop-updated.pdf)
+* Tablet wireframe - [attached](media/readme/wf-tablet-updated.pdf)
+* Mobile wireframe - [attached](media/readme/wf-mobile-updated.pdf)
 
 #### Typography
 Lato is used as the main font on the site, as imported through Google Fonts. Sans-serif is used as the fallback font. According to an article on [perpetual media group](http://www.perpetualmediagroup.ca/tenbestfontsforprintandweb/):
