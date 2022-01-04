@@ -231,6 +231,14 @@ Product detail | Quantity buttons displayed | | Pass
 Product detail | Quantity buttons minus sign disabled below "2" | [Link](media/readme/mt-5.JPG) and [Link](media/readme/mt-6.JPG) | Pass
 Product detail | Add to bag/Continue shopping work appropriately | See user story response 11) and 15) below | Pass
 Product detail | No image picture is displayed if a product image is missing | | Pass
+Product detail | User prevention of submitting a second review | [Link](media/readme/added-review-already.JPG) | Pass
+Product detail | Previous reviews shown and ordered by date descending(latest first) | [Link](media/readme/previous-reviews.JPG) | Pass
+Product detail | Form appears to user yet to make a review | [Link](media/readme/user-review-allowed.JPG) | Pass
+Product detail | Number of reviews available | [Link](media/readme/user-review-allowed.JPG) | Pass
+Product detail | Review product form unaccessible to unregistered users | [Link](media/readme/unregistered-reviewer.JPG) | Pass
+Product detail | Superuser can delete reviews | [Link](media/readme/delete-review.JPG) | Pass
+Product detail | Submit review button processes the form correctly | | Pass
+Product detail | Star rating must be filled in for review to post | [Link](media/readme/star-error.JPG) | Pass
 Shopping bag | Item name, quantity, sale save amount, image, description and subtotal all work correctly | | Pass
 Shopping bag | Sale save amount for on sale items updates appropriately with quantity of that item | | Pass
 Shopping bag | Update quantity and remove buttons appropriately work for each item | | Pass
@@ -269,6 +277,15 @@ Profile | On updating default information, this feeds through to prefilled check
 Profile | Order history shows all previous orders of the site profile | See user story response 17) below | Pass
 Profile | Order history has reference number link that takes the user to the detail of that previous order | | Pass
 Profile | On clicking this reference number, an informational notification is displayed to confirm this is a past order | | Pass
+Blog | Add blog button works appropriately | | Pass
+Blog | Read post in full button brings user to full post | | Pass
+Blog | Blog entries are stacked by date descending order (latest first) | [Link](media/readme/blog-order.JPG) | Pass
+Blog | The narrative at top of page correctly identifies latest post | [Link](media/readme/blog-order.JPG) | Pass
+Blog - full post | Superuser can edit or delete blog | [Link](media/readme/blog-superuser.JPG) | Pass
+Blog - full post | Edit/delete buttons work appropriately | | Pass
+Blog - full post | On editing a blog, it appropriately updates across the individual blog and blog home page | | Pass
+Blog - full post | Back to blogs button works appropriately | | Pass
+Blog - full post | Blog posts correctly identifiy spacing and/or line breaks/symbols | [Link](media/readme/blog-lines.JPG) | Pass
 Site Management | On the products pages, each item has an edit/delete button | |
 Site Management | For above, clicking delete deletes the item in full and a toast notification appears | | Pass
 Site Management | For above, clicking edit brings the superuser to that specific item and allows them to edit the various metrics associated with it, including image change/discount percent/on sale boolean/description and category | [Link](media/readme/mt-14.JPG) | Pass
