@@ -22,14 +22,14 @@
     <!--- To display editable post --->
     <div class="container col-10">
         <div class="row bg-light text-dark border border-dark rounded-2 border-2">
-            <div class="col-8 mt-1">
+            <div class="col-lg-8 col-12 mt-1">
                 <h4 class = "fw-bold">{{ post.title }}</h4>
                 {% if user.is_superuser %}
                 <a href="{% url 'edit_post' post.slug %}" class="btn btn-dark btn-sm">Edit Post</a>
                 <a class="text-light btn btn-danger btn-sm" href="{% url 'delete_post' post.slug %}">Delete</a></small>
                 {% endif %}
             </div>
-            <div class="col-8 mt-1">
+            <div class="col-lg-8 col-12 mt-1">
                 <h6>Article by: <i><strong>{{ post.author }}</strong></i></h6>
             </div>
             <div class="col-12 col-md-11">
