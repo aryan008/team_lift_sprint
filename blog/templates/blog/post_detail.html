@@ -30,16 +30,16 @@
             <div class="col-8 mt-1">
                 <h6>Article by: <i><strong>{{ post.author }}</strong></i></h6>
             </div>
-            <div class="col-11">
+            <div class="col-12 col-md-11">
                 <p><i>{{ post.intro }}</i></p>
             </div>
-            <div class="col-11">
+            <div class="col-12 col-md-11">
                 <p>{{ post.article }}</p>
             </div>
             <div class="col-8 mb-1">
                 <div class="text-muted">{{ post.date_added | date:"d M - Y | h:i"}}</div>
             </div>
         </div>
-        <a class="btn btn-dark rounded-0 mt-2 text-uppercase" href="{% url 'blog' %}"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+        <a class="btn btn-dark rounded-0 mt-3 mb-3 text-uppercase" href="{% url 'blog' %}"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
     </div>
 {% endblock %}
