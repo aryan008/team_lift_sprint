@@ -449,17 +449,37 @@ Number | User story requirement | Response design | Screenshot(s)/Narrative
 
 Number | User story requirement | Response design | Screenshot(s)/Narrative
 ------ | ---------------------- | --------------- | -----------------------
-16 | Ability to reset my password and forgot my password verification | Frequent vistor (1) - password functionality present on the login section of the navbar | Below
+16 | See any product reviews and enter one myself | View product reviews available to all users in product detail - logged in users can enter a review | Below
 
-![image](media/readme/16.1.JPG)
-
-![image](media/readme/16.2.JPG)
+![image](media/readme/.JPG)
 
 <hr>
 
 Number | User story requirement | Response design | Screenshot(s)/Narrative
 ------ | ---------------------- | --------------- | -----------------------
-17 | View my previous orders | Frequent vistor (2) - Ability to view past orders for registered users on their profile page on the navbar | Below
+17 | Read any articles regarding fitness | Blog viewing present for all viewers accessible through the navbar | Below
+
+![image](media/readme/test-review1.JPG)
+
+![image](media/readme/test-review2.JPG)
+
+![image](media/readme/test-review3.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+18 | Ability to reset my password and forgot my password verification | Frequent vistor (1) - password functionality present on the login section of the navbar | Below
+
+![image](media/readme/test-blog1.JPG)
+
+![image](media/readme/test-blog2.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+19 | View my previous orders | Frequent vistor (2) - Ability to view past orders for registered users on their profile page on the navbar | Below
 
 ![image](media/readme/17.1.JPG)
 
@@ -469,8 +489,8 @@ Number | User story requirement | Response design | Screenshot(s)/Narrative
 
 Number | User story requirement | Response design | Screenshot(s)/Narrative
 ------ | ---------------------- | --------------- | -----------------------
-18 | Log in and out easily | Frequent vistor (3) - Present on the navbar | Noted in 4) and 7) above
-19 | Save/Update my contact details | Frequent vistor (4) - Registered users can update their contact/delivery/billing details on the profile app, which feed directly into the checkout app for their next purchase | Below
+20 | Log in and out easily | Frequent vistor (3) - Present on the navbar | Noted in 4) and 7) above
+21 | Save/Update my contact details | Frequent vistor (4) - Registered users can update their contact/delivery/billing details on the profile app, which feed directly into the checkout app for their next purchase | Below
 
 ![image](media/readme/19.1.JPG)
 
