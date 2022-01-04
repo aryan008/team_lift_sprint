@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<!-- Masthead -->
+<header class="masthead">
+    <div class="container position-relative pt-5 p-2 g-0">
+        <div class="row">
+            <div class="col-8">
+                <div class="text-white non-home-narrative">
+                    <h1>Welcome to Team Lift Sprint!</h1>
+                    <h3>See below for our amazing products...</h3>
+                    <a class="text-white-50 mb-0 lead banner-contact-link d-none d-md-block" href="{% url 'contact' %}" aria-label="Contact us">Need more Info? Contact Us.</a>
+                </div>
+            </div>
+            <div class="col-4 d-none d-md-block">
+                <div>
+                    <div>
+                        <img src="{{ MEDIA_URL }}products_home.jpg" class="rounded-circle"
+                            alt="Man running in nature" style='height: 200px; width: 200px; object-fit: cover'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<!-- Products heading -->
+<div class="container g-0">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="text-dark product-heading"><strong class="text-uppercase">Wishlist</strong></h2>
+            <hr class="w-100 mb-2">
+        </div>
+    </div>
+
+{% endblock %}
