@@ -57,6 +57,9 @@ class Product(models.Model):
 
 # Review product model
 class ReviewProduct(models.Model):
+    class Meta:
+        ordering = ['-date_review']
+
     STARS = (
         (1, '1'),
         (2, '2'),
