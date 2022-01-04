@@ -7,6 +7,21 @@ from .models import Post
 def blog(request):
     """ BLog page to display all available posts """
 
+    posts = Post.objects.all()
     template = 'blog/blog.html'
+    context = {
+        'posts': posts,
+    }
+    return render(request, template, context)
 
-    return render(request, template)
+
+def post_detail(request, slug):
+    """ Display each Post in detail along with its comments """
+    post = Post.objects.get(slug=slug)
+
+    template = 'blog/post_detail.html'
+    context = {
+        'post': post,
+    }
+
+    return render(request, template, context)
