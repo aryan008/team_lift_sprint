@@ -105,14 +105,6 @@
                             </div>
                             <!-- Product Name-->
                             <h5 class="card-title product-narrative text-center fw-bold">{{ product.name }}</h5>
-                            <!-- Add to favourite -->
-                            {% if request.user.is_authenticated%}
-                                <p>
-                                    <a href="">
-                                        <i class="far fa-heart fa-lg text-black hvr-grow"></i>
-                                    </a>
-                                </p>
-                            {% endif %}
                             <!-- Product price and discounted price if appropriate-->
                             {% if product.on_sale is True %}
                             <p class="text-center">
