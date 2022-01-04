@@ -1,13 +1,16 @@
 <h1>Testing Section</h1>
 
-As per the table of contents, the following areas of testing were reviewed:
+## Contents
 
-* Code validation
-* Accessibility/Lighthouse testing
-* Responsive testing
-* Manual testing
-* Testing user stories from User Experience (UX) section
-* Known bugs
+* [Code validation](#code-validation)
+* [Accessibility/Lighthouse testing](#accessibility/lighthouse-testing)
+* [Responsive testing](#responsive-testing)
+* [Manual testing](#manual-testing)
+* [Testing user stories from User Experience (UX)](#testing-user-stories-from-user-experience-(ux))
+* [Fixes and Known Bugs](#fixes-and-known-bugs)
+
+[View README.md](https://github.com/aryan008/team_lift_sprint/blob/main/README.md)
+
 
 ### Code validation
 The W3C Markup Validator, W3C CSS Validator, JSHint JavaScript Validator Services and PEP8 online were used to validate the project to ensure there were no errors in the project. 
