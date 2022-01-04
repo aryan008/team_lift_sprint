@@ -451,14 +451,6 @@ Number | User story requirement | Response design | Screenshot(s)/Narrative
 ------ | ---------------------- | --------------- | -----------------------
 16 | See any product reviews and enter one myself | View product reviews available to all users in product detail - logged in users can enter a review | Below
 
-![image](media/readme/.JPG)
-
-<hr>
-
-Number | User story requirement | Response design | Screenshot(s)/Narrative
------- | ---------------------- | --------------- | -----------------------
-17 | Read any articles regarding fitness | Blog viewing present for all viewers accessible through the navbar | Below
-
 ![image](media/readme/test-review1.JPG)
 
 ![image](media/readme/test-review2.JPG)
@@ -469,11 +461,21 @@ Number | User story requirement | Response design | Screenshot(s)/Narrative
 
 Number | User story requirement | Response design | Screenshot(s)/Narrative
 ------ | ---------------------- | --------------- | -----------------------
-18 | Ability to reset my password and forgot my password verification | Frequent vistor (1) - password functionality present on the login section of the navbar | Below
+17 | Read any articles regarding fitness | Blog viewing present for all viewers accessible through the navbar | Below
 
 ![image](media/readme/test-blog1.JPG)
 
 ![image](media/readme/test-blog2.JPG)
+
+<hr>
+
+Number | User story requirement | Response design | Screenshot(s)/Narrative
+------ | ---------------------- | --------------- | -----------------------
+18 | Ability to reset my password and forgot my password verification | Frequent vistor (1) - password functionality present on the login section of the navbar | Below
+
+![image](media/readme/16.1.JPG)
+
+![image](media/readme/16.2.JPG)
 
 <hr>
 
