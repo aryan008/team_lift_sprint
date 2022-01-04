@@ -152,6 +152,18 @@ Widths used to test the below are:
 
 ![image](media/readme/view-product-mobile.JPG)
 
+##### View product page - reviews
+
+![image](media/readme/review-desktop.JPG)
+
+![image](media/readme/review-1-tablet.JPG)
+
+![image](media/readme/review-2-tablet.JPG)
+
+![image](media/readme/review-1-mobile.JPG)
+
+![image](media/readme/review-2-mobile.JPG)
+
 ##### Bag page
 
 ![image](media/readme/bag-desktop.JPG)
@@ -175,6 +187,14 @@ Widths used to test the below are:
 ![image](media/readme/profile-tablet.JPG)
 
 ![image](media/readme/profile-mobile.JPG)
+
+##### Blog page
+
+![image](media/readme/blog-desktop.JPG)
+
+![image](media/readme/blog-tablet.JPG)
+
+![image](media/readme/blog-mobile.JPG)
 
 
 ### Manual testing
