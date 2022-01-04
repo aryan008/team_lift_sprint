@@ -15,38 +15,41 @@
     <div class="container position-relative pt-5 g-0">
         <div class="row">
             <div class="col">
-                <h2 class="fw-bold text-center text-capitalize mb-4 mt-3 ms-1">Team Lift Sprint Blog</h2>
-                <a class="btn btn-danger rounded-1" href="{% url 'add_post' %}">Add post</a>
+                <h2 class="fw-bold text-center text-capitalize mb-4 mt-3 ms-1">Team Lift Sprint Blog
+                {% if request.user.is_superuser %}
+                    <i class="fas fa-caret-right ms-2"></i>
+                    <a class="btn btn-success btn-sm rounded-1" href="{% url 'add_post' %}">Add Blog Entry</a>
+                {% endif %}
+                </h2>
             </div>
         </div>
     </div>
     <!--- To display all the Posts available --->
-    <div class="row mb-3">
-        {% for post in posts %}
-            {% if posts %}
-            <div class="col-2 offset-1">
-                {{ post.title }}
-            </div>
-            <div class="col-1">
-                {{ post.author }}
-            </div>
-            <div class="col-5">
-                {{ post.intro }}
-            </div>
-            <div class="row pb-2 mt-1">
-                <div class="col-8 offset-1">
-                    {{ post.date_added | date:"d M - Y | h:i"}}
+    <div class="container col-10">
+        <div class="row bg-light text-dark border border-dark rounded-2 border-2">
+            {% for post in posts %}
+                {% if posts %}
+                <div class="col-8 mt-1">
+                    <h4 class = "fw-bold">{{ post.title }}</h4>
                 </div>
-            </div>
-            <div class="row pb-2 mt-1 mb-3">
-                <div class="col-8 offset-1">
-                    <a href="{% url 'post_detail'  post.slug %}" class="btn btn-dark">Read this post...</a>
+                <div class="col-8">
+                    <h6>Article by: <i><strong>{{ post.author }}</strong></i></h6>
                 </div>
-            </div>
-        <hr>
-        {% else %}
-            <h3>No Posts Available</h3>
-        {% endif %}
-        {% endfor %}
+                <div class="col-11">
+                    <p><i>{{ post.intro }}</i></p>
+                </div>
+                <div class="col-8">
+                    <div class="text-muted">{{ post.date_added | date:"d M - Y | h:i"}}</div>
+                </div>
+                <div class="row pb-2 mt-2 mb-3">
+                    <div class="col-8">
+                        <a href="{% url 'post_detail'  post.slug %}" class="btn btn-dark border-light border-3 btn-sm">Read this post...</a>
+                    </div>
+                </div>
+            {% else %}
+                <h3>No Posts Available</h3>
+            {% endif %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %} 
