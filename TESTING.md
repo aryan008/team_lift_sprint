@@ -201,7 +201,6 @@ Widths used to test the below are:
 
 
 ### Manual testing
-<h1>UUUUUUPPPPDAAAAATE</h1>
 
 The following is a breakdown of successful manual testing performed on the site, broken out by subcomponent.
 
@@ -499,6 +498,37 @@ Number | User story requirement | Response design | Screenshot(s)/Narrative
 
 ![image](media/readme/19.1.JPG)
 
-### Known bugs
+### Fixes and Known Bugs
 
-<h1>UUUUUUPPPPDAAAAATE</h1>
+#### Fixes
+
+The below respresent the fixes and commit link for the project.
+
+Commit link | Error | Response design
+----------- | ----- | ---------------
+
+
+
+#### Known Bugs
+
+The following respresent bugs in the project:
+
+1. The Product addition/subtraction button on the bag page - it does not stack correctly on unfamiliar device layout. To fix, I could easily have removed the text narrative from the buttons/resized for the below pixels, however I feel they are pertinant so the user knows what to do. This bug only occurs between 585px and 576px - no known device width occurs as per my responsiveness testing and as such I will not fix this bug.
+
+See below for what it should look like:
+
+![image](media/readme/review-bug1.JPG)
+
+And bug as per 585px-576px width:
+
+![image](media/readme/review-bug2.JPG)
+
+2. A rare "gutter" layout error sometimes occurs on the heroku app with regards to mobile layout on the home screen and the product review form. It is always fixed when I refreshed the page as shown below - not a real bug as it just relates to refresh. As I explained, this only happens extremely rarely however I would be interested to find the cause.
+
+See below for what it should look like:
+
+![image](media/readme/home-bug1.JPG)
+
+And pre-refresh:
+
+![image](media/readme/home-bug2.JPG)
