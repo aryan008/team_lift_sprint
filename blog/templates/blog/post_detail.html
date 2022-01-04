@@ -25,6 +25,7 @@
                 {{ post.title }}
             </div>
             <a href="{% url 'edit_post' post.slug %}">Edit</a>
+            <a class="text-danger" href="{% url 'delete_post' post.slug %}">Delete</a></small>
             <div class="col-1">
                 {{ post.author }}
             </div>
