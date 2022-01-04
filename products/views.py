@@ -77,10 +77,10 @@ def product_detail(request, product_id):
     # The users product review
     if request.user.is_authenticated:
         # Count how many reviews this person has left on this product
-        checkReview = ReviewProduct.objects.filter(
+        check_review = ReviewProduct.objects.filter(
             user=request.user, product=product).count()
         # If above 0, they cant add a review but old review shown
-        if checkReview > 0:
+        if check_review > 0:
             can_add_review = False
             review = get_object_or_404(
                 ReviewProduct, product=product, user=request.user)

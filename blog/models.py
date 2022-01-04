@@ -1,5 +1,13 @@
 from django.db import models
-from profiles.models import UserProfile
+
+
+"""
+Blog class credit for inspiration:
+(1) - https://dev.to/madhubankhatri/blog-website-using-django-55ji
+    - Madhuban Khatri
+(2) - https://www.youtube.com/watch?app=desktop&v=GcqURKYfv00
+    - CodingWithMitch
+"""
 
 
 class Blog(models.Model):

@@ -27,8 +27,8 @@
     <!--- To display all the Posts available --->
     <div class="container col-10">
         <div class="row bg-light text-dark border border-dark rounded-2 border-2">
-            {% for post in posts %}
-                {% if posts %}
+            {% for post in blog_posts %}
+                {% if blog_posts %}
                 <div class="col-8 mt-1">
                     <h4 class = "fw-bold">{{ post.title }}</h4>
                 </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="row pb-2 mt-2 mb-3">
                     <div class="col-8">
-                        <a href="{% url 'post_detail'  post.slug %}" class="btn btn-dark border-light border-3 btn-sm">Read this post...</a>
+                        <a href="{% url 'post_detail'  post.slug %}" class="btn btn-dark border-light border-3 btn-sm">Read this post in full...</a>
                     </div>
                 </div>
             {% else %}

@@ -6,18 +6,20 @@ from .forms import PostForm
 
 
 def blog(request):
-    """ BLog page to display all available posts """
+    """ Display all blog posts """
 
-    posts = Post.objects.all()
+    # Grab all the blog posts
+    blog_posts = Post.objects.all()
     template = 'blog/blog.html'
     context = {
-        'posts': posts,
+        'blog_posts': blog_posts,
     }
     return render(request, template, context)
 
 
 def post_detail(request, slug):
-    """ Display each Post in detail along with its comments """
+    """ Show the full post including intro and article """
+    # Get the specific post with id of slug
     post = Post.objects.get(slug=slug)
 
     template = 'blog/post_detail.html'
@@ -28,17 +30,25 @@ def post_detail(request, slug):
     return render(request, template, context)
 
 
+@login_required
 def add_post(request):
-    """ Add a post to the blog """
+    """ Add blog post """
+    # Superuser requirement
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the storeowner can do this.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
+        # Grab the postform
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
+            # Save on validity
             post = form.save()
-            messages.success(request, 'Successfully added a post!')
+            messages.success(request, 'Successfully added a blog entry!')
             return redirect(reverse('post_detail', args=[post.slug]))
         else:
             messages.error(
-                request, 'Failed to add blog post. Check if form is valid.')
+                request, 'Post failure, ensure your entry is correct.')
     else:
         form = PostForm()
 
@@ -50,22 +60,30 @@ def add_post(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_post(request, slug):
-    """ Edit an existing Post """
+    """ Edit an existing blog entry """
+    # Superuser requirement
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the storeowner can do this.')
+        return redirect(reverse('home'))
 
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
+        # Grab the postform
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
+            # Save on validity
             form.save()
             messages.success(request, 'Successfully updated blog post!')
             return redirect(reverse('post_detail', args=[post.slug]))
         else:
             messages.error(
-                request, 'Failed to update blog post. Check if form is valid.')
+                request, 'Blog edit failure, ensure your entry is correct.')
     else:
         form = PostForm(instance=post)
-        messages.info(request, f'You are editing {post.title} blog entry')
+        messages.info(
+            request, f'You are editing the "{post.title}" blog entry')
 
     template = 'blog/edit_post.html'
     context = {
@@ -76,10 +94,16 @@ def edit_post(request, slug):
     return render(request, template, context)
 
 
+@login_required
 def delete_post(request, slug):
-    """ Delete a post from the blog """
+    """ Delete blog post """
+    # Superuser requirement
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the storeowner can do this.')
+        return redirect(reverse('home'))
 
     post = get_object_or_404(Post, slug=slug)
+    # Delete the entry
     post.delete()
-    messages.success(request, 'post deleted!')
+    messages.success(request, 'entry deleted!')
     return redirect(reverse('blog'))

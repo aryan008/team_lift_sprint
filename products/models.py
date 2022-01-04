@@ -55,6 +55,12 @@ class Product(models.Model):
         return on_sale_price
 
 
+"""
+Credit for help on product review:
+https://www.youtube.com/watch?v=reFJ9hBLFUY - Coding Stuff
+"""
+
+
 # Review product model
 class ReviewProduct(models.Model):
     class Meta:

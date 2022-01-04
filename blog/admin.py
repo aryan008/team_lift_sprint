@@ -5,12 +5,14 @@ from .models import Blog, Post
 
 
 class BlogAdmin(admin.ModelAdmin):
+    """ Admin blog class """
     list_display = (
         'title',
     )
 
 
 class PostAdmin(admin.ModelAdmin):
+    """ Admin post class """
     list_display = (
         'title',
         'intro',
@@ -18,6 +20,7 @@ class PostAdmin(admin.ModelAdmin):
         'date_added',
         'author'
     )
+
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Blog, BlogAdmin)

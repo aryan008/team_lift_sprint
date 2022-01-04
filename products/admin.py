@@ -31,7 +31,8 @@ class ProductAdmin(admin.ModelAdmin):
 
 class ReviewProductAdmin(admin.ModelAdmin):
     list_display = (
-        'user', 'product', 'review_text_field', 'review_star_rating', 'date_review')
+        'user', 'product', 'review_text_field',
+        'review_star_rating', 'date_review')
 
 
 admin.site.register(ReviewProduct, ReviewProductAdmin)
