@@ -10,9 +10,12 @@ def blog(request):
 
     # Grab all the blog posts
     blog_posts = Post.objects.all()
+    # Grab the latest post
+    latest_post = Post.objects.latest('date_added')
     template = 'blog/blog.html'
     context = {
         'blog_posts': blog_posts,
+        'latest_post': latest_post,
     }
     return render(request, template, context)
 

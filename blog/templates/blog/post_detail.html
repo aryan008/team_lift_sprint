@@ -36,7 +36,7 @@
                 <p><i>{{ post.intro }}</i></p>
             </div>
             <div class="col-12 col-md-11">
-                <p>{{ post.article }}</p>
+                <p>{{ post.article|linebreaks }}</p>
             </div>
             <div class="col-8 mb-1">
                 <div class="text-muted">{{ post.date_added | date:"d M - Y | h:i"}}</div>
