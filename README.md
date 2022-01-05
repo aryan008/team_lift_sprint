@@ -337,6 +337,8 @@ Product addition and subsequent deletion:
 
 ![image](media/readme/product-addition-4.JPG)
 
+Note that per the known bugs section in the testing.md file, the "noimage" bug has been documented on AWS error.
+
 ##### Search box
 
 Full search capability on product titles and description.
