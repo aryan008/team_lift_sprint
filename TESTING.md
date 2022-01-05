@@ -179,6 +179,10 @@ Widths used to test the below are:
 
 ![image](media/readme/review-2-mobile.JPG)
 
+See below for superuser can delete all reviews:
+
+![image](media/readme/test-indiv-review-super.JPG)
+
 See below for user can delete their specific review:
 
 ![image](media/readme/test-indiv-review.JPG)
