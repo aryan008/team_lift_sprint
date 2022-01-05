@@ -53,7 +53,8 @@ As above explanations, these are not true errors but due to the templating langu
 
 ##### JSHint JavaScript Validator Services
 
-See below screenshots for results on JSHint validation on seperate JS code (3) - no errors present:
+As per #8 on the Fixes section at the bottom of the file, only colon errors were present on the JSHint validation which were promptly fixed.
+See below screenshots for results on JSHint validation on seperate JS code (3) - no errors present after the above was completed:
 
 ![image](media/readme/countryfield-js-checker.JPG)
 
@@ -66,7 +67,7 @@ See below screenshots for results on JSHint validation on seperate JS code (3) -
 
 ### Accessibility/Lighthouse testing
 
-[WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used on all pages to review site accessibility. No errors on the site occurred as a result of this accessibility testing.
+[WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used on all pages to review site accessibility. No errors on the site occurred as a result of this accessibility testing. The only updates related to this was updating aria labels on the navbar search and quantity buttons in the quantity form - detailed in #3 and #9 in the fixes section respectively at the bottom of this testing.md file.
 
 See below for results on various pages:
 
@@ -504,10 +505,20 @@ Number | User story requirement | Response design | Screenshot(s)/Narrative
 
 The below respresent the fixes and commit link for the project.
 
-Commit link | Error | Response design
------------ | ----- | ---------------
-
-
+Number | Error | Response design | Commit link
+------ | ----- | --------------- | -----------
+1 | Django updated their CSRF policy as per [here](https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-trusted-origins) | Included the list of trusted application domains allowed. Whilst the commit reference relates to my gitpod address, for the final heroku deployment this is pointing to my heroku domain | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/31855d617daf6dc539b43dca42e7d4481eb840ce)
+2 | Items on sale did not bring in the correct sale price | Update the sale price and related subtotal/grandtotal in the contexts.py and html files | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/3e133af31319f91b11b7d4d1b6a5319cca25abb1)
+3 | Search button did not have a meaningful aria-label | Updated to a better name | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/5c5bc22ea3bc30ff13c65205c8118d7c64ff0d4f)
+4 | Product areas were displayed instead of category | Show each products category in the for loop | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/8d683c016ae15575178744f37c31561185241774)
+5 | Product pages did not have the href to "contact" page on site banner | Change from p tag to anchor ref and link appropriately | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/d47bf34bfffc46bffd284135d2ab962d2189dbf3)
+6 | Users were required to click on a confirmation link upon registering | As mentioned in the ReadMe file, due to security restrictions on my laptop I cannot send emails to users that are registering, hence I set the ACCOUNT_EMAIL_VERIFICATION to none to allow users to register without clicking on this link | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/05325c8c562a4f52137cf3542990d05795cbfac7)
+7 | The blog posts were not appearing by "newest date" | Changed the meta class on the Post model to descending date order | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/157b3c95d5aa6e870653e0cde6c84c8472faceb4)
+8 | JSHint errors displayed | Updated for recommendations | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/5876aa5a18dcf0eef2bac0c57ce86c2d60f4a159)
+9 | Quantity buttons did not have a meaningful aria-label | Updated aria-labels for a better name | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/a3e7efe581711f5e4f8275f5bb0cbbcfe6e3b1d9)
+10 | Toast notifications were not appearing on mobile devices | This was due to CSS positioning and sizing, hence the update in the css and toast files so they show on mobile | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/b01a21e6927f05012e77b4cbb4550f1a17c7f98b)
+11 | The amount saved on discounted products did not multiply by quantity | Updated the total saving on a product by product basis by multiplying by the quantity of that discounted item | [Commit link](https://github.com/aryan008/team_lift_sprint/commit/8c27f21020b06255c978c0c37bb24acc61de0304)
+12 | Django 4.0 update did not bring in homepage/Product banner images in | Removed the absolute reference of the media folder before the images render on the site | [Commit link 1](https://github.com/aryan008/team_lift_sprint/commit/534608033e7fb6844cb79b45026e25165bb261ca) and [Commit link 2](https://github.com/aryan008/team_lift_sprint/commit/807d9b6cad07f2226ab23875455b9d8783f0041d)
 
 #### Known Bugs
 
