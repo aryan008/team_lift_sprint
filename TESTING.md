@@ -3,10 +3,10 @@
 ## Contents
 
 * [Code validation](#code-validation)
-* [Accessibility/Lighthouse testing](#accessibility/lighthouse-testing)
+* [Accessibility/Lighthouse testing](#accessibilitylighthouse-testing)
 * [Responsive testing](#responsive-testing)
 * [Manual testing](#manual-testing)
-* [Testing user stories from User Experience (UX)](#testing-user-stories-from-user-experience-(ux))
+* [Testing user stories from User Experience (UX)](#testing-user-stories-from-user-experience-ux)
 * [Fixes and Known Bugs](#fixes-and-known-bugs)
 
 [View README.md](https://github.com/aryan008/team_lift_sprint/blob/main/README.md)
