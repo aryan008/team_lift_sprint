@@ -91,7 +91,7 @@ As a first-time visitor of the site, I want:
 13.	View and purchase whats on sale
 14.	Have a FAQ section where I can get in touch with the company regarding shipping/delivery, etc.
 15.	See if I have any shipping costs
-16.	See any product reviews and enter one myself
+16.	See any product reviews and enter one myself, delete one if needed
 17.	Read any articles regarding fitness
 
 
@@ -140,7 +140,7 @@ Sort functionality on all product views | 3 | 5
 Title on products page for categories | 3 | 5
 Pagination | 3 | 5
 Products on sale are clearly defined and shown how much the user saves by purchasing | 4 | 5
-Allow logged in users to submit a review of a product and see other reviews | 3 | 5
+Allow logged in users to submit a review of a product and see other reviews, delete their reviews | 3 | 5
 Site admins can post fitness related content as a blog | 4 | 4
 
 #### Scope Plane
@@ -158,7 +158,7 @@ User error handling – appropriate redirects on user interaction and display me
 A split of products based on what the user is looking for - themselves/team/indoor/outdoor
 Footer links include FAQ's that is standard across all ecommerce sites
 Integration of secure payment system
-Allow logged in users to submit a review of a product
+Allow logged in users to submit a review of a product, delete their reviews
 Pre paying the user has the ability to edit their bag items
 Sort functionality on all product views
 Site admins can post fitness related content as a blog
@@ -167,7 +167,7 @@ Products on sale are clearly defined and shown how much the user saves by purcha
 #### Structure Plane
 Question |	Response for site design
 -------- | ---------
-How do I navigate easily? | Navbar is present across all site pages and is fixed to the top. Pages present on the account management section of the navbar will depend on the following: Unregistered user - On the home page, prompt to create an account/login. Home/product sections are present regardless of user status. Blog section is available to all user types Registered user – As above but including navbar links for profile page as well as log out option. Users can also review products. Superuser – As above but including a navbar link for managing the site products. Throughout the site, buttons/navbar links are present to allow the user to bring them to the areas they wish to visit. On the products pages, a "bring to top" button is available for the user to click rather than scrolling needlessly back up. Superusers can also delete reviews as well as full CRUD usage on blog posts.
+How do I navigate easily? | Navbar is present across all site pages and is fixed to the top. Pages present on the account management section of the navbar will depend on the following: Unregistered user - On the home page, prompt to create an account/login. Home/product sections are present regardless of user status. Blog section is available to all user types Registered user – As above but including navbar links for profile page as well as log out option. Users can also review products and delete their reviews. Superuser – As above but including a navbar link for managing the site products. Throughout the site, buttons/navbar links are present to allow the user to bring them to the areas they wish to visit. On the products pages, a "bring to top" button is available for the user to click rather than scrolling needlessly back up. Superusers can also delete reviews as well as full CRUD usage on blog posts.
 How is the information presented? | Using sporting equipment site style colours/features and text content that allow the user to achieve their goals. Dark navbar background to light product interface for a clear separation of site navigation to bag additions/management. Clear feedback loop for all users whenever the user performs CRUD functionality. The buttons through the site pop to the user, clearly demonstrating what will happen should they click on them.
 State changes | There is a clear state change at the navbar level depending on the user of the site as previously mentioned – no account, registered user, superuser. Appropriate redirects/CTA buttons are present when the user interacts with both the navbar and the buttons of the site, including “keep shopping”/"checkout securely"/"View bag" both in the html pages and the toast forms. Upon checking out, a clear state change a success message appears for the order which allows them to see their purchase. Finally, state changes are present on all CRUD function buttons when the user interacts with them along with the Toast messages, tying in with the feedback loop that the user action was performed successfully.
 Is the site consistent? | Correct styling and fonts are applied throughout the site, which was achieved using the "extends" functionality in Django.
@@ -375,6 +375,10 @@ See a product with no reviews:
 
 ![image](media/readme/review-noreview.JPG)
 
+See how the reviewer can delete their review:
+
+![image](media/readme/test-indiv-review.JPG)
+
 ##### Blog posts
 
 Site visitors can view detailed blog posts regarding fitness posted by the site owners.
@@ -444,10 +448,10 @@ There are three types of users that this website is designed for:
 A visitor is anyone who navigates to this website and can see home/products pages. Visitors can view the products, their narrative, add them to a cart with all CRUD functionality and checkout with an order number. They can see blog posts and review any product reviews of items. They can also register for an account/login with email verification.
 
 #### Logged in User
-A visitor who registers for an account automatically becomes a "user". Users have the same rights as visitors, plus they have access to their own profile where they can see all of their past orders and create their default profile information for checkout purposes. These users can change/forgot their password and log out. These users can add create a review for a particular product if they havent already.
+A visitor who registers for an account automatically becomes a "user". Users have the same rights as visitors, plus they have access to their own profile where they can see all of their past orders and create their default profile information for checkout purposes. These users can change/forgot their password and log out. These users can add create a review for a particular product if they havent already and delete it if they want.
 
 #### Administrator/Superuser
-Administrators have all the rights of a logged in user, but they also have the right to manage the information of all products in the store, as well as add a product. They can verify email addresses of users that wish to create an account. They can delete any user except themselves. This is a security feature so that an administrator doesn't accidentally delete their own account. They can also edit/add/delete blog posts and delete product reviews.
+Administrators have all the rights of a logged in user, but they also have the right to manage the information of all products in the store, as well as add a product. They can verify email addresses of users that wish to create an account. They can delete any user except themselves. This is a security feature so that an administrator doesn't accidentally delete their own account. They can also edit/add/delete blog posts and delete all product reviews.
 
 ### CRUD Functionality
 
@@ -493,7 +497,7 @@ Account|Yes|No|No
 Bag items|Yes|Yes|Yes
 Manage users|No|Yes|No
 Blog post|No|Yes|No
-Item review|No|Yes|No
+Item review|Yes|Yes|No
 
 ### Database model
 
