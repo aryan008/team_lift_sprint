@@ -179,6 +179,10 @@ Widths used to test the below are:
 
 ![image](media/readme/review-2-mobile.JPG)
 
+See below for user can delete their specific review:
+
+![image](media/readme/test-indiv-review.JPG)
+
 ##### Bag page
 
 ![image](media/readme/bag-desktop.JPG)
@@ -250,7 +254,8 @@ Product detail | Previous reviews shown and ordered by date descending(latest fi
 Product detail | Form appears to user yet to make a review | [Link](media/readme/user-review-allowed.JPG) | Pass
 Product detail | Number of reviews available | [Link](media/readme/user-review-allowed.JPG) | Pass
 Product detail | Review product form unaccessible to unregistered users | [Link](media/readme/unregistered-reviewer.JPG) | Pass
-Product detail | Superuser can delete reviews | [Link](media/readme/delete-review.JPG) | Pass
+Product detail | Superuser can delete all reviews | [Link](media/readme/delete-review.JPG) | Pass
+Product detail | Logged in user can delete their specific review only | [Link](media/readme/test-indiv-review.JPG) | Pass
 Product detail | Submit review button processes the form correctly | | Pass
 Product detail | Star rating must be filled in for review to post | [Link](media/readme/star-error.JPG) | Pass
 Shopping bag | Item name, quantity, sale save amount, image, description and subtotal all work correctly | | Pass
@@ -463,13 +468,15 @@ Number | User story requirement | Response design | Screenshot(s)/Narrative
 
 Number | User story requirement | Response design | Screenshot(s)/Narrative
 ------ | ---------------------- | --------------- | -----------------------
-16 | See any product reviews and enter one myself | View product reviews available to all users in product detail - logged in users can enter a review | Below
+16 | See any product reviews and enter one myself | View product reviews available to all users in product detail - logged in users can enter a review and delete it if needed | Below
 
 ![image](media/readme/test-review1.JPG)
 
 ![image](media/readme/test-review2.JPG)
 
 ![image](media/readme/test-review3.JPG)
+
+![image](media/readme/test-indiv-review.JPG)
 
 <hr>
 
@@ -555,4 +562,4 @@ And pre-refresh:
 
 ![image](media/readme/home-bug2.JPG)
 
-3. As per manual tests, if I add a product with no image the "noimage.png" does not appear. Whilst this worked in production, when I brought all my images to my AWS bucket I could not add it. I contacted AWS support regarding this and after a lengthy call I would have to re-register my account and repeat the AWS process noted in the deployment section of the ReadMe file. I decided not to do this and as such this is a known bug.
+3. As per manual tests, if I add a product with no image the "noimage.png" does not appear. Whilst this worked in production, when I brought all my images to my AWS bucket I could not add it. I contacted AWS support regarding this and after a lengthy call I would have to re-register my account and repeat the AWS process noted in the deployment section of the ReadMe file. This also affects my favicon icon for the site. I decided not to do this and as such this is a known bug.
