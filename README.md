@@ -49,7 +49,7 @@ The following areas of testing were reviewed:
   * Responsive testing
   * Manual testing
   * Testing user stories from User Experience (UX) section
-  * Known bugs
+  * Fixes and Known bugs
 
 * [Deployment](#deployment)
   * [Process of deployment](#process-of-deployment)
@@ -563,16 +563,14 @@ An open standard file format and data interchange format that uses human-readabl
 
 ## Testing
 
-<h1 align = "center">UPPPPDAAAAATE</h1>
-
-See [link](static/rm_files/logic-diagram.pdf) for testing of the following areas:
+See [Testing.md](https://github.com/aryan008/team_lift_sprint/blob/main/TESTING.md) for testing of the following areas:
 
 * Code validation
 * Accessibility testing
 * Responsive testing
 * Manual testing
 * Testing user stories from User Experience (UX) section
-* Known bugs
+* Fixes and Known bugs
 
 
 ## Deployment
