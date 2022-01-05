@@ -468,7 +468,7 @@ As seen in the table above referencing purchasing a product, all CRUD functional
 Narrative|User|Admin|Visitor
 -------- | --------- | -------- | --------
 Account creation|Yes|Yes|Yes
-Purchase a product|Yes|Yes|No
+Purchase a product|Yes|Yes|Yes
 Password functionality|Yes|Yes|No
 Blog post|No|Yes|No
 Leave a review|Yes|Yes|No
@@ -477,6 +477,7 @@ Leave a review|Yes|Yes|No
 Narrative|User|Admin|Visitor
 -------- | --------- | -------- | --------
 Home/Products Pages|Yes|Yes|Yes
+Bag items|Yes|Yes|Yes
 User profile|Yes|Yes|No
 Past orders|Yes|Yes|No
 Manage/verify users|No|Yes|No
