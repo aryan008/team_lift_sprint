@@ -27,14 +27,14 @@ The site has been tested on a number of devices including desktop, tablets and m
 
 * [Design & UX – How do they come together?](#design--ux--how-do-they-come-together)
   * [User goals](#user-goals)
-  * [Site owner/designer goals](#site-owner/designer-goals)
+  * [Site owner/designer goals](#site-ownerdesigner-goals)
   * [Application-features](#application-features)
   * [Future-developments](#future-developments)
 
 * [Information Architecture](#information-architecture)
   *	[Site Logic and diagram](#site-logic-and-diagram)
   *	[User Types and permissions](#user-types-and-permissions)
-  *	[CRUD Functionality](#crud---create-read-update-and-delete)
+  *	[CRUD Functionality](#crud-functionality)
   *	[Database model](#database-model)
 
 * [Technology and Languages used](#technology-and-languages-used)
@@ -43,13 +43,14 @@ The site has been tested on a number of devices including desktop, tablets and m
 
 * [Testing](#testing)
 
-The following areas of testing were reviewed:
-  * Code validation
-  * Accessibility testing
-  * Responsive testing
-  * Manual testing
-  * Testing user stories from User Experience (UX) section
-  * Fixes and Known bugs
+The following areas of testing were reviewed in the testing.md file:
+
+- Code validation
+- Accessibility testing
+- Responsive testing
+- Manual testing
+- Testing user stories from User Experience (UX) section
+- Fixes and Known bugs
 
 * [Deployment](#deployment)
   * [Process of deployment](#process-of-deployment)
