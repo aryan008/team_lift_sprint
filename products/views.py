@@ -119,12 +119,12 @@ def product_detail(request, product_id):
 @login_required
 def delete_review(request, review_id):
     """ Delete a review """
-    if not request.user.is_superuser:
+    if not request.user.is_authenticated:
         # Error message if not superuser
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only logged in users can do that.')
         return redirect(reverse('home'))
 
-    elif request.user.is_superuser:
+    elif request.user.is_authenticated:
         review = ReviewProduct.objects.filter(pk=review_id).last()
         product_id = review.product_id
         # Delete the review

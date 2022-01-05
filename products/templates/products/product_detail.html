@@ -195,6 +195,9 @@
                     {% if user.is_superuser %}
                     <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">Delete Review</a>
                     {% endif %}
+                    {% if request.user.username == review.user.username %}
+                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">Delete Your Review</a>
+                    {% endif %}
                 </div>
                 {% endfor %}
             {% else %}
